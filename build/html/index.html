@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bem vindo ao Validator &mdash; documentação Validator 0.1.2</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> Validator
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Bem vindo ao Validator</a><ul>
+<li><a class="reference internal" href="#caracteristicas">Características</a></li>
+<li><a class="reference internal" href="#validacao-de-datas">Validação de Datas</a></li>
+<li><a class="reference internal" href="#validacao-de-cpf">Validação de CPF</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Validator</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Bem vindo ao Validator</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bem-vindo-ao-validator">
+<span id="bem-vindo-ao-validator"></span><h1>Bem vindo ao Validator<a class="headerlink" href="#bem-vindo-ao-validator" title="Link permanente para este título">¶</a></h1>
+<p>Não perca tempo pesquisando como validar informações como datas, documentos ou cartões de crédito.</p>
+<p>Essa biblioteca possui um conjunto de validações prontas para uso.</p>
+<div class="section" id="caracteristicas">
+<span id="caracteristicas"></span><h2>Características<a class="headerlink" href="#caracteristicas" title="Link permanente para este título">¶</a></h2>
+<ul class="simple">
+<li>Padrão PSR-4</li>
+<li>Testes unitários com PHPUnit</li>
+<li>Documentação clara e objetiva</li>
+</ul>
+</div>
+<div class="section" id="validacao-de-datas">
+<span id="validacao-de-datas"></span><h2>Validação de Datas<a class="headerlink" href="#validacao-de-datas" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nx">validate</span> <span class="p">(</span><span class="nx">string</span> <span class="nv">$subject</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$format</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Retorna um objeto Date contendo as informações referentes à data recebida. Retorna false se a data for inválida.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Caractere</th>
+<th>Descrição</th>
+<th>intervalo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td>dia</td>
+<td>01-31</td>
+</tr>
+<tr>
+<td>j</td>
+<td>dia</td>
+<td>1-31</td>
+</tr>
+<tr>
+<td>m</td>
+<td>mês</td>
+<td>01-12</td>
+</tr>
+<tr>
+<td>n</td>
+<td>mês</td>
+<td>1-12</td>
+</tr>
+<tr>
+<td>y</td>
+<td>ano</td>
+<td>00-99 (20xx entre 00-69 e 19xx entre 70-99)</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>ano</td>
+<td>1970-2099</td>
+</tr>
+</tbody>
+</table><div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Validator\Date</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$date</span> <span class="o">=</span> <span class="nx">Date</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="s1">&#39;2018-12-19&#39;</span><span class="p">,</span> <span class="s1">&#39;Y-m-d&#39;</span><span class="p">))</span> <span class="p">{</span>
+
+    <span class="c1">// caso nenhum pattern seja fornecido, getDate() retorna a data no formato em que foi recebida</span>
+    
+    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getDate</span><span class="p">();</span>        <span class="c1">// 2018-12-19</span>
+    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getDate</span><span class="p">(</span><span class="s1">&#39;d/m/y&#39;</span><span class="p">);</span> <span class="c1">// 19/12/18</span>
+    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getDay</span><span class="p">();</span>         <span class="c1">// 19</span>
+    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getMonth</span><span class="p">();</span>       <span class="c1">// 12</span>
+    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getYear</span><span class="p">();</span>        <span class="c1">// 2018</span>
+    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getTimestamp</span><span class="p">()</span>    <span class="c1">// 1545177600</span>
+    
+<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nx">validateArray</span> <span class="p">(</span><span class="k">array</span> <span class="nv">$subjects</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$format</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Retorna um array de objetos Date contendo as informações referentes à cada data válida recebida. Retorna um array vazio caso nenhuma ocorrência seja válida.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Validator\Date</span><span class="p">;</span>
+
+<span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;2018-12-19&#39;</span><span class="p">,</span> <span class="s1">&#39;12/05/2018&#39;</span><span class="p">,</span> <span class="s1">&#39;14-02-18&#39;</span><span class="p">,</span> <span class="s1">&#39;2018/01/05&#39;</span><span class="p">,</span> <span class="s1">&#39;1995-02-18&#39;</span><span class="p">,</span> <span class="s1">&#39;20.08.2000&#39;</span><span class="p">);</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$dates</span> <span class="o">=</span> <span class="nx">Date</span><span class="o">::</span><span class="na">validateArray</span><span class="p">(</span><span class="nv">$array</span><span class="p">,</span> <span class="s1">&#39;Y-m-d&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$dates</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+
+<span class="sd">/** Saída **/</span>
+
+  <span class="k">Array</span>
+<span class="p">(</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Cajudev\Validator\Date</span> <span class="nx">Object</span>
+        <span class="p">(</span>
+            <span class="p">[</span><span class="nb">date</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">19</span>
+            <span class="p">[</span><span class="nx">day</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">19</span>
+            <span class="p">[</span><span class="nx">month</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">12</span>
+            <span class="p">[</span><span class="nx">year</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">2018</span>
+            <span class="p">[</span><span class="nx">timestamp</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">1545177600</span>
+        <span class="p">)</span>
+
+    <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Cajudev\Validator\Date</span> <span class="nx">Object</span>
+        <span class="p">(</span>
+            <span class="p">[</span><span class="nb">date</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">1995</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">18</span>
+            <span class="p">[</span><span class="nx">day</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">18</span>
+            <span class="p">[</span><span class="nx">month</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mo">02</span>
+            <span class="p">[</span><span class="nx">year</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">1995</span>
+            <span class="p">[</span><span class="nx">timestamp</span><span class="o">:</span><span class="nx">Cajudev\Validator\Date</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">793065600</span>
+        <span class="p">)</span>
+
+<span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="validacao-de-cpf">
+<span id="validacao-de-cpf"></span><h2>Validação de CPF<a class="headerlink" href="#validacao-de-cpf" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nx">validate</span> <span class="p">(</span><span class="nx">string</span> <span class="nv">$subject</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Retorna um objeto Cpf contendo um número válido. Retorna false se o cpf for inválido.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Validator\Cpf</span><span class="p">;</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$cpf</span> <span class="o">=</span> <span class="nx">Cpf</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="s2">&quot;590.887.600-39&quot;</span><span class="p">))</span> <span class="p">{</span>
+
+    <span class="c1">// por padrão, getNumber() retorna o número formatado, caso queira o número limpo, insira como argumento &quot;false&quot;;</span>
+    
+    <span class="nv">$cpf</span><span class="o">-&gt;</span><span class="na">getNumber</span><span class="p">();</span>        <span class="c1">// 590.887.600-39</span>
+    <span class="nv">$cpf</span><span class="o">-&gt;</span><span class="na">getNumber</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>   <span class="c1">// 59088760039</span>
+    
+<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nx">validateArray</span> <span class="p">(</span><span class="k">array</span> <span class="nv">$subjects</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Retorna um array de objetos com os cpf’s válidos. Retorna um array vazio caso nenhuma ocorrência seja válida.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Validator\Cpf</span><span class="p">;</span>
+
+<span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">&quot;438.784.570-81&quot;</span><span class="p">,</span> <span class="s2">&quot;231.803.290-41&quot;</span><span class="p">,</span> <span class="s2">&quot;477.107.930-69&quot;</span><span class="p">,</span> <span class="s2">&quot;041.830.100-04&quot;</span><span class="p">,</span> <span class="s2">&quot;769.611.670-55&quot;</span><span class="p">);</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nv">$cpfs</span> <span class="o">=</span> <span class="nx">Cpf</span><span class="o">::</span><span class="na">validateArray</span><span class="p">(</span><span class="nv">$array</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$cpfs</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+
+<span class="sd">/** Saída **/</span>
+
+<span class="k">Array</span>
+<span class="p">(</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Cajudev\Validator\Cpf</span> <span class="nx">Object</span>
+        <span class="p">(</span>
+            <span class="p">[</span><span class="nx">number</span><span class="o">:</span><span class="nx">Cajudev\Validator\Cpf</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">43878457081</span>
+        <span class="p">)</span>
+
+    <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Cajudev\Validator\Cpf</span> <span class="nx">Object</span>
+        <span class="p">(</span>
+            <span class="p">[</span><span class="nx">number</span><span class="o">:</span><span class="nx">Cajudev\Validator\Cpf</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">23180329041</span>
+        <span class="p">)</span>
+
+    <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Cajudev\Validator\Cpf</span> <span class="nx">Object</span>
+        <span class="p">(</span>
+            <span class="p">[</span><span class="nx">number</span><span class="o">:</span><span class="nx">Cajudev\Validator\Cpf</span><span class="o">:</span><span class="k">private</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mo">041</span><span class="mi">83010004</span>
+        <span class="p">)</span>
+
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Richard Lopes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
