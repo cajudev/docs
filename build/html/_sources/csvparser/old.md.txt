@@ -1,0 +1,25 @@
+Obtendo dados
+-------------
+
+
+Customizando o retorno
+----------------------
+
+```php
+
+
+/** Saída **/
+
+
+```
+
+Filtrando os dados
+------------------
+
+```php
+
+
+$results = $csv->parse();
+
+
+```

@@ -24,14 +24,9 @@ lexers["php-annotations"] = PhpLexer(startinline=True, linenos=1)
 
 # -- Project information -----------------------------------------------------
 
-project = u'Validator'
+project = u'Cajudev'
 copyright = u'2018, Richard Lopes'
 author = u'Richard Lopes'
-
-# The short X.Y version
-version = u''
-# The full version, including alpha/beta/rc tags
-release = u'0.1.2'
 
 
 # -- General configuration ---------------------------------------------------
@@ -76,7 +71,7 @@ language = u'pt_BR'
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = None
+pygments_style = 'monokai'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -90,7 +85,11 @@ html_theme = 'sphinx_rtd_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'display_version': False,
+    'collapse_navigation': True,
+    'navigation_depth': 2,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -107,11 +106,14 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
+#disable html_show_sourcelink
+html_show_sourcelink = False
+
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Validatordoc'
+htmlhelp_basename = 'cajudev'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -138,7 +140,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Validator.tex', u'Validator Documentation',
+    (master_doc, 'Cajudev.tex', u'Cajudev Documentation',
      u'Richard Lopes', 'manual'),
 ]
 
@@ -148,7 +150,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'validator', u'Validator Documentation',
+    (master_doc, 'Cajudev', u'Cajudev Documentation',
      [author], 1)
 ]
 
@@ -159,8 +161,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Validator', u'Validator Documentation',
-     author, 'Validator', 'One line description of project.',
+    (master_doc, 'Cajudev', u'Cajudev Documentation',
+     author, 'Cajudev', 'One line description of project.',
      'Miscellaneous'),
 ]
 
