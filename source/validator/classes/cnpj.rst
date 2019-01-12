@@ -47,12 +47,12 @@ validateArray( )
 Resultado:
 ..........
 
-.. parsed-literal::
+.. code-block:: php
 
    Array
    (
       [0] => Cajudev\Validator\Cnpj Object
          (
-            [number:Cajudev\Validator\Cnpj:private] => 09475795000169
+            [number:Cajudev\Validator\Cnpj:private] => "09475795000169"
          )
    )

@@ -47,17 +47,17 @@ validateArray( )
 Resultado:
 ..........
 
-.. parsed-literal::
+.. code-block:: php
 
    Array
    (
       [0] => Cajudev\Validator\Cpf Object
          (
-            [number:Cajudev\Validator\Cpf:private] => 43878457081
+            [number:Cajudev\Validator\Cpf:private] => "43878457081"
          )
 
       [1] => Cajudev\Validator\Cpf Object
          (
-            [number:Cajudev\Validator\Cpf:private] => 23180329041
+            [number:Cajudev\Validator\Cpf:private] => "23180329041"
          )
    )

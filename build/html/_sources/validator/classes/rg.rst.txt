@@ -47,22 +47,22 @@ validateArray( )
 Resultado:
 ..........
 
-.. parsed-literal::
+.. code-block:: php
 
    Array
    (
       [0] => Cajudev\Validator\Rg Object
          (
-            [number:Cajudev\Validator\Rg:private] => 323316207
+            [number:Cajudev\Validator\Rg:private] => "323316207"
          )
 
       [1] => Cajudev\Validator\Rg Object
          (
-            [number:Cajudev\Validator\Rg:private] => 435131126
+            [number:Cajudev\Validator\Rg:private] => "435131126"
          )
 
       [2] => Cajudev\Validator\Rg Object
          (
-            [number:Cajudev\Validator\Rg:private] => 261783841
+            [number:Cajudev\Validator\Rg:private] => "261783841"
          )
    )

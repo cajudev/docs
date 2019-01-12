@@ -71,25 +71,25 @@ validateArray( )
 Resultado:
 ..........
 
-.. parsed-literal::
+.. code-block:: php
 
    Array
    (
       [0] => Cajudev\Validator\Date Object
          (
-            [date:Cajudev\Validator\Date:private] => 2018-12-19
-            [day:Cajudev\Validator\Date:private] => 19
-            [month:Cajudev\Validator\Date:private] => 12
-            [year:Cajudev\Validator\Date:private] => 2018
-            [timestamp:Cajudev\Validator\Date:private] => 1545177600
+            [date:Cajudev\Validator\Date:private] => "2018-12-19"
+            [day:Cajudev\Validator\Date:private] => "19"
+            [month:Cajudev\Validator\Date:private] => "12"
+            [year:Cajudev\Validator\Date:private] => "2018"
+            [timestamp:Cajudev\Validator\Date:private] => "1545177600"
          )
 
       [1] => Cajudev\Validator\Date Object
          (
-            [date:Cajudev\Validator\Date:private] => 1995-02-18
-            [day:Cajudev\Validator\Date:private] => 18
-            [month:Cajudev\Validator\Date:private] => 02
-            [year:Cajudev\Validator\Date:private] => 1995
-            [timestamp:Cajudev\Validator\Date:private] => 793065600
+            [date:Cajudev\Validator\Date:private] => "1995-02-18"
+            [day:Cajudev\Validator\Date:private] => "18"
+            [month:Cajudev\Validator\Date:private] => "02"
+            [year:Cajudev\Validator\Date:private] => "1995"
+            [timestamp:Cajudev\Validator\Date:private] => "793065600"
          )
    )

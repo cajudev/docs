@@ -48,13 +48,13 @@ validateArray( )
 Resultado:
 ..........
 
-.. parsed-literal::
+.. code-block:: php
 
    Array
    (
       [0] => Cajudev\Validator\CreditCard Object
          (
-            [number:Cajudev\Validator\CreditCard:private] => 4532694194144787
-            [flag:Cajudev\Validator\CreditCard:private] => visa
+            [number:Cajudev\Validator\CreditCard:private] => "4532694194144787"
+            [flag:Cajudev\Validator\CreditCard:private] => "visa"
          )
    )
