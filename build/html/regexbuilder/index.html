@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Classes &mdash; documentação Cajudev </title>
+  <title>Bem Vindo ao RegexBuilder &mdash; documentação Cajudev </title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="Date" href="classes/date.html" />
-    <link rel="prev" title="Bem Vindo ao Validator" href="index.html" /> 
+    <link rel="next" title="Exemplos" href="examples.html" />
+    <link rel="prev" title="Filtrando Dados" href="../csvparser/instructions/filter.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,22 +81,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../csvparser/instructions.html">Instruções</a></li>
 </ul>
 <p class="caption"><span class="caption-text">RegexBuilder:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../regexbuilder/index.html">Introdução</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../regexbuilder/examples.html">Exemplos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../regexbuilder/details.html">Detalhes</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Exemplos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="details.html">Detalhes</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Validator:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Introdução</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Classes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classes/date.html">Date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes/cpf.html">Cpf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes/cnpj.html">Cnpj</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes/rg.html">Rg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes/creditcard.html">CreditCard</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../validator/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../validator/classes.html">Classes</a></li>
 </ul>
 
             
@@ -142,7 +135,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Classes</li>
+      <li>Bem Vindo ao RegexBuilder</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -159,11 +152,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="classes">
-<h1>Classes<a class="headerlink" href="#classes" title="Link permanente para este título">¶</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="section" id="bem-vindo-ao-regexbuilder">
+<h1>Bem Vindo ao RegexBuilder<a class="headerlink" href="#bem-vindo-ao-regexbuilder" title="Link permanente para este título">¶</a></h1>
+<a class="reference external image-reference" href="https://packagist.org/packages/cajudev/regexbuilder"><img alt="https://img.shields.io/packagist/v/cajudev/regexbuilder.svg" src="https://img.shields.io/packagist/v/cajudev/regexbuilder.svg" /></a>
+<a class="reference external image-reference" href="https://packagist.org/packages/cajudev/regexbuilder"><img alt="https://img.shields.io/packagist/dt/cajudev/regexbuilder.svg" src="https://img.shields.io/packagist/dt/cajudev/regexbuilder.svg" /></a>
+<a class="reference external image-reference" href="https://raw.githubusercontent.com/cajudev/regexbuilder/master/LICENSE"><img alt="https://img.shields.io/github/license/cajudev/regexbuilder.svg" src="https://img.shields.io/github/license/cajudev/regexbuilder.svg" /></a>
+<a class="reference external image-reference" href="https://travis-ci.org/cajudev/regexbuilder"><img alt="https://img.shields.io/travis/cajudev/regexbuilder.svg" src="https://img.shields.io/travis/cajudev/regexbuilder.svg" /></a>
+<a class="reference external image-reference" href="https://coveralls.io/github/cajudev/regexbuilder"><img alt="https://coveralls.io/repos/github/cajudev/regexbuilder/badge.svg?branch=master" src="https://coveralls.io/repos/github/cajudev/regexbuilder/badge.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://github.com/cajudev/regexbuilder/issues"><img alt="https://img.shields.io/github/issues/cajudev/regexbuilder.svg" src="https://img.shields.io/github/issues/cajudev/regexbuilder.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/cajudev/regexbuilder/graphs/contributors"><img alt="https://img.shields.io/github/contributors/cajudev/regexbuilder.svg" src="https://img.shields.io/github/contributors/cajudev/regexbuilder.svg" /></a>
+<p>Uma divertida e poderosa interface para a criação de expressões regulares, tornando-as muito mais legíveis</p>
+<div class="section" id="caracteristicas">
+<h2>Características<a class="headerlink" href="#caracteristicas" title="Link permanente para este título">¶</a></h2>
+<ul class="simple">
+<li>Padrão PSR-4</li>
+<li>Testes unitários com PHPUnit</li>
+</ul>
 </div>
-<p>Hora de conhecer nossas classes de validação, fique à vontade para navegador pelo menu ao lado ou avance para a primeira opção =)</p>
 </div>
 
 
@@ -174,10 +179,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="classes/date.html" class="btn btn-neutral float-right" title="Date" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Exemplos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Bem Vindo ao Validator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../csvparser/instructions/filter.html" class="btn btn-neutral" title="Filtrando Dados" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

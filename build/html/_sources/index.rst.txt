@@ -12,6 +12,16 @@ Seja bem vindo à nossa documentação
 
    Introdução <csvparser/index>
    Instruções <csvparser/instructions>
+
+.. toctree::
+   :hidden:
+   :caption: RegexBuilder:
+   :glob:
+   :titlesonly:
+
+   Introdução <regexbuilder/index>
+   Exemplos <regexbuilder/examples>
+   Detalhes <regexbuilder/details>
    
 .. toctree::
    :hidden:
