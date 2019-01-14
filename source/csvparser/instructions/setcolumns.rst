@@ -12,14 +12,23 @@ Customizando o Retorno
 
    $csv->setDelimiter(';');
 
-   $csv->setColumns(['Produto', 'Preço', 'Pagamento', 'Nome']); // <<< Linha acrescentada
+   $csv->setColumns(['Produto', 'Preço', 'Pagamento', 'Nome']);
 
    $results = $csv->parse();
 
    print_r($results);
 
+Ou se você preferir:
+--------------------
+
+.. code-block:: php
+
+   $columns = ['Produto', 'Preço', 'Pagamento', 'Nome'];
+
+   $results = $csv->setDelimiter(';')->setColumns($columns)->parse();
+
 Resultado:
-..........
+----------
 
 .. parsed-literal::
 

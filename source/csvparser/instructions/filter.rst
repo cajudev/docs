@@ -14,17 +14,41 @@ Filtrando Dados
 
    $csv->setColumns(['Produto', 'Preço', 'Pagamento', 'Nome']);
 
-   $csv->setFilters([                                   // 
-      'Pagamento' => ['Visa'],                          // Linhas
-      'Estado'    => ['São Paulo', 'Rio de Janeiro'],   // Acrescentadas
-   ]);                                                  //
+   $csv->setFilters([
+      'Pagamento' => ['Visa'],
+      'Estado'    => ['São Paulo', 'Rio de Janeiro'],
+   ]);
 
    $results = $csv->parse();
 
    print_r($results);
 
+Ou se você preferir:
+--------------------
+
+.. code-block:: php
+
+   $columns = ['Produto', 'Preço', 'Pagamento', 'Nome'];
+
+   $filters = [
+      'Pagamento' => ['Visa'],
+      'Estado'    => ['São Paulo', 'Rio de Janeiro'],
+   ];
+
+   $results = $csv->setDelimiter(';')->setColumns($columns)->setFilters($filters)->parse();
+
+Ou indentado, talvez =)
+-----------------------
+
+.. code-block:: php
+
+   $results = $csv->setDelimiter(';')
+                  ->setColumns($columns)
+                  ->setFilters($filters)
+                  ->parse();
+
 Resultado:
-..........
+----------
 
 .. parsed-literal::
 

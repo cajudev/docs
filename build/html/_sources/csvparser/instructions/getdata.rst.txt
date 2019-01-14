@@ -16,8 +16,15 @@ Obtendo Dados
 
    print_r($results);
 
+Ou se você preferir:
+--------------------
+
+.. code-block:: php
+
+   $results = $csv->setDelimiter(';')->parse();
+
 Resultado:
-..........
+----------
 
 .. parsed-literal::
 
