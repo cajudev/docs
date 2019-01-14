@@ -12,8 +12,6 @@ Filtrando Dados
 
    $csv->setDelimiter(';');
 
-   $results = $csv->parse();
-
    $csv->setColumns(['Produto', 'Preço', 'Pagamento', 'Nome']);
 
    $csv->setFilters([                                   // 

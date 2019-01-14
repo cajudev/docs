@@ -12,8 +12,6 @@ Customizando o Retorno
 
    $csv->setDelimiter(';');
 
-   $results = $csv->parse();
-
    $csv->setColumns(['Produto', 'Preço', 'Pagamento', 'Nome']); // <<< Linha acrescentada
 
    $results = $csv->parse();
