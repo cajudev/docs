@@ -35,13 +35,6 @@ Ou se você preferir:
       'Estado'    => ['São Paulo', 'Rio de Janeiro'],
    ];
 
-   $results = $csv->setDelimiter(';')->setColumns($columns)->setFilters($filters)->parse();
-
-Ou indentado, talvez =)
------------------------
-
-.. code-block:: php
-
    $results = $csv->setDelimiter(';')
                   ->setColumns($columns)
                   ->setFilters($filters)
