@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="Bem Vindo ao CsvParser" href="../../csvparser/index.html" />
     <link rel="prev" title="Rg" href="rg.html" /> 
 
   
@@ -74,18 +75,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">CsvParser:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../csvparser/index.html">Introdução</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../csvparser/instructions.html">Instruções</a></li>
-</ul>
-<p class="caption"><span class="caption-text">RegexBuilder:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/index.html">Introdução</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/examples.html">Exemplos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/details.html">Detalhes</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Validator:</span></p>
+              <p class="caption"><span class="caption-text">Validator:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introdução</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../classes.html">Classes</a><ul class="current">
@@ -96,6 +86,16 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">CreditCard</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">CsvParser:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/instructions.html">Instruções</a></li>
+</ul>
+<p class="caption"><span class="caption-text">RegexBuilder:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/examples.html">Exemplos</a></li>
 </ul>
 
             
@@ -172,13 +172,13 @@
 
 <span class="c1">//Retorna um objeto CreditCard ou null se o número for inválido.</span>
 
-<span class="k">if</span><span class="p">(</span><span class="nv">$cc</span> <span class="o">=</span> <span class="nx">CreditCard</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="s2">&quot;5277887630105547&quot;</span><span class="p">))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$cc</span> <span class="o">=</span> <span class="nx">CreditCard</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="s2">&quot;5277887630105547&quot;</span><span class="p">))</span> <span class="p">{</span>
 
    <span class="nv">$cc</span><span class="o">-&gt;</span><span class="na">getNumber</span><span class="p">();</span>        <span class="c1">// 5277 8876 3010 5547 &lt;&lt;&lt; Formatado</span>
    <span class="nv">$cc</span><span class="o">-&gt;</span><span class="na">getNumber</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>   <span class="c1">// 5277887630105547    &lt;&lt;&lt; Sem Formatação</span>
    <span class="nv">$cc</span><span class="o">-&gt;</span><span class="na">getFlag</span><span class="p">()</span>           <span class="c1">// mastercard</span>
 
-<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
    <span class="o">...</span>
 <span class="p">}</span>
 </pre></div>
@@ -192,11 +192,11 @@
 
 <span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;4532 6941 9414 4788&quot;</span><span class="p">,</span> <span class="s2">&quot;4532 6941 9414 4787&quot;</span><span class="p">,</span> <span class="s2">&quot;3775 247152 71461&quot;</span><span class="p">];</span>
 
-<span class="k">if</span><span class="p">(</span><span class="nv">$ccs</span> <span class="o">=</span> <span class="nx">CreditCard</span><span class="o">::</span><span class="na">validateArray</span><span class="p">(</span><span class="nv">$array</span><span class="p">))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$ccs</span> <span class="o">=</span> <span class="nx">CreditCard</span><span class="o">::</span><span class="na">validateArray</span><span class="p">(</span><span class="nv">$array</span><span class="p">))</span> <span class="p">{</span>
 
    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$ccs</span><span class="p">);</span>
 
-<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
    <span class="o">...</span>
 <span class="p">}</span>
 </pre></div>
@@ -224,6 +224,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../csvparser/index.html" class="btn btn-neutral float-right" title="Bem Vindo ao CsvParser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="rg.html" class="btn btn-neutral" title="Rg" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

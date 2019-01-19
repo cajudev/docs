@@ -16,13 +16,13 @@ validate( )
 
    //Retorna um objeto CreditCard ou null se o número for inválido.
 
-   if($cc = CreditCard::validate("5277887630105547")) {
-      
+   if ($cc = CreditCard::validate("5277887630105547")) {
+    
       $cc->getNumber();        // 5277 8876 3010 5547 <<< Formatado
       $cc->getNumber(false);   // 5277887630105547    <<< Sem Formatação
       $cc->getFlag()           // mastercard
       
-   }else {
+   } else {
       ...
    }
 
@@ -37,11 +37,11 @@ validateArray( )
   
    $array = ["4532 6941 9414 4788", "4532 6941 9414 4787", "3775 247152 71461"];
   
-   if($ccs = CreditCard::validateArray($array)) {
+   if ($ccs = CreditCard::validateArray($array)) {
 
       print_r($ccs);
 
-   }else {
+   } else {
       ...
    }
 

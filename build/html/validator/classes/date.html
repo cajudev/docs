@@ -75,18 +75,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">CsvParser:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../csvparser/index.html">Introdução</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../csvparser/instructions.html">Instruções</a></li>
-</ul>
-<p class="caption"><span class="caption-text">RegexBuilder:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/index.html">Introdução</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/examples.html">Exemplos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/details.html">Detalhes</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Validator:</span></p>
+              <p class="caption"><span class="caption-text">Validator:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introdução</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../classes.html">Classes</a><ul class="current">
@@ -97,6 +86,16 @@
 <li class="toctree-l2"><a class="reference internal" href="creditcard.html">CreditCard</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">CsvParser:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/instructions.html">Instruções</a></li>
+</ul>
+<p class="caption"><span class="caption-text">RegexBuilder:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/examples.html">Exemplos</a></li>
 </ul>
 
             
@@ -217,7 +216,7 @@
 
 <span class="c1">//Retorna um objeto Date ou null se a data for inválida.</span>
 
-<span class="k">if</span><span class="p">(</span><span class="nv">$date</span> <span class="o">=</span> <span class="nx">Date</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="s1">&#39;2018-12-19&#39;</span><span class="p">,</span> <span class="s1">&#39;Y-m-d&#39;</span><span class="p">))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$date</span> <span class="o">=</span> <span class="nx">Date</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="s1">&#39;2018-12-19&#39;</span><span class="p">,</span> <span class="s1">&#39;Y-m-d&#39;</span><span class="p">))</span> <span class="p">{</span>
 
    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getDate</span><span class="p">();</span>        <span class="c1">// 2018-12-19 &lt;&lt;&lt; Mesmo formato de entrada</span>
    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getDate</span><span class="p">(</span><span class="s1">&#39;d/m/y&#39;</span><span class="p">);</span> <span class="c1">// 19/12/18   &lt;&lt;&lt; Saída personalizada</span>
@@ -226,7 +225,7 @@
    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getYear</span><span class="p">();</span>        <span class="c1">// 2018</span>
    <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">getTimestamp</span><span class="p">()</span>    <span class="c1">// 1545177600</span>
 
-<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
    <span class="o">...</span>
 <span class="p">}</span>
 </pre></div>
@@ -240,11 +239,11 @@
 
 <span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2018-12-19&#39;</span><span class="p">,</span> <span class="s1">&#39;12/05/2018&#39;</span><span class="p">,</span> <span class="s1">&#39;14-02-18&#39;</span><span class="p">,</span> <span class="s1">&#39;2018/01/05&#39;</span><span class="p">,</span> <span class="s1">&#39;1995-02-18&#39;</span><span class="p">,</span> <span class="s1">&#39;20.08.2000&#39;</span><span class="p">];</span>
 
-<span class="k">if</span><span class="p">(</span><span class="nv">$dates</span> <span class="o">=</span> <span class="nx">Date</span><span class="o">::</span><span class="na">validateArray</span><span class="p">(</span><span class="nv">$array</span><span class="p">,</span> <span class="s1">&#39;Y-m-d&#39;</span><span class="p">))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$dates</span> <span class="o">=</span> <span class="nx">Date</span><span class="o">::</span><span class="na">validateArray</span><span class="p">(</span><span class="nv">$array</span><span class="p">,</span> <span class="s1">&#39;Y-m-d&#39;</span><span class="p">))</span> <span class="p">{</span>
 
    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$dates</span><span class="p">);</span>
 
-<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="o">...</span>
 <span class="p">}</span>
 </pre></div>

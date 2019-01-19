@@ -16,12 +16,12 @@ validate( )
 
    //Retorna um objeto Cpf ou null se o número for inválido.
 
-   if($cpf = Cpf::validate("590.887.600-39")) {
+   if ($cpf = Cpf::validate("590.887.600-39")) {
    
       $cpf->getNumber();        // 590.887.600-39 <<< Formatado
       $cpf->getNumber(false);   // 59088760039    <<< Sem Formatação
       
-   }else {
+   } else {
       ...
    }
 
@@ -36,11 +36,11 @@ validateArray( )
 
    $array = ["438.784.570-81", "231.803.290-41", "477.107.930-69", "769.611.670-55"];
 
-   if($cpfs = Cpf::validateArray($array)) {
+   if ($cpfs = Cpf::validateArray($array)) {
 
       print_r($cpfs);
 
-   }else {
+   } else {
       ...
    }
 

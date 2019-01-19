@@ -36,7 +36,7 @@ validate( )
 
    //Retorna um objeto Date ou null se a data for inválida.
 
-   if($date = Date::validate('2018-12-19', 'Y-m-d')) {
+   if ($date = Date::validate('2018-12-19', 'Y-m-d')) {
       
       $date->getDate();        // 2018-12-19 <<< Mesmo formato de entrada
       $date->getDate('d/m/y'); // 19/12/18   <<< Saída personalizada
@@ -45,7 +45,7 @@ validate( )
       $date->getYear();        // 2018
       $date->getTimestamp()    // 1545177600
       
-   }else {
+   } else {
       ...
    }
 
@@ -60,11 +60,11 @@ validateArray( )
    
    $array = ['2018-12-19', '12/05/2018', '14-02-18', '2018/01/05', '1995-02-18', '20.08.2000'];
    
-   if($dates = Date::validateArray($array, 'Y-m-d')) {
+   if ($dates = Date::validateArray($array, 'Y-m-d')) {
 
       print_r($dates);
 
-   }else {
+   } else {
          ...
    }
 

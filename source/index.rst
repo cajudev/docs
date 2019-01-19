@@ -6,6 +6,15 @@ Seja bem vindo à nossa documentação
 
 .. toctree::
    :hidden:
+   :caption: Validator:
+   :glob:
+   :titlesonly:
+
+   Introdução <validator/index>
+   Classes <validator/classes>
+
+.. toctree::
+   :hidden:
    :caption: CsvParser:
    :glob:
    :titlesonly:
@@ -21,16 +30,6 @@ Seja bem vindo à nossa documentação
 
    Introdução <regexbuilder/index>
    Exemplos <regexbuilder/examples>
-   Detalhes <regexbuilder/details>
-   
-.. toctree::
-   :hidden:
-   :caption: Validator:
-   :glob:
-   :titlesonly:
-
-   Introdução <validator/index>
-   Classes <validator/classes>
 
 No menu ao lado você encontrará todas as informações referentes às nossas bibliotecas de forma bem organizada.
 

@@ -16,12 +16,12 @@ validate( )
 
    //Retorna um objeto Rg ou null se o número for inválido.
 
-   if($rg = Rg::validate("43.230.115-X")) {
+   if ($rg = Rg::validate("43.230.115-X")) {
       
       $rg->getNumber();        // 43.230.115-X <<< Formatado
       $rg->getNumber(false);   // 43230115X    <<< Sem Formatação
       
-   }else {
+   } else {
       ...
    }
 
@@ -36,11 +36,11 @@ validateArray( )
   
   $array = ["32.331.620-7", "43.513.112-6", "26.178.384-1", "15.978.609-7", "43.230.111-X"];
   
-  if($rgs = Rg::validateArray($array)) {
+  if ($rgs = Rg::validateArray($array)) {
 
       print_r($rgs);
 
-  }else {
+  } else {
       ...
   }
 

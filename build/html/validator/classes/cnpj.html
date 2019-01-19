@@ -75,18 +75,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">CsvParser:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../csvparser/index.html">Introdução</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../csvparser/instructions.html">Instruções</a></li>
-</ul>
-<p class="caption"><span class="caption-text">RegexBuilder:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/index.html">Introdução</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/examples.html">Exemplos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/details.html">Detalhes</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Validator:</span></p>
+              <p class="caption"><span class="caption-text">Validator:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introdução</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../classes.html">Classes</a><ul class="current">
@@ -97,6 +86,16 @@
 <li class="toctree-l2"><a class="reference internal" href="creditcard.html">CreditCard</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">CsvParser:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/instructions.html">Instruções</a></li>
+</ul>
+<p class="caption"><span class="caption-text">RegexBuilder:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../regexbuilder/examples.html">Exemplos</a></li>
 </ul>
 
             
@@ -173,12 +172,12 @@
 
 <span class="c1">//Retorna um objeto Cnpj ou null se o número for inválido.</span>
 
-<span class="k">if</span><span class="p">(</span><span class="nv">$cnpj</span> <span class="o">=</span> <span class="nx">Cnpj</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="s2">&quot;60.342.988/0001-07&quot;</span><span class="p">))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$cnpj</span> <span class="o">=</span> <span class="nx">Cnpj</span><span class="o">::</span><span class="na">validate</span><span class="p">(</span><span class="s2">&quot;60.342.988/0001-07&quot;</span><span class="p">))</span> <span class="p">{</span>
 
    <span class="nv">$cnpj</span><span class="o">-&gt;</span><span class="na">getNumber</span><span class="p">();</span>        <span class="c1">// 60.342.988/0001-07 &lt;&lt;&lt; Formatado</span>
    <span class="nv">$cnpj</span><span class="o">-&gt;</span><span class="na">getNumber</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>   <span class="c1">// 60342988000107     &lt;&lt;&lt; Sem Formatação</span>
 
-<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
    <span class="o">...</span>
 <span class="p">}</span>
 </pre></div>
@@ -192,11 +191,11 @@
 
 <span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;57.806.461/0001-74&quot;</span><span class="p">,</span> <span class="s2">&quot;09.475.795/0001-69&quot;</span><span class="p">,</span> <span class="s2">&quot;60.184.969/0001-81&quot;</span><span class="p">];</span>
 
-<span class="k">if</span><span class="p">(</span><span class="nv">$cnpjs</span> <span class="o">=</span> <span class="nx">Cnpj</span><span class="o">::</span><span class="na">validateArray</span><span class="p">(</span><span class="nv">$array</span><span class="p">))</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$cnpjs</span> <span class="o">=</span> <span class="nx">Cnpj</span><span class="o">::</span><span class="na">validateArray</span><span class="p">(</span><span class="nv">$array</span><span class="p">))</span> <span class="p">{</span>
 
     <span class="nb">print_r</span><span class="p">(</span><span class="nv">$cnpjs</span><span class="p">);</span>
 
-<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="o">...</span>
 <span class="p">}</span>
 </pre></div>
