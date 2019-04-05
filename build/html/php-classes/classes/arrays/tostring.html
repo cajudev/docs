@@ -1,0 +1,244 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>toString &mdash; documentação Cajudev </title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../../search.html" />
+    <link rel="next" title="Bem Vindo ao Validator" href="../../../validator/index.html" />
+    <link rel="prev" title="Sintaxe de Array" href="array-sintax.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Cajudev
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PHP Classes:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introdução</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../classes.html">Classes</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../arrays.html">Arrays</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="push.html">Push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apush.html">Apush</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array-sintax.html">Sintaxe de Array</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">toString</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../validator/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../validator/classes.html">Classes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CsvParser:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../csvparser/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../csvparser/instructions.html">Instruções</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cajudev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../classes.html">Classes</a> &raquo;</li>
+        
+          <li><a href="../arrays.html">Arrays</a> &raquo;</li>
+        
+      <li>toString</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tostring">
+<h1>toString<a class="headerlink" href="#tostring" title="Link permanente para este título">¶</a></h1>
+<p>Ao tentarmos utilizar construtores de linguagem como <code class="docutils literal notranslate"><span class="pre">echo</span></code> ou <code class="docutils literal notranslate"><span class="pre">print</span></code> em um objeto,
+um erro é emitido pelo php, pois o mesmo não sabe como tratar esse retorno. Felizmente,
+nossa classe implementa um método que retorna nesses casos,
+o conteúdo do array interno em formato JSON.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">,</span> <span class="s1">&#39;amet&#39;</span><span class="p">,</span> <span class="s1">&#39;consectetur&#39;</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">;</span>
+
+<span class="c1">// {&quot;lorem&quot;:&quot;ipsum&quot;,&quot;dolor&quot;:&quot;sit&quot;,&quot;amet&quot;:&quot;consectetur&quot;}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../validator/index.html" class="btn btn-neutral float-right" title="Bem Vindo ao Validator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="array-sintax.html" class="btn btn-neutral" title="Sintaxe de Array" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Richard Lopes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

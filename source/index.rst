@@ -6,6 +6,15 @@ Seja bem vindo à nossa documentação
 
 .. toctree::
    :hidden:
+   :caption: PHP Classes:
+   :glob:
+   :titlesonly:
+
+   Introdução <php-classes/index>
+   Classes <php-classes/classes>
+
+.. toctree::
+   :hidden:
    :caption: Validator:
    :glob:
    :titlesonly:
@@ -21,15 +30,6 @@ Seja bem vindo à nossa documentação
 
    Introdução <csvparser/index>
    Instruções <csvparser/instructions>
-
-.. toctree::
-   :hidden:
-   :caption: RegexBuilder:
-   :glob:
-   :titlesonly:
-
-   Introdução <regexbuilder/index>
-   Exemplos <regexbuilder/examples>
 
 No menu ao lado você encontrará todas as informações referentes às nossas bibliotecas de forma bem organizada.
 
