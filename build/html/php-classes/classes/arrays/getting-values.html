@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Recebendo Valores &mdash; documentação Cajudev </title>
+  <title>3. Recebendo Valores &mdash; documentação Cajudev </title>
   
 
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Buscar" href="../../../search.html" />
-    <link rel="next" title="Sintaxe de Array" href="array-sintax.html" />
+    <link rel="next" title="4. Sintaxe de Array" href="array-sintax.html" />
     <link rel="prev" title="2. Inserindo valores" href="inserting-values.html" /> 
 
   
@@ -83,8 +83,9 @@
 <li class="toctree-l3"><a class="reference internal" href="inserting-values.html">Inserindo Valores</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Recebendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="array-sintax.html">Sintaxe de Array</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tostring.html">Imprimindo o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="printing-object.html">Imprimindo o Objeto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">Verificando e Removendo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iterating.html">Iterando sobre o Objeto</a></li>
 </ul>
 </li>
 </ul>
@@ -148,7 +149,7 @@
         
           <li><a href="../arrays.html">Arrays</a> &raquo;</li>
         
-      <li>Recebendo Valores</li>
+      <li>3. Recebendo Valores</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -166,12 +167,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="recebendo-valores">
-<h1>Recebendo Valores<a class="headerlink" href="#recebendo-valores" title="Link permanente para este título">¶</a></h1>
+<h1>3. Recebendo Valores<a class="headerlink" href="#recebendo-valores" title="Link permanente para este título">¶</a></h1>
 <p>O método <code class="docutils literal notranslate"><span class="pre">get</span></code> possui função dupla. Ele pode receber como argumento uma chave ou mais
 retornando assim um valor correpondente, ou, caso não seja passado nenhum argumento
 retornará todo o array interno da classe.</p>
 <div class="section" id="selecionando-dados">
-<h2>Selecionando dados<a class="headerlink" href="#selecionando-dados" title="Link permanente para este título">¶</a></h2>
+<h2>3.1 Selecionando dados<a class="headerlink" href="#selecionando-dados" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;sit&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;amet&#39;</span><span class="p">]]);</span>
@@ -199,7 +200,7 @@ retornará todo o array interno da classe.</p>
 </div>
 </div>
 <div class="section" id="recebendo-todo-o-conteudo">
-<h2>Recebendo todo o conteúdo<a class="headerlink" href="#recebendo-todo-o-conteudo" title="Link permanente para este título">¶</a></h2>
+<h2>3.2 Recebendo todo o conteúdo<a class="headerlink" href="#recebendo-todo-o-conteudo" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;sit&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;amet&#39;</span><span class="p">]]);</span>
@@ -236,7 +237,7 @@ existem situações onde você realmente precisará de todo o conteúdo em forma
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="array-sintax.html" class="btn btn-neutral float-right" title="Sintaxe de Array" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="array-sintax.html" class="btn btn-neutral float-right" title="4. Sintaxe de Array" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="inserting-values.html" class="btn btn-neutral" title="2. Inserindo valores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

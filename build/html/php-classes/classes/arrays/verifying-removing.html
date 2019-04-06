@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Verificando e Removendo Valores &mdash; documentação Cajudev </title>
+  <title>6. Verificando e Removendo Valores &mdash; documentação Cajudev </title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Buscar" href="../../../search.html" />
-    <link rel="next" title="Bem Vindo ao Validator" href="../../../validator/index.html" />
-    <link rel="prev" title="Imprimindo o Objeto" href="tostring.html" /> 
+    <link rel="next" title="7. Iterando sobre o Objeto" href="iterating.html" />
+    <link rel="prev" title="5. Imprimindo o Objeto" href="printing-object.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -83,8 +83,9 @@
 <li class="toctree-l3"><a class="reference internal" href="inserting-values.html">Inserindo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="getting-values.html">Recebendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="array-sintax.html">Sintaxe de Array</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tostring.html">Imprimindo o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="printing-object.html">Imprimindo o Objeto</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Verificando e Removendo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iterating.html">Iterando sobre o Objeto</a></li>
 </ul>
 </li>
 </ul>
@@ -148,7 +149,7 @@
         
           <li><a href="../arrays.html">Arrays</a> &raquo;</li>
         
-      <li>Verificando e Removendo Valores</li>
+      <li>6. Verificando e Removendo Valores</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -166,9 +167,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="verificando-e-removendo-valores">
-<h1>Verificando e Removendo Valores<a class="headerlink" href="#verificando-e-removendo-valores" title="Link permanente para este título">¶</a></h1>
+<h1>6. Verificando e Removendo Valores<a class="headerlink" href="#verificando-e-removendo-valores" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="verificando-nulidade">
-<h2>Verificando Nulidade<a class="headerlink" href="#verificando-nulidade" title="Link permanente para este título">¶</a></h2>
+<h2>6.1 Verificando Nulidade<a class="headerlink" href="#verificando-nulidade" title="Link permanente para este título">¶</a></h2>
 <p>Para verificar a existência de uma chave no array, você pode utilizar o método <code class="docutils literal notranslate"><span class="pre">isset</span></code>.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
@@ -189,7 +190,7 @@
 </div>
 </div>
 <div class="section" id="verificando-valores-vazios">
-<h2>Verificando Valores Vazios<a class="headerlink" href="#verificando-valores-vazios" title="Link permanente para este título">¶</a></h2>
+<h2>6.2 Verificando Valores Vazios<a class="headerlink" href="#verificando-valores-vazios" title="Link permanente para este título">¶</a></h2>
 <p>Para verificar se uma chave do array é vazia, utilize o método <code class="docutils literal notranslate"><span class="pre">empty</span></code>.
 Esse método equivale a utilização de <code class="docutils literal notranslate"><span class="pre">$arrays-&gt;noset($key)</span> <span class="pre">||</span> <span class="pre">$arrays-&gt;get($key)</span> <span class="pre">==</span> <span class="pre">false</span></code>.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
@@ -221,10 +222,10 @@ do que a negação do método anterior, equivalendo a <code class="docutils lite
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../../validator/index.html" class="btn btn-neutral float-right" title="Bem Vindo ao Validator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="iterating.html" class="btn btn-neutral float-right" title="7. Iterando sobre o Objeto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tostring.html" class="btn btn-neutral" title="Imprimindo o Objeto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="printing-object.html" class="btn btn-neutral" title="5. Imprimindo o Objeto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

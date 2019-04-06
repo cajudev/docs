@@ -9,8 +9,9 @@ Arrays
    Inserindo Valores <arrays/inserting-values>
    Recebendo Valores <arrays/getting-values>
    Sintaxe de Array <arrays/array-sintax>
-   Imprimindo o Objeto <arrays/tostring>
+   Imprimindo o Objeto <arrays/printing-object>
    Verificando e Removendo Valores <arrays/verifying-removing>
+   Iterando sobre o Objeto <arrays/iterating>
 
 Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 

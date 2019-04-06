@@ -1,13 +1,13 @@
-================
-Sintaxe de Array
-================
+===================
+4. Sintaxe de Array
+===================
 
 É possível manipular esta classe da mesma maneira que um array comum, acessando
 chaves com a forma ``$array[$key]``. Além disso, existem algumas características
 interessantes que serão mostradas abaixo.
 
-Inserindo valores
------------------
+4.1 Inserindo valores
+---------------------
 
 .. code-block:: php
 
@@ -31,8 +31,8 @@ Inserindo valores
     )
    */
 
-Acessando valores
------------------
+4.2 Acessando valores
+---------------------
 
 Para acessar uma chave anteriormente setada, basta fazer como o de costume:
 

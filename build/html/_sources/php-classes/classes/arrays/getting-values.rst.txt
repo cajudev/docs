@@ -1,13 +1,13 @@
-=================
-Recebendo Valores
-=================
+====================
+3. Recebendo Valores
+====================
 
 O método ``get`` possui função dupla. Ele pode receber como argumento uma chave ou mais
 retornando assim um valor correpondente, ou, caso não seja passado nenhum argumento
 retornará todo o array interno da classe.
 
-Selecionando dados
-------------------
+3.1 Selecionando dados
+----------------------
 
 .. code-block:: php
 
@@ -35,8 +35,8 @@ Selecionando dados
     }
    */
 
-Recebendo todo o conteúdo
--------------------------
+3.2 Recebendo todo o conteúdo
+-----------------------------
 
 .. code-block:: php
 

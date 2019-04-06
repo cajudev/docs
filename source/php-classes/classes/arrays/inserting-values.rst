@@ -3,7 +3,7 @@
 ====================
 
 2.1 Push
-========
+--------
 
 O método ``push`` é usado para adicionar (empurrar) um ou mais valores ao final do array
 
@@ -31,7 +31,7 @@ O método ``push`` é usado para adicionar (empurrar) um ou mais valores ao fina
    */
 
 2.2 Apush
-=========
+---------
 
 O método ``apush`` é usado para adicionar (empurrar) um ou mais valores ao final do array
 de maneira associativa onde o primeiro argumento corresponde à chave e o segundo ao valor,

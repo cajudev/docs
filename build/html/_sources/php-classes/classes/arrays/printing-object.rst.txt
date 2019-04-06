@@ -1,6 +1,6 @@
-===================
-Imprimindo o Objeto
-===================
+======================
+5. Imprimindo o Objeto
+======================
 
 Ao tentarmos utilizar construtores de linguagem como ``echo`` ou ``print`` em um objeto, 
 um erro é emitido pelo php, pois o mesmo não sabe como tratar esse retorno. Felizmente, 
