@@ -1,5 +1,5 @@
 ======================
-5. Imprimindo o Objeto
+6. Imprimindo o Objeto
 ======================
 
 Ao tentarmos utilizar construtores de linguagem como ``echo`` ou ``print`` em um objeto, 

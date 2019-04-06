@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Sintaxe de Array &mdash; documentação Cajudev </title>
+  <title>5. Notação de Ponto &mdash; documentação Cajudev </title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Buscar" href="../../../search.html" />
-    <link rel="next" title="3. Notação de Ponto" href="dot-notation.html" />
-    <link rel="prev" title="3. Recebendo Valores" href="getting-values.html" /> 
+    <link rel="next" title="6. Imprimindo o Objeto" href="printing-object.html" />
+    <link rel="prev" title="4. Sintaxe de Array" href="array-sintax.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -82,8 +82,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../arrays.html">Arrays</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="inserting-values.html">Inserindo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="getting-values.html">Recebendo Valores</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Sintaxe de Array</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dot-notation.html">Notação de Ponto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array-sintax.html">Sintaxe de Array</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Notação de Ponto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="printing-object.html">Imprimindo o Objeto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">Verificando e Removendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="iterating.html">Iterando sobre o Objeto</a></li>
@@ -150,7 +150,7 @@
         
           <li><a href="../arrays.html">Arrays</a> &raquo;</li>
         
-      <li>4. Sintaxe de Array</li>
+      <li>5. Notação de Ponto</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -167,44 +167,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sintaxe-de-array">
-<h1>4. Sintaxe de Array<a class="headerlink" href="#sintaxe-de-array" title="Link permanente para este título">¶</a></h1>
-<p>É possível manipular esta classe da mesma maneira que um array comum, acessando
-chaves com a forma <code class="docutils literal notranslate"><span class="pre">$array[$key]</span></code>.</p>
+  <div class="section" id="notacao-de-ponto">
+<h1>5. Notação de Ponto<a class="headerlink" href="#notacao-de-ponto" title="Link permanente para este título">¶</a></h1>
+<p>Uma característica muito interessante que essa classe possui é a possibilidade
+de navegar entre seu conteúdo utilizando a notação de ponto.</p>
 <div class="section" id="inserindo-valores">
-<h2>4.1 Inserindo valores<a class="headerlink" href="#inserindo-valores" title="Link permanente para este título">¶</a></h2>
+<h2>5.1 Inserindo valores<a class="headerlink" href="#inserindo-valores" title="Link permanente para este título">¶</a></h2>
+<p>Para criar arrays multidimensionais facilmente, sem a utilização de milhares de colchetes,
+basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
-<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">;</span>
-<span class="nv">$arrays</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">&#39;dolor&#39;</span><span class="p">;</span>
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem.ipsum.dolor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;amet&#39;</span><span class="p">;</span>
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem.ipsum&#39;</span><span class="p">][]</span> <span class="o">=</span> <span class="s1">&#39;consectetur&#39;</span><span class="p">;</span>
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem.ipsum&#39;</span><span class="p">][]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sit&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;amet&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;dolor&#39;</span><span class="p">]];</span>
 
-<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span> <span class="c1">// Imprimindo todo o objeto</span>
 
 <span class="cm">/*</span>
 <span class="cm"> Cajudev\Classes\Arrays Object</span>
-<span class="cm"> (</span>
-<span class="cm">     [content:protected] =&gt; Array</span>
-<span class="cm">         (</span>
-<span class="cm">             [lorem] =&gt; ipsum</span>
-<span class="cm">             [0] =&gt; dolor</span>
-<span class="cm">         )</span>
+<span class="cm">     (</span>
+<span class="cm">         [content:protected] =&gt; Array</span>
+<span class="cm">             (</span>
+<span class="cm">                 [lorem] =&gt; Cajudev\Classes\Arrays Object</span>
+<span class="cm">                     (</span>
+<span class="cm">                         [content:protected] =&gt; Array</span>
+<span class="cm">                             (</span>
+<span class="cm">                                 [ipsum] =&gt; Cajudev\Classes\Arrays Object</span>
+<span class="cm">                                     (</span>
+<span class="cm">                                         [content:protected] =&gt; Array</span>
+<span class="cm">                                             (</span>
+<span class="cm">                                                 [dolor] =&gt; amet</span>
+<span class="cm">                                                 [0] =&gt; consectetur</span>
+<span class="cm">                                                 [1] =&gt; Cajudev\Classes\Arrays Object</span>
+<span class="cm">                                                     (</span>
+<span class="cm">                                                         [content:protected] =&gt; Array</span>
+<span class="cm">                                                             (</span>
+<span class="cm">                                                                 [sit] =&gt; Array</span>
+<span class="cm">                                                                     (</span>
+<span class="cm">                                                                         [amet] =&gt; dolor</span>
+<span class="cm">                                                                     )</span>
 
-<span class="cm"> )</span>
+<span class="cm">                                                             )</span>
+
+<span class="cm">                                                     )</span>
+
+<span class="cm">                                             )</span>
+
+<span class="cm">                                     )</span>
+
+<span class="cm">                             )</span>
+
+<span class="cm">                     )</span>
+
+<span class="cm">             )</span>
+
+<span class="cm">     )</span>
 <span class="cm">*/</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="acessando-valores">
-<h2>4.2 Acessando valores<a class="headerlink" href="#acessando-valores" title="Link permanente para este título">¶</a></h2>
-<p>Para acessar uma chave anteriormente setada, basta fazer como o de costume:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">];</span> <span class="c1">// ipsum</span>
-</pre></div>
-</div>
-<p>O diferencial é que ao tentar acessar uma chave que ainda não foi setada, nenhum erro será emitido,
-apenas receberá como retorno o valor <code class="docutils literal notranslate"><span class="pre">null</span></code>, e embora a classe possua,
-isso dispensa o uso do método <code class="docutils literal notranslate"><span class="pre">isset</span></code>.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;invalid&#39;</span><span class="p">]);</span> <span class="c1">// NULL</span>
+<h2>5.2 Acessando valores<a class="headerlink" href="#acessando-valores" title="Link permanente para este título">¶</a></h2>
+<p>Da mesma forma, é possível facilmente percorrer o objeto para acessar seu conteúdo.
+Para os exemplos que serão mostrados abaixo, considere o objeto anteriormente criado.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="c1">// Navegando entre os valores</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem.ipsum.1.sit.amet&#39;</span><span class="p">];</span> <span class="c1">// dolor</span>
+
+<span class="c1">// Também é possível misturar as sintaxes se assim o preferir.</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem.ipsum&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;sit.amet&#39;</span><span class="p">];</span> <span class="c1">//dolor</span>
 </pre></div>
 </div>
 </div>
@@ -218,10 +251,10 @@ isso dispensa o uso do método <code class="docutils literal notranslate"><span 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dot-notation.html" class="btn btn-neutral float-right" title="3. Notação de Ponto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="printing-object.html" class="btn btn-neutral float-right" title="6. Imprimindo o Objeto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="getting-values.html" class="btn btn-neutral" title="3. Recebendo Valores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="array-sintax.html" class="btn btn-neutral" title="4. Sintaxe de Array" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

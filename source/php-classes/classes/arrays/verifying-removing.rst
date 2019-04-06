@@ -1,8 +1,8 @@
 ==================================
-6. Verificando e Removendo Valores
+7. Verificando e Removendo Valores
 ==================================
 
-6.1 Verificando Nulidade
+7.1 Verificando Nulidade
 ------------------------
 
 Para verificar a existência de uma chave no array, você pode utilizar o método ``isset``.
@@ -23,7 +23,7 @@ Caso queira executar a lógica inversa, você pode utilizar o método ``noset``.
    var_dump($arrays->noset('lorem')); // bool(false)
    var_dump($arrays->noset('ipsum')); // bool(true)
 
-6.2 Verificando Valores Vazios
+7.2 Verificando Valores Vazios
 ------------------------------
 
 Para verificar se uma chave do array é vazia, utilize o método ``empty``.

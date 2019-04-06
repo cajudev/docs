@@ -9,6 +9,7 @@ Arrays
    Inserindo Valores <arrays/inserting-values>
    Recebendo Valores <arrays/getting-values>
    Sintaxe de Array <arrays/array-sintax>
+   Notação de Ponto <arrays/dot-notation>
    Imprimindo o Objeto <arrays/printing-object>
    Verificando e Removendo Valores <arrays/verifying-removing>
    Iterando sobre o Objeto <arrays/iterating>

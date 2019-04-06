@@ -83,6 +83,7 @@
 <li class="toctree-l3"><a class="reference internal" href="inserting-values.html">Inserindo Valores</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Recebendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="array-sintax.html">Sintaxe de Array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dot-notation.html">Notação de Ponto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="printing-object.html">Imprimindo o Objeto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">Verificando e Removendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="iterating.html">Iterando sobre o Objeto</a></li>
@@ -211,29 +212,6 @@ retornará todo o array interno da classe.</p>
 <p class="last">Evite o uso do método <code class="docutils literal notranslate"><span class="pre">get</span></code> sem passar nenhum argumento, visto que seu uso é custoso,
 pois o mesmo percorre recursivamente todo o array interno, convertendo todas as
 instâncias da classe Arrays em um array normal.</p>
-</div>
-</div>
-<div class="section" id="utilizando-a-dot-notation">
-<h2>3.3 Utilizando a Dot Notation<a class="headerlink" href="#utilizando-a-dot-notation" title="Link permanente para este título">¶</a></h2>
-<p>Existe uma forma interessante de navegar entre o conteúdo de um objeto Arrays,
-utilizando uma notação de ponto através do método <code class="docutils literal notranslate"><span class="pre">fetch</span></code>.</p>
-<p>A concepção deste método foi dada por <a class="reference external" href="https://www.linkedin.com/in/clebersonbieleski">https://www.linkedin.com/in/clebersonbieleski</a>.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
-
-<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span>
-     <span class="s1">&#39;app&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-         <span class="s1">&#39;config&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-             <span class="s1">&#39;database&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-                 <span class="s1">&#39;name&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;teste&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;host&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;password&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;1234&#39;</span>
-             <span class="p">]</span>
-         <span class="p">]</span>
-     <span class="p">]</span>
- <span class="p">]);</span>
-
- <span class="k">echo</span> <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">(</span><span class="s1">&#39;app.config.database.password&#39;</span><span class="p">);</span> <span class="c1">// 1234</span>
-</pre></div>
 </div>
 </div>
 </div>
