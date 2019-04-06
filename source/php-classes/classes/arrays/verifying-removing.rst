@@ -16,6 +16,31 @@ Para verificar a existência de uma chave no array, você pode utilizar o métod
    var_dump($arrays->isset('lorem')); // bool(true)
    var_dump($arrays->isset('ipsum')); // bool(false)
 
+.. hint::
+
+   Em todos os métodos dessa página, é possível aplicar o uso da notação de ponto,
+   explicada na seção 5, como no exemplo abaixo:
+
+.. code-block:: php
+
+   use Cajudev\Classes\Arrays;
+
+   $arrays = new Arrays([
+      'lorem' => [
+         'ipsum' => [
+            'dolor' => [
+               'sit' => 'amet'
+            ]
+         ],
+      ]
+   ]);
+
+   var_dump($arrays->isset('lorem.ipsum.dolor.sit'));     // bool(true)
+   var_dump($arrays['lorem.ipsum.dolor']->isset('sit')); // bool(true)
+
+   var_dump($arrays->isset('lorem.ipsum.amet'));       // bool(false)
+   var_dump($arrays['lorem.ipsum']->isset('amet'));   // bool(false)
+
 Caso queira executar a lógica inversa, você pode utilizar o método ``noset``.
 
 .. code-block:: php

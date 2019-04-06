@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Introdução &mdash; documentação Cajudev </title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../../search.html" />
+    <link rel="next" title="2. Inserindo valores" href="inserting-values.html" />
+    <link rel="prev" title="Arrays" href="../arrays.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Cajudev
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PHP Classes:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Introdução</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../classes.html">Classes</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../arrays.html">Arrays</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. Introdução</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inserting-values.html">2. Inserindo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-values.html">3. Recebendo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array-sintax.html">4. Sintaxe de Array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dot-notation.html">5. Notação de Ponto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="printing-object.html">6. Imprimindo o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">7. Verificando e Removendo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iterating.html">8. Iterando sobre o Objeto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../validator/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../validator/classes.html">Classes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CsvParser:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../csvparser/index.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../csvparser/instructions.html">Instruções</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Cajudev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../classes.html">Classes</a> &raquo;</li>
+        
+          <li><a href="../arrays.html">Arrays</a> &raquo;</li>
+        
+      <li>1. Introdução</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introducao">
+<h1>1. Introdução<a class="headerlink" href="#introducao" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="instanciando-um-objeto-vazio">
+<h2>1.1 Instanciando um objeto vazio<a class="headerlink" href="#instanciando-um-objeto-vazio" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">   Cajudev\Classes\Arrays Object</span>
+<span class="cm">   (</span>
+<span class="cm">      [content:protected] =&gt; Array</span>
+<span class="cm">         (</span>
+<span class="cm">         )</span>
+<span class="cm">   )</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instanciando-a-partir-de-um-array">
+<h2>1.2 Instanciando a partir de um array<a class="headerlink" href="#instanciando-a-partir-de-um-array" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">   Cajudev\Classes\Arrays Object</span>
+<span class="cm">   (</span>
+<span class="cm">      [content:protected] =&gt; Array</span>
+<span class="cm">         (</span>
+<span class="cm">               [0] =&gt; 1</span>
+<span class="cm">               [1] =&gt; 2</span>
+<span class="cm">               [three] =&gt; 3</span>
+<span class="cm">         )</span>
+<span class="cm">   )</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instanciando-a-partir-de-uma-lista-de-valores">
+<h2>1.3 Instanciando a partir de uma lista de valores<a class="headerlink" href="#instanciando-a-partir-de-uma-lista-de-valores" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$int</span>    <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="nv">$std</span>    <span class="o">=</span> <span class="k">new</span> <span class="k">StdClass</span><span class="p">;</span>
+<span class="nv">$string</span> <span class="o">=</span> <span class="s1">&#39;lorem ipsum&#39;</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="nv">$int</span><span class="p">,</span> <span class="nv">$std</span><span class="p">,</span> <span class="nv">$string</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">   Cajudev\Classes\Arrays Object</span>
+<span class="cm">   (</span>
+<span class="cm">      [content:protected] =&gt; Array</span>
+<span class="cm">         (</span>
+<span class="cm">               [0] =&gt; 5</span>
+<span class="cm">               [1] =&gt; stdClass Object</span>
+<span class="cm">                  (</span>
+<span class="cm">                  )</span>
+
+<span class="cm">               [2] =&gt; lorem ipsum</span>
+<span class="cm">         )</span>
+<span class="cm">   )</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instanciando-a-partir-de-um-objeto">
+<h2>1.4 Instanciando a partir de um objeto<a class="headerlink" href="#instanciando-a-partir-de-um-objeto" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$object</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Class</span><span class="p">()</span> <span class="p">{</span>
+   <span class="k">private</span>   <span class="nv">$lorem</span>  <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+   <span class="k">protected</span> <span class="nv">$ipsum</span>  <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+   <span class="k">public</span>    <span class="nv">$dolor</span>  <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="nv">$object</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">   Cajudev\Classes\Arrays Object</span>
+<span class="cm">   (</span>
+<span class="cm">      [content:protected] =&gt; Array</span>
+<span class="cm">         (</span>
+<span class="cm">               [lorem] =&gt; 1</span>
+<span class="cm">               [ipsum] =&gt; 2</span>
+<span class="cm">               [dolor] =&gt; 3</span>
+<span class="cm">         )</span>
+<span class="cm">   )</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="inserting-values.html" class="btn btn-neutral float-right" title="2. Inserindo valores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../arrays.html" class="btn btn-neutral" title="Arrays" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Richard Lopes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
