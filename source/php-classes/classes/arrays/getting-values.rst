@@ -63,3 +63,29 @@ retornará todo o array interno da classe.
     Embora esse uso não     
     seja recomendado pois quebra o conceito de encapsulamento e proteção de dados,  
     existem situações onde você realmente precisará de todo o conteúdo em forma de array.
+
+3.3 Utilizando a Dot Notation
+-----------------------------
+
+Existe uma forma interessante de navegar entre o conteúdo de um objeto Arrays,
+utilizando a notação de ponto (ou quase isso) através do método ``fetch``.
+
+A concepção deste método foi dada por https://www.linkedin.com/in/clebersonbieleski.
+
+.. code-block:: php
+
+   use Cajudev\Classes\Arrays;
+
+   $arrays = new Arrays([
+        'app' => [
+            'config' => [
+                'database' => [
+                    'name'     => 'teste',
+                    'host'     => 'localhost',
+                    'password' => '1234'
+                ]
+            ]
+        ]
+    ]);
+
+    echo $arrays->fetch('app.config.database.password'); // 1234

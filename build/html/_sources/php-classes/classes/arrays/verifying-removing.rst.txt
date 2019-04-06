@@ -20,7 +20,7 @@ Para verificar a existência de uma chave no array, você pode utilizar o métod
    var_dump($arrays->isset('lorem')); // bool(true)
    var_dump($arrays->isset('ipsum')); // bool(false)
 
-Caso queira executar a lógica inverta, você pode utilizar o método ``noset``.
+Caso queira executar a lógica inversa, você pode utilizar o método ``noset``.
 
 .. code-block:: php
 
