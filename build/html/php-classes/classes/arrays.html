@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
-    <link rel="next" title="Push" href="arrays/push.html" />
+    <link rel="next" title="2. Inserindo valores" href="arrays/inserting-values.html" />
     <link rel="prev" title="Classes" href="../classes.html" /> 
 
   
@@ -80,11 +80,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Introdução</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../classes.html">Classes</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Arrays</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="arrays/push.html">Push</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arrays/apush.html">Apush</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arrays/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arrays/inserting-values.html">Inserindo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arrays/getting-values.html">Recebendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arrays/array-sintax.html">Sintaxe de Array</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arrays/tostring.html">toString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arrays/tostring.html">Imprimindo o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arrays/verifying-removing.html">Verificando e Removendo Valores</a></li>
 </ul>
 </li>
 </ul>
@@ -171,9 +171,9 @@
 Ela funciona de forma semelhante à Spl ArrayObject,
 porém com alguns diferenciais interessantes que você verá ao longo desta documentação.</p>
 <div class="section" id="instanciando-um-objeto">
-<h2>Instanciando um objeto<a class="headerlink" href="#instanciando-um-objeto" title="Link permanente para este título">¶</a></h2>
+<h2>1. Instanciando um objeto<a class="headerlink" href="#instanciando-um-objeto" title="Link permanente para este título">¶</a></h2>
 <div class="section" id="criando-um-objeto-vazio">
-<h3>Criando um objeto vazio<a class="headerlink" href="#criando-um-objeto-vazio" title="Link permanente para este título">¶</a></h3>
+<h3>1.1 Criando um objeto vazio<a class="headerlink" href="#criando-um-objeto-vazio" title="Link permanente para este título">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
@@ -191,7 +191,7 @@ porém com alguns diferenciais interessantes que você verá ao longo desta docu
 </div>
 </div>
 <div class="section" id="criando-a-partir-de-um-array-comum">
-<h3>Criando a partir de um array comum<a class="headerlink" href="#criando-a-partir-de-um-array-comum" title="Link permanente para este título">¶</a></h3>
+<h3>1.2 Criando a partir de um array comum<a class="headerlink" href="#criando-a-partir-de-um-array-comum" title="Link permanente para este título">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">];</span>
@@ -214,7 +214,7 @@ porém com alguns diferenciais interessantes que você verá ao longo desta docu
 </div>
 </div>
 <div class="section" id="criando-a-partir-de-uma-lista-de-valores">
-<h3>Criando a partir de uma lista de valores<a class="headerlink" href="#criando-a-partir-de-uma-lista-de-valores" title="Link permanente para este título">¶</a></h3>
+<h3>1.3 Criando a partir de uma lista de valores<a class="headerlink" href="#criando-a-partir-de-uma-lista-de-valores" title="Link permanente para este título">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$int</span>    <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
@@ -242,7 +242,7 @@ porém com alguns diferenciais interessantes que você verá ao longo desta docu
 </div>
 </div>
 <div class="section" id="criando-a-partir-de-um-objeto">
-<h3>Criando a partir de um objeto<a class="headerlink" href="#criando-a-partir-de-um-objeto" title="Link permanente para este título">¶</a></h3>
+<h3>1.4 Criando a partir de um objeto<a class="headerlink" href="#criando-a-partir-de-um-objeto" title="Link permanente para este título">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$object</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Class</span><span class="p">()</span> <span class="p">{</span>
@@ -279,7 +279,7 @@ porém com alguns diferenciais interessantes que você verá ao longo desta docu
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="arrays/push.html" class="btn btn-neutral float-right" title="Push" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="arrays/inserting-values.html" class="btn btn-neutral float-right" title="2. Inserindo valores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../classes.html" class="btn btn-neutral" title="Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>toString &mdash; documentação Cajudev </title>
+  <title>Imprimindo o Objeto &mdash; documentação Cajudev </title>
   
 
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Buscar" href="../../../search.html" />
-    <link rel="next" title="Bem Vindo ao Validator" href="../../../validator/index.html" />
+    <link rel="next" title="Verificando e Removendo Valores" href="verifying-removing.html" />
     <link rel="prev" title="Sintaxe de Array" href="array-sintax.html" /> 
 
   
@@ -80,11 +80,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Introdução</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../classes.html">Classes</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../arrays.html">Arrays</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="push.html">Push</a></li>
-<li class="toctree-l3"><a class="reference internal" href="apush.html">Apush</a></li>
-<li class="toctree-l3"><a class="reference internal" href="get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inserting-values.html">Inserindo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-values.html">Recebendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="array-sintax.html">Sintaxe de Array</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">toString</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Imprimindo o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">Verificando e Removendo Valores</a></li>
 </ul>
 </li>
 </ul>
@@ -148,7 +148,7 @@
         
           <li><a href="../arrays.html">Arrays</a> &raquo;</li>
         
-      <li>toString</li>
+      <li>Imprimindo o Objeto</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -165,12 +165,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tostring">
-<h1>toString<a class="headerlink" href="#tostring" title="Link permanente para este título">¶</a></h1>
+  <div class="section" id="imprimindo-o-objeto">
+<h1>Imprimindo o Objeto<a class="headerlink" href="#imprimindo-o-objeto" title="Link permanente para este título">¶</a></h1>
 <p>Ao tentarmos utilizar construtores de linguagem como <code class="docutils literal notranslate"><span class="pre">echo</span></code> ou <code class="docutils literal notranslate"><span class="pre">print</span></code> em um objeto,
 um erro é emitido pelo php, pois o mesmo não sabe como tratar esse retorno. Felizmente,
 nossa classe implementa um método que retorna nesses casos,
-o conteúdo do array interno em formato JSON.</p>
+o conteúdo do array interno em formato JSON. Caso precise salvar os dados neste, ou em outro
+formato veja o método <code class="docutils literal notranslate"><span class="pre">export</span></code>.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
@@ -190,7 +191,7 @@ o conteúdo do array interno em formato JSON.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../../validator/index.html" class="btn btn-neutral float-right" title="Bem Vindo ao Validator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="verifying-removing.html" class="btn btn-neutral float-right" title="Verificando e Removendo Valores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="array-sintax.html" class="btn btn-neutral" title="Sintaxe de Array" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

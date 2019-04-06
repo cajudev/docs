@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Apush &mdash; documentação Cajudev </title>
+  <title>Verificando e Removendo Valores &mdash; documentação Cajudev </title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Buscar" href="../../../search.html" />
-    <link rel="next" title="Get" href="get.html" />
-    <link rel="prev" title="Push" href="push.html" /> 
+    <link rel="next" title="Bem Vindo ao Validator" href="../../../validator/index.html" />
+    <link rel="prev" title="Imprimindo o Objeto" href="tostring.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -80,11 +80,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Introdução</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../classes.html">Classes</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../arrays.html">Arrays</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="push.html">Push</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Apush</a></li>
-<li class="toctree-l3"><a class="reference internal" href="get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inserting-values.html">Inserindo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-values.html">Recebendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="array-sintax.html">Sintaxe de Array</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tostring.html">toString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tostring.html">Imprimindo o Objeto</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Verificando e Removendo Valores</a></li>
 </ul>
 </li>
 </ul>
@@ -148,7 +148,7 @@
         
           <li><a href="../arrays.html">Arrays</a> &raquo;</li>
         
-      <li>Apush</li>
+      <li>Verificando e Removendo Valores</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -165,60 +165,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="apush">
-<h1>Apush<a class="headerlink" href="#apush" title="Link permanente para este título">¶</a></h1>
-<p>O método <code class="docutils literal notranslate"><span class="pre">apush</span></code> é usado para adicionar (empurrar) um ou mais valores ao final do array
-de maneira associativa onde o primeiro argumento corresponde à chave e o segundo ao valor,
-sendo assim sussessivamente.</p>
+  <div class="section" id="verificando-e-removendo-valores">
+<h1>Verificando e Removendo Valores<a class="headerlink" href="#verificando-e-removendo-valores" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="verificando-nulidade">
+<h2>Verificando Nulidade<a class="headerlink" href="#verificando-nulidade" title="Link permanente para este título">¶</a></h2>
+<p>Para verificar a existência de uma chave no array, você pode utilizar o método <code class="docutils literal notranslate"><span class="pre">isset</span></code>.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
-<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span>
-     <span class="s1">&#39;lorem&#39;</span> <span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;dolor&#39;</span> <span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;amet&#39;</span>  <span class="p">,</span> <span class="s1">&#39;consectetur&#39;</span>
- <span class="p">);</span>
-<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
-
-<span class="cm">/*</span>
-<span class="cm"> Cajudev\Classes\Arrays Object</span>
-<span class="cm"> (</span>
-<span class="cm">     [content:protected] =&gt; Array</span>
-<span class="cm">         (</span>
-<span class="cm">             [lorem] =&gt; ipsum</span>
-<span class="cm">             [dolor] =&gt; sit</span>
-<span class="cm">             [amet] =&gt; consectetur</span>
-<span class="cm">         )</span>
-<span class="cm"> )</span>
-<span class="cm">*/</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Caso o número de argumento informado seja ímpar, o a última chave
-informada terá valor <code class="docutils literal notranslate"><span class="pre">null</span></code></p>
-</div>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
-
-<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
-<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span>
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span> <span class="c1">//lembre-se -&gt; key, value, key, value, etc</span>
      <span class="s1">&#39;lorem&#39;</span> <span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span>
      <span class="s1">&#39;dolor&#39;</span> <span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">,</span>
      <span class="s1">&#39;amet&#39;</span>
  <span class="p">);</span>
-<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
-
- <span class="cm">/*</span>
-<span class="cm"> class Cajudev\Classes\Arrays#413 (1) {</span>
-<span class="cm">     protected $content =&gt;</span>
-<span class="cm">         array(3) {</span>
-<span class="cm">             &#39;lorem&#39; =&gt; string(5) &quot;ipsum&quot;</span>
-<span class="cm">             &#39;dolor&#39; =&gt; string(3) &quot;sit&quot;</span>
-<span class="cm">             &#39;amet&#39; =&gt; NULL</span>
-<span class="cm">         }</span>
-<span class="cm"> }</span>
-<span class="cm"> */</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">isset</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">));</span> <span class="c1">// bool(true)</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">isset</span><span class="p">(</span><span class="s1">&#39;ipsum&#39;</span><span class="p">));</span> <span class="c1">// bool(false)</span>
 </pre></div>
+</div>
+<p>Caso queira executar a lógica inverta, você pode utilizar o método <code class="docutils literal notranslate"><span class="pre">noset</span></code>.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">noset</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">));</span> <span class="c1">// bool(false)</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">noset</span><span class="p">(</span><span class="s1">&#39;ipsum&#39;</span><span class="p">));</span> <span class="c1">// bool(true)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="verificando-valores-vazios">
+<h2>Verificando Valores Vazios<a class="headerlink" href="#verificando-valores-vazios" title="Link permanente para este título">¶</a></h2>
+<p>Para verificar se uma chave do array é vazia, utilize o método <code class="docutils literal notranslate"><span class="pre">empty</span></code>.
+Esse método equivale a utilização de <code class="docutils literal notranslate"><span class="pre">$arrays-&gt;noset($key)</span> <span class="pre">||</span> <span class="pre">$arrays-&gt;get($key)</span> <span class="pre">==</span> <span class="pre">false</span></code>.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">empty</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">));</span> <span class="c1">//bool(true);</span>
+</pre></div>
+</div>
+<p>Para verificar se um valor não é vazio, você pode utilizar o método filled, que nada mais é
+do que a negação do método anterior, equivalendo a <code class="docutils literal notranslate"><span class="pre">$arrays-&gt;isset($key)</span> <span class="pre">&amp;&amp;</span> <span class="pre">$arrays-&gt;get($key)</span> <span class="pre">==</span> <span class="pre">true</span></code>.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">filled</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">));</span> <span class="c1">//bool(false);</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -230,10 +221,10 @@ informada terá valor <code class="docutils literal notranslate"><span class="pr
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="get.html" class="btn btn-neutral float-right" title="Get" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../../validator/index.html" class="btn btn-neutral float-right" title="Bem Vindo ao Validator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="push.html" class="btn btn-neutral" title="Push" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tostring.html" class="btn btn-neutral" title="Imprimindo o Objeto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

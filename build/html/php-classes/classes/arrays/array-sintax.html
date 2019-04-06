@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Buscar" href="../../../search.html" />
-    <link rel="next" title="toString" href="tostring.html" />
-    <link rel="prev" title="Get" href="get.html" /> 
+    <link rel="next" title="Imprimindo o Objeto" href="tostring.html" />
+    <link rel="prev" title="Recebendo Valores" href="getting-values.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -80,11 +80,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">Introdução</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../classes.html">Classes</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../arrays.html">Arrays</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="push.html">Push</a></li>
-<li class="toctree-l3"><a class="reference internal" href="apush.html">Apush</a></li>
-<li class="toctree-l3"><a class="reference internal" href="get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inserting-values.html">Inserindo Valores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-values.html">Recebendo Valores</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Sintaxe de Array</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tostring.html">toString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tostring.html">Imprimindo o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">Verificando e Removendo Valores</a></li>
 </ul>
 </li>
 </ul>
@@ -168,7 +168,7 @@
   <div class="section" id="sintaxe-de-array">
 <h1>Sintaxe de Array<a class="headerlink" href="#sintaxe-de-array" title="Link permanente para este título">¶</a></h1>
 <p>É possível manipular esta classe da mesma maneira que um array comum, acessando
-chaves com a forma <code class="docutils literal notranslate"><span class="pre">$array[$key]</span></code>. No entando, existem algumas características
+chaves com a forma <code class="docutils literal notranslate"><span class="pre">$array[$key]</span></code>. Além disso, existem algumas características
 interessantes que serão mostradas abaixo.</p>
 <div class="section" id="inserindo-valores">
 <h2>Inserindo valores<a class="headerlink" href="#inserindo-valores" title="Link permanente para este título">¶</a></h2>
@@ -200,7 +200,7 @@ interessantes que serão mostradas abaixo.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">];</span> <span class="c1">// ipsum</span>
 </pre></div>
 </div>
-<p>Ao tentar acessar uma chave que ainda não foi setada, nenhum erro será emitido,
+<p>O diferencial é que ao tentar acessar uma chave que ainda não foi setada, nenhum erro será emitido,
 apenas receberá como retorno o valor <code class="docutils literal notranslate"><span class="pre">null</span></code>, e embora a classe possua,
 isso dispensa o uso do método <code class="docutils literal notranslate"><span class="pre">isset</span></code>.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;invalid&#39;</span><span class="p">]);</span> <span class="c1">// NULL</span>
@@ -217,10 +217,10 @@ isso dispensa o uso do método <code class="docutils literal notranslate"><span 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tostring.html" class="btn btn-neutral float-right" title="toString" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tostring.html" class="btn btn-neutral float-right" title="Imprimindo o Objeto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="get.html" class="btn btn-neutral" title="Get" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="getting-values.html" class="btn btn-neutral" title="Recebendo Valores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

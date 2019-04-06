@@ -3,7 +3,7 @@ Sintaxe de Array
 ================
 
 É possível manipular esta classe da mesma maneira que um array comum, acessando
-chaves com a forma ``$array[$key]``. No entando, existem algumas características
+chaves com a forma ``$array[$key]``. Além disso, existem algumas características
 interessantes que serão mostradas abaixo.
 
 Inserindo valores
@@ -40,7 +40,7 @@ Para acessar uma chave anteriormente setada, basta fazer como o de costume:
 
    echo $arrays['lorem']; // ipsum
 
-Ao tentar acessar uma chave que ainda não foi setada, nenhum erro será emitido,
+O diferencial é que ao tentar acessar uma chave que ainda não foi setada, nenhum erro será emitido,
 apenas receberá como retorno o valor ``null``, e embora a classe possua,
 isso dispensa o uso do método ``isset``.
 

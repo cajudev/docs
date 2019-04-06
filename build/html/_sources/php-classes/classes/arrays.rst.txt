@@ -6,20 +6,20 @@ Arrays
    :hidden:
    :glob:
 
-   Push <arrays/push>
-   Apush <arrays/apush>
-   Get <arrays/get>
+   Inserindo Valores <arrays/inserting-values>
+   Recebendo Valores <arrays/getting-values>
    Sintaxe de Array <arrays/array-sintax>
-   toString <arrays/tostring>
+   Imprimindo o Objeto <arrays/tostring>
+   Verificando e Removendo Valores <arrays/verifying-removing>
 
 Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 
 porém com alguns diferenciais interessantes que você verá ao longo desta documentação.
 
-Instanciando um objeto  
+1. Instanciando um objeto  
 =========================
 
-Criando um objeto vazio
+1.1 Criando um objeto vazio
 ---------------------------
 
 .. code-block:: php
@@ -38,7 +38,7 @@ Criando um objeto vazio
       )
    */
 
-Criando a partir de um array comum
+1.2 Criando a partir de um array comum
 --------------------------------------
 
 .. code-block:: php
@@ -62,7 +62,7 @@ Criando a partir de um array comum
       )
    */
 
-Criando a partir de uma lista de valores
+1.3 Criando a partir de uma lista de valores
 --------------------------------------------
 
 .. code-block:: php
@@ -91,7 +91,7 @@ Criando a partir de uma lista de valores
       )
    */
 
-Criando a partir de um objeto
+1.4 Criando a partir de um objeto
 ---------------------------------
 
 .. code-block:: php
