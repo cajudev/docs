@@ -182,20 +182,6 @@ retornará todo o array interno da classe.</p>
 <span class="k">echo</span> <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;dolor&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;sit&#39;</span><span class="p">);</span> <span class="c1">//amet</span>
 
 <span class="k">echo</span> <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">);</span> <span class="c1">//amet</span>
-
-<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">());</span>
-
-<span class="cm">/*</span>
-<span class="cm"> array(3) {</span>
-<span class="cm">     [0] =&gt; string(5) &quot;lorem&quot;</span>
-<span class="cm">     [1] =&gt; string(5) &quot;ipsum&quot;</span>
-<span class="cm">     [2] =&gt; array(1) {</span>
-<span class="cm">         &#39;dolor&#39; =&gt; array(1) {</span>
-<span class="cm">             &#39;sit&#39; =&gt; string(4) &quot;amet&quot;</span>
-<span class="cm">         }</span>
-<span class="cm">     }</span>
-<span class="cm"> }</span>
-<span class="cm">*/</span>
 </pre></div>
 </div>
 </div>
@@ -222,15 +208,15 @@ retornará todo o array interno da classe.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p class="last">Embora esse uso não
-seja recomendado pois quebra o conceito de encapsulamento e proteção de dados,
-existem situações onde você realmente precisará de todo o conteúdo em forma de array.</p>
+<p class="last">Evite o uso do método <code class="docutils literal notranslate"><span class="pre">get</span></code> sem passar nenhum argumento, visto que seu uso é custoso,
+pois o mesmo percorre recursivamente todo o array interno, convertendo todas as
+instâncias da classe Arrays em um array normal.</p>
 </div>
 </div>
 <div class="section" id="utilizando-a-dot-notation">
 <h2>3.3 Utilizando a Dot Notation<a class="headerlink" href="#utilizando-a-dot-notation" title="Link permanente para este título">¶</a></h2>
 <p>Existe uma forma interessante de navegar entre o conteúdo de um objeto Arrays,
-utilizando a notação de ponto (ou quase isso) através do método <code class="docutils literal notranslate"><span class="pre">fetch</span></code>.</p>
+utilizando uma notação de ponto através do método <code class="docutils literal notranslate"><span class="pre">fetch</span></code>.</p>
 <p>A concepção deste método foi dada por <a class="reference external" href="https://www.linkedin.com/in/clebersonbieleski">https://www.linkedin.com/in/clebersonbieleski</a>.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 

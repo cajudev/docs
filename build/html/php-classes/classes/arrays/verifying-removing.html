@@ -173,12 +173,8 @@
 <p>Para verificar a existência de uma chave no array, você pode utilizar o método <code class="docutils literal notranslate"><span class="pre">isset</span></code>.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
-<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
-<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span> <span class="c1">//lembre-se -&gt; key, value, key, value, etc</span>
-     <span class="s1">&#39;lorem&#39;</span> <span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;dolor&#39;</span> <span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;amet&#39;</span>
- <span class="p">);</span>
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sit&#39;</span><span class="p">]);</span>
+
 <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">isset</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">));</span> <span class="c1">// bool(true)</span>
 <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">isset</span><span class="p">(</span><span class="s1">&#39;ipsum&#39;</span><span class="p">));</span> <span class="c1">// bool(false)</span>
 </pre></div>
@@ -197,7 +193,7 @@ Esse método equivale a utilização de <code class="docutils literal notranslat
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
-<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">empty</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">));</span> <span class="c1">//bool(true);</span>
 </pre></div>
 </div>
@@ -207,7 +203,7 @@ do que a negação do método anterior, equivalendo a <code class="docutils lite
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
-<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">filled</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">));</span> <span class="c1">//bool(false);</span>
 </pre></div>
 </div>

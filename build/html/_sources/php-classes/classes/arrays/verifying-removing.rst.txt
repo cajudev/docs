@@ -11,12 +11,8 @@ Para verificar a existência de uma chave no array, você pode utilizar o métod
 
    use Cajudev\Classes\Arrays;
 
-   $arrays = new Arrays();
-   $arrays->apush( //lembre-se -> key, value, key, value, etc
-        'lorem' , 'ipsum',
-        'dolor' , 'sit',
-        'amet'
-    );
+   $arrays = new Arrays(['lorem' => 'ipsum', 'dolor' => 'sit']);
+
    var_dump($arrays->isset('lorem')); // bool(true)
    var_dump($arrays->isset('ipsum')); // bool(false)
 
@@ -39,7 +35,7 @@ Esse método equivale a utilização de ``$arrays->noset($key) || $arrays->get($
 
    $arrays = new Arrays();
 
-   $arrays->apush('lorem', 0);
+   $arrays['lorem'] = false;
    var_dump($arrays->empty('lorem')); //bool(true);
 
 Para verificar se um valor não é vazio, você pode utilizar o método filled, que nada mais é
@@ -51,5 +47,5 @@ do que a negação do método anterior, equivalendo a ``$arrays->isset($key) && 
 
    $arrays = new Arrays();
 
-   $arrays->apush('lorem', 0);
+   $arrays['lorem'] = false;
    var_dump($arrays->filled('lorem')); //bool(false);

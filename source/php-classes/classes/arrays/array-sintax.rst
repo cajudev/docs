@@ -3,8 +3,7 @@
 ===================
 
 É possível manipular esta classe da mesma maneira que um array comum, acessando
-chaves com a forma ``$array[$key]``. Além disso, existem algumas características
-interessantes que serão mostradas abaixo.
+chaves com a forma ``$array[$key]``.
 
 4.1 Inserindo valores
 ---------------------

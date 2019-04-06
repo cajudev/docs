@@ -21,20 +21,6 @@ retornará todo o array interno da classe.
 
    echo $arrays->get(2, 'dolor', 'sit'); //amet
 
-   var_dump($arrays->get());
-
-   /*
-    array(3) {
-        [0] => string(5) "lorem"
-        [1] => string(5) "ipsum"
-        [2] => array(1) {
-            'dolor' => array(1) {
-                'sit' => string(4) "amet"
-            }
-        }
-    }
-   */
-
 3.2 Recebendo todo o conteúdo
 -----------------------------
 
@@ -60,15 +46,15 @@ retornará todo o array interno da classe.
    
 .. note::
 
-    Embora esse uso não     
-    seja recomendado pois quebra o conceito de encapsulamento e proteção de dados,  
-    existem situações onde você realmente precisará de todo o conteúdo em forma de array.
+    Evite o uso do método ``get`` sem passar nenhum argumento, visto que seu uso é custoso,
+    pois o mesmo percorre recursivamente todo o array interno, convertendo todas as
+    instâncias da classe Arrays em um array normal.
 
 3.3 Utilizando a Dot Notation
 -----------------------------
 
 Existe uma forma interessante de navegar entre o conteúdo de um objeto Arrays,
-utilizando a notação de ponto (ou quase isso) através do método ``fetch``.
+utilizando uma notação de ponto através do método ``fetch``.
 
 A concepção deste método foi dada por https://www.linkedin.com/in/clebersonbieleski.
 

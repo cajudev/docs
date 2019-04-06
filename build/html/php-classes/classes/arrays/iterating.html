@@ -173,8 +173,7 @@
 <p>A utilização da classe em um laço for-each é a mesma a de um array comum</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
-<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
-<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">);</span>
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sit&#39;</span><span class="p">]);</span>
 
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$arrays</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
      <span class="k">echo</span> <span class="s2">&quot;key: </span><span class="si">{</span><span class="nv">$key</span><span class="si">}</span><span class="s2"> value: </span><span class="si">{</span><span class="nv">$value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
@@ -263,23 +262,23 @@ segundo argumento um valor negativo.</p>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">;</span>
 <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">push</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">,</span> <span class="s1">&#39;amet&#39;</span><span class="p">,</span> <span class="s1">&#39;consectetur&#39;</span><span class="p">);</span>
-<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">apush</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">,</span> <span class="s1">&#39;amet&#39;</span><span class="p">,</span> <span class="s1">&#39;consectetur&#39;</span><span class="p">);</span>
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;dolor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sit&#39;</span><span class="p">;</span>
 
 <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">echo</span> <span class="s2">&quot;key: </span><span class="si">{</span><span class="nv">$key</span><span class="si">}</span><span class="s2"> value: </span><span class="si">{</span><span class="nv">$value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
 <span class="p">});</span>
 
 <span class="cm">/*</span>
+<span class="cm">    key: lorem value: ipsum</span>
 <span class="cm">    key: 0 value: lorem</span>
 <span class="cm">    key: 1 value: ipsum</span>
 <span class="cm">    key: 2 value: dolor</span>
 <span class="cm">    key: 3 value: sit</span>
 <span class="cm">    key: 4 value: amet</span>
 <span class="cm">    key: 5 value: consectetur</span>
-<span class="cm">    key: lorem value: ipsum</span>
 <span class="cm">    key: dolor value: sit</span>
-<span class="cm">    key: amet value: consectetur</span>
 <span class="cm">*/</span>
 </pre></div>
 </div>

@@ -11,8 +11,7 @@ A utilização da classe em um laço for-each é a mesma a de um array comum
 
    use Cajudev\Classes\Arrays;
 
-   $arrays = new Arrays();
-   $arrays->apush('lorem', 'ipsum', 'dolor', 'sit');
+   $arrays = new Arrays(['lorem' => 'ipsum', 'dolor' => 'sit']);
 
    foreach ($arrays as $key => $value) {
         echo "key: {$key} value: {$value}" . PHP_EOL;
@@ -112,23 +111,23 @@ Esse método também funciona com arrays associativos e arrays mistos.
 
     $arrays = new Arrays();
 
+    $arrays['lorem'] = 'ipsum';
     $arrays->push('lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur');
-    $arrays->apush('lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur');
+    $arrays['dolor'] = 'sit';
 
     $arrays->for(0, 1, function($key, $value) {
         echo "key: {$key} value: {$value}" . PHP_EOL;
     });
 
     /*
+        key: lorem value: ipsum
         key: 0 value: lorem
         key: 1 value: ipsum
         key: 2 value: dolor
         key: 3 value: sit
         key: 4 value: amet
         key: 5 value: consectetur
-        key: lorem value: ipsum
         key: dolor value: sit
-        key: amet value: consectetur
     */   
 
 7.3.4 Realizando modificações

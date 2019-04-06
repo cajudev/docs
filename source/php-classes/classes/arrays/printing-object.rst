@@ -12,8 +12,7 @@ formato veja o método ``export``.
 
    use Cajudev\Classes\Arrays;
 
-   $arrays = new Arrays();
-   $arrays->apush('lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur');
+   $arrays = new Arrays(['lorem' => 'ipsum', 'dolor' => 'sit', 'amet' => 'consectetur']);
    echo $arrays; 
    
    // {"lorem":"ipsum","dolor":"sit","amet":"consectetur"}
