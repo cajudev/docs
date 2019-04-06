@@ -196,7 +196,7 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
 7.3.6 Exemplo de utilização
 ...........................
 
-Dado um certo array de com números de 0 a 100, como você faria para obter todos os
+Dado um certo array com números de 0 a 100, como você faria para obter todos os
 números pares maiores que 70? Utilizando o método for, essa tarefa é muito simples.
 
 .. code-block:: php
