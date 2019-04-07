@@ -74,3 +74,29 @@ do que a negação do método anterior, equivalendo a ``$arrays->isset($key) && 
 
    $arrays['lorem'] = false;
    var_dump($arrays->filled('lorem')); //bool(false);
+
+7.3 Removendo Valores
+---------------------
+
+Para remover um elemento do array utilize o método ``unset``.
+
+.. code-block:: php
+
+   use Cajudev\Classes\Arrays;
+
+   $arrays = new Arrays([  
+      'lorem' => [
+         'ipsum' => [
+            'dolor' => [
+               'sit' => 'amet'
+            ]
+         ],
+      ]
+   ]);
+
+   echo $arrays; // {"lorem":{"ipsum":{"dolor":{"sit":"amet"}}}}
+
+   $arrays->unset('lorem.ipsum.dolor');
+
+   echo $arrays; // {"lorem":{"ipsum":[]}}
+   

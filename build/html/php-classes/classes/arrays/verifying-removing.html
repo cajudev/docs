@@ -88,6 +88,7 @@
 <li class="toctree-l3"><a class="reference internal" href="printing-object.html">6. Imprimindo o Objeto</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">7. Verificando e Removendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="iterating.html">8. Iterando sobre o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general-methods.html">9. Métodos de Uso geral</a></li>
 </ul>
 </li>
 </ul>
@@ -231,6 +232,29 @@ do que a negação do método anterior, equivalendo a <code class="docutils lite
 
 <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">filled</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">));</span> <span class="c1">//bool(false);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="removendo-valores">
+<h2>7.3 Removendo Valores<a class="headerlink" href="#removendo-valores" title="Link permanente para este título">¶</a></h2>
+<p>Para remover um elemento do array utilize o método <code class="docutils literal notranslate"><span class="pre">unset</span></code>.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span>
+   <span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;ipsum&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+         <span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;sit&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;amet&#39;</span>
+         <span class="p">]</span>
+      <span class="p">],</span>
+   <span class="p">]</span>
+<span class="p">]);</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">;</span> <span class="c1">// {&quot;lorem&quot;:{&quot;ipsum&quot;:{&quot;dolor&quot;:{&quot;sit&quot;:&quot;amet&quot;}}}}</span>
+
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">unset</span><span class="p">(</span><span class="s1">&#39;lorem.ipsum.dolor&#39;</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">;</span> <span class="c1">// {&quot;lorem&quot;:{&quot;ipsum&quot;:[]}}</span>
 </pre></div>
 </div>
 </div>

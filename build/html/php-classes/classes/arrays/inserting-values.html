@@ -88,6 +88,7 @@
 <li class="toctree-l3"><a class="reference internal" href="printing-object.html">6. Imprimindo o Objeto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">7. Verificando e Removendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="iterating.html">8. Iterando sobre o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general-methods.html">9. Métodos de Uso geral</a></li>
 </ul>
 </li>
 </ul>
@@ -170,6 +171,8 @@
             
   <div class="section" id="inserindo-valores">
 <h1>2. Inserindo valores<a class="headerlink" href="#inserindo-valores" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="push">
+<h2>2.1 Push<a class="headerlink" href="#push" title="Link permanente para este título">¶</a></h2>
 <p>O método <code class="docutils literal notranslate"><span class="pre">push</span></code> é usado para adicionar (empurrar) um ou mais valores ao final do array</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
@@ -182,22 +185,43 @@
 <span class="cm">   (</span>
 <span class="cm">      [content:protected] =&gt; Array</span>
 <span class="cm">         (</span>
-<span class="cm">               [0] =&gt; lorem</span>
-<span class="cm">               [1] =&gt; ipsum</span>
-<span class="cm">               [2] =&gt; dolor</span>
-<span class="cm">               [3] =&gt; sit</span>
-<span class="cm">               [4] =&gt; amet</span>
-<span class="cm">               [5] =&gt; consectetur</span>
+<span class="cm">            [0] =&gt; lorem</span>
+<span class="cm">            [1] =&gt; ipsum</span>
+<span class="cm">            [2] =&gt; dolor</span>
+<span class="cm">            [3] =&gt; sit</span>
+<span class="cm">            [4] =&gt; amet</span>
+<span class="cm">            [5] =&gt; consectetur</span>
 <span class="cm">         )</span>
 <span class="cm">   )</span>
 <span class="cm">*/</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Esse método é apenas um facilitador, para quando houver a necessidade de
-empurrar vários valores de uma única vez no array. Na maioria das vezes você utilizará
-a sintaxe de array que será descrita mais adiante.</p>
+</div>
+<div class="section" id="unshift">
+<h2>2.2 Unshift<a class="headerlink" href="#unshift" title="Link permanente para este título">¶</a></h2>
+<p>O método <code class="docutils literal notranslate"><span class="pre">unshift</span></code> é usado para adicionar (empurrar) um ou mais valores no início do array</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">);</span>
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">unshift</span><span class="p">(</span><span class="s1">&#39;sit&#39;</span><span class="p">,</span> <span class="s1">&#39;amet&#39;</span><span class="p">,</span> <span class="s1">&#39;consectetur&#39;</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">   Cajudev\Classes\Arrays Object</span>
+<span class="cm">   (</span>
+<span class="cm">      [content:protected] =&gt; Array</span>
+<span class="cm">         (</span>
+<span class="cm">            [0] =&gt; sit</span>
+<span class="cm">            [1] =&gt; amet</span>
+<span class="cm">            [2] =&gt; consectetur</span>
+<span class="cm">            [3] =&gt; lorem</span>
+<span class="cm">            [4] =&gt; ipsum</span>
+<span class="cm">            [5] =&gt; dolor</span>
+<span class="cm">         )</span>
+<span class="cm">   )</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
 </div>
 </div>
 

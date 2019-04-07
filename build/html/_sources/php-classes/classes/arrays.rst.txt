@@ -14,6 +14,7 @@ Arrays
    6. Imprimindo o Objeto <arrays/printing-object>
    7. Verificando e Removendo Valores <arrays/verifying-removing>
    8. Iterando sobre o Objeto <arrays/iterating>
+   9. Métodos de Uso geral <arrays/general-methods>
 
 Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 

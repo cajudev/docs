@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Sintaxe de Array &mdash; documentação Cajudev </title>
+  <title>9. Métodos de Uso Geral &mdash; documentação Cajudev </title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Buscar" href="../../../search.html" />
-    <link rel="next" title="5. Notação de Ponto" href="dot-notation.html" />
-    <link rel="prev" title="3. Recebendo Valores" href="getting-values.html" /> 
+    <link rel="next" title="Bem Vindo ao Validator" href="../../../validator/index.html" />
+    <link rel="prev" title="8. Iterando sobre o Objeto" href="iterating.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -83,12 +83,12 @@
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">1. Introdução</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inserting-values.html">2. Inserindo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="getting-values.html">3. Recebendo Valores</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4. Sintaxe de Array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="array-sintax.html">4. Sintaxe de Array</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dot-notation.html">5. Notação de Ponto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="printing-object.html">6. Imprimindo o Objeto</a></li>
 <li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">7. Verificando e Removendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="iterating.html">8. Iterando sobre o Objeto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="general-methods.html">9. Métodos de Uso geral</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">9. Métodos de Uso geral</a></li>
 </ul>
 </li>
 </ul>
@@ -152,7 +152,7 @@
         
           <li><a href="../arrays.html">Arrays</a> &raquo;</li>
         
-      <li>4. Sintaxe de Array</li>
+      <li>9. Métodos de Uso Geral</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -169,44 +169,56 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sintaxe-de-array">
-<h1>4. Sintaxe de Array<a class="headerlink" href="#sintaxe-de-array" title="Link permanente para este título">¶</a></h1>
-<p>É possível manipular esta classe da mesma maneira que um array comum, acessando
-chaves com a forma <code class="docutils literal notranslate"><span class="pre">$array[$key]</span></code>.</p>
-<div class="section" id="inserindo-valores">
-<h2>4.1 Inserindo valores<a class="headerlink" href="#inserindo-valores" title="Link permanente para este título">¶</a></h2>
+  <div class="section" id="metodos-de-uso-geral">
+<h1>9. Métodos de Uso Geral<a class="headerlink" href="#metodos-de-uso-geral" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="count">
+<h2>9.1 Count<a class="headerlink" href="#count" title="Link permanente para este título">¶</a></h2>
+<p>O método count retorna a quantidade de elementos do array</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
 
-<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
-<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">;</span>
-<span class="nv">$arrays</span><span class="p">[]</span> <span class="o">=</span> <span class="s1">&#39;dolor&#39;</span><span class="p">;</span>
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;sit&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;amet&#39;</span><span class="p">]]);</span>
 
-<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
-
-<span class="cm">/*</span>
-<span class="cm"> Cajudev\Classes\Arrays Object</span>
-<span class="cm"> (</span>
-<span class="cm">     [content:protected] =&gt; Array</span>
-<span class="cm">         (</span>
-<span class="cm">             [lorem] =&gt; ipsum</span>
-<span class="cm">             [0] =&gt; dolor</span>
-<span class="cm">         )</span>
-
-<span class="cm"> )</span>
-<span class="cm">*/</span>
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span> <span class="c1">// 3</span>
+</pre></div>
+</div>
+<p>Caso o argumento $mode seja informado como <code class="docutils literal notranslate"><span class="pre">COUNT_RECURSIVE</span></code> ou <code class="docutils literal notranslate"><span class="pre">1</span></code>, o retorno será
+a quantidade total de elementos e não apenas do nível atual.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// 5</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="acessando-valores">
-<h2>4.2 Acessando valores<a class="headerlink" href="#acessando-valores" title="Link permanente para este título">¶</a></h2>
-<p>Para acessar uma chave anteriormente setada, basta fazer como o de costume:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">];</span> <span class="c1">// ipsum</span>
+<div class="section" id="last">
+<h2>9.2 Last<a class="headerlink" href="#last" title="Link permanente para este título">¶</a></h2>
+<p>Retorna o último elemento de um array (reinicia o ponteiro)</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">last</span><span class="p">();</span> <span class="c1">// &#39;dolor&#39;</span>
 </pre></div>
 </div>
-<p>O diferencial é que ao tentar acessar uma chave que ainda não foi setada, nenhum erro será emitido,
-apenas receberá como retorno o valor <code class="docutils literal notranslate"><span class="pre">null</span></code>, e embora a classe possua,
-isso dispensa o uso do método <code class="docutils literal notranslate"><span class="pre">isset</span></code>.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;invalid&#39;</span><span class="p">]);</span> <span class="c1">// NULL</span>
+</div>
+<div class="section" id="shift">
+<h2>9.3 Shift<a class="headerlink" href="#shift" title="Link permanente para este título">¶</a></h2>
+<p>Remove o primeiro elemento de um array (reinicia o ponteiro)</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">);</span>
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">shift</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">;</span> <span class="c1">// [&quot;ipsum&quot;,&quot;dolor&quot;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pop">
+<h2>9.4 Pop<a class="headerlink" href="#pop" title="Link permanente para este título">¶</a></h2>
+<p>Remove o último elemento de um array (reinicia o ponteiro)</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">);</span>
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">pop</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">;</span> <span class="c1">// [&quot;lorem&quot;,&quot;ipsum&quot;]</span>
 </pre></div>
 </div>
 </div>
@@ -220,10 +232,10 @@ isso dispensa o uso do método <code class="docutils literal notranslate"><span 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dot-notation.html" class="btn btn-neutral float-right" title="5. Notação de Ponto" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../../validator/index.html" class="btn btn-neutral float-right" title="Bem Vindo ao Validator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="getting-values.html" class="btn btn-neutral" title="3. Recebendo Valores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="iterating.html" class="btn btn-neutral" title="8. Iterando sobre o Objeto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
