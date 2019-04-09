@@ -9,14 +9,14 @@ O método ``push`` é usado para adicionar (empurrar) um ou mais valores ao fina
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', 'dolor');
    $arrays->push('sit', 'amet', 'consectetur');
    print_r($arrays);
 
    /*
-      Cajudev\Classes\Arrays Object
+      Cajudev\Arrays Object
       (
          [content:protected] => Array
             (
@@ -37,14 +37,14 @@ O método ``unshift`` é usado para adicionar (empurrar) um ou mais valores no i
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', 'dolor');
    $arrays->unshift('sit', 'amet', 'consectetur');
    print_r($arrays);
 
    /*
-      Cajudev\Classes\Arrays Object
+      Cajudev\Arrays Object
       (
          [content:protected] => Array
             (

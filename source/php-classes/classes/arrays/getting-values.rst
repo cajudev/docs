@@ -11,7 +11,7 @@ retornará todo o array interno da classe.
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]);
 
@@ -26,7 +26,7 @@ retornará todo o array interno da classe.
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]);
    
@@ -43,9 +43,3 @@ retornará todo o array interno da classe.
         }
     }
    */
-   
-.. note::
-
-    Evite o uso do método ``get`` sem passar nenhum argumento, visto que seu uso é custoso,
-    pois o mesmo percorre recursivamente todo o array interno, convertendo todas as
-    instâncias da classe Arrays em um array normal.

@@ -13,7 +13,7 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays();
    $arrays['lorem.ipsum.dolor'] = 'amet';
@@ -23,21 +23,21 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
    print_r($arrays); // Imprimindo todo o objeto
 
    /*
-    Cajudev\Classes\Arrays Object
+    Cajudev\Arrays Object
         (
             [content:protected] => Array
                 (
-                    [lorem] => Cajudev\Classes\Arrays Object
+                    [lorem] => Cajudev\Arrays Object
                         (
                             [content:protected] => Array
                                 (
-                                    [ipsum] => Cajudev\Classes\Arrays Object
+                                    [ipsum] => Cajudev\Arrays Object
                                         (
                                             [content:protected] => Array
                                                 (
                                                     [dolor] => amet
                                                     [0] => consectetur
-                                                    [1] => Cajudev\Classes\Arrays Object
+                                                    [1] => Cajudev\Arrays Object
                                                         (
                                                             [content:protected] => Array
                                                                 (

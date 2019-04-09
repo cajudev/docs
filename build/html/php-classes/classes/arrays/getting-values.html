@@ -176,7 +176,7 @@ retornando assim um valor correpondente, ou, caso não seja passado nenhum argum
 retornará todo o array interno da classe.</p>
 <div class="section" id="selecionando-dados">
 <h2>3.1 Selecionando dados<a class="headerlink" href="#selecionando-dados" title="Link permanente para este título">¶</a></h2>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;sit&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;amet&#39;</span><span class="p">]]);</span>
 
@@ -190,7 +190,7 @@ retornará todo o array interno da classe.</p>
 </div>
 <div class="section" id="recebendo-todo-o-conteudo">
 <h2>3.2 Recebendo todo o conteúdo<a class="headerlink" href="#recebendo-todo-o-conteudo" title="Link permanente para este título">¶</a></h2>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;sit&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;amet&#39;</span><span class="p">]]);</span>
 
@@ -208,12 +208,6 @@ retornará todo o array interno da classe.</p>
 <span class="cm"> }</span>
 <span class="cm">*/</span>
 </pre></div>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Evite o uso do método <code class="docutils literal notranslate"><span class="pre">get</span></code> sem passar nenhum argumento, visto que seu uso é custoso,
-pois o mesmo percorre recursivamente todo o array interno, convertendo todas as
-instâncias da classe Arrays em um array normal.</p>
 </div>
 </div>
 </div>

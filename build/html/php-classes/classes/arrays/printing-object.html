@@ -176,7 +176,7 @@ um erro é emitido pelo php, pois o mesmo não sabe como tratar esse retorno. Fe
 nossa classe implementa um método que retorna nesses casos,
 o conteúdo do array interno em formato JSON. Caso precise salvar os dados neste, ou em outro
 formato veja o método <code class="docutils literal notranslate"><span class="pre">export</span></code>.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sit&#39;</span><span class="p">,</span> <span class="s1">&#39;amet&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;consectetur&#39;</span><span class="p">]);</span>
 <span class="k">echo</span> <span class="nv">$arrays</span><span class="p">;</span>

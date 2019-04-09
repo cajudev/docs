@@ -9,7 +9,7 @@ O método count retorna a quantidade de elementos do array
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]);
 
@@ -29,7 +29,7 @@ Retorna o último elemento de um array (reinicia o ponteiro)
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', 'dolor');
 
@@ -42,7 +42,7 @@ Remove o primeiro elemento de um array (reinicia o ponteiro)
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', 'dolor');
    $arrays->shift();
@@ -56,7 +56,7 @@ Remove o último elemento de um array (reinicia o ponteiro)
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', 'dolor');
    $arrays->pop();

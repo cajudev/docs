@@ -9,7 +9,7 @@ A utilização da classe em um laço for-each é a mesma a de um array comum
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays(['lorem' => 'ipsum', 'dolor' => 'sit']);
 
@@ -29,7 +29,7 @@ A utilização da classe em um laço while é realizada da seguinte maneira:
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays();
    $arrays->push('lorem', 'ipsum', 'dolor', 'sit');
@@ -58,7 +58,7 @@ o valor de cada iteração.
 
 .. code-block:: php
 
-    use Cajudev\Classes\Arrays;
+    use Cajudev\Arrays;
 
     $arrays = new Arrays();
 
@@ -83,7 +83,7 @@ segundo argumento um valor negativo.
 
 .. code-block:: php
 
-    use Cajudev\Classes\Arrays;
+    use Cajudev\Arrays;
 
     $arrays = new Arrays();
 
@@ -107,7 +107,7 @@ Esse método também funciona com arrays associativos e arrays mistos.
 
 .. code-block:: php
 
-    use Cajudev\Classes\Arrays;
+    use Cajudev\Arrays;
 
     $arrays = new Arrays();
 
@@ -138,7 +138,7 @@ você precisará adicionar um ``use`` passando o seu objeto:
 
 .. code-block:: php
 
-    use Cajudev\Classes\Arrays;
+    use Cajudev\Arrays;
 
     $arrays = new Arrays();
 
@@ -151,7 +151,7 @@ você precisará adicionar um ``use`` passando o seu objeto:
     print_r($arrays);
 
     /*
-        Cajudev\Classes\Arrays Object
+        Cajudev\Arrays Object
         (
             [content:protected] => Array
                 (
@@ -174,7 +174,7 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
 
 .. code-block:: php
 
-    use Cajudev\Classes\Arrays;
+    use Cajudev\Arrays;
 
     $arrays = new Arrays(0, 1, 2, 3, 4, 5);
 
@@ -200,7 +200,7 @@ números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é 
 
 .. code-block:: php
 
-    use Cajudev\Classes\Arrays;
+    use Cajudev\Arrays;
 
     $arrays = new Arrays(
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,

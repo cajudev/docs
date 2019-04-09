@@ -10,7 +10,7 @@ formato veja o método ``export``.
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays(['lorem' => 'ipsum', 'dolor' => 'sit', 'amet' => 'consectetur']);
    echo $arrays; 

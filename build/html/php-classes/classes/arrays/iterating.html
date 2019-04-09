@@ -174,7 +174,7 @@
 <div class="section" id="iterando-em-um-laco-for-each">
 <h2>8.1 Iterando em um laço for-each<a class="headerlink" href="#iterando-em-um-laco-for-each" title="Link permanente para este título">¶</a></h2>
 <p>A utilização da classe em um laço for-each é a mesma a de um array comum</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sit&#39;</span><span class="p">]);</span>
 
@@ -192,7 +192,7 @@
 <div class="section" id="iterando-em-um-laco-while">
 <h2>8.2 Iterando em um laço while<a class="headerlink" href="#iterando-em-um-laco-while" title="Link permanente para este título">¶</a></h2>
 <p>A utilização da classe em um laço while é realizada da seguinte maneira:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">push</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">);</span>
@@ -217,7 +217,7 @@ incremento, e o último é uma função anônima que recebe por meio de injeçã
 o valor de cada iteração.</p>
 <div class="section" id="iterando-para-frente">
 <h3>8.3.1 Iterando para frente<a class="headerlink" href="#iterando-para-frente" title="Link permanente para este título">¶</a></h3>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span> <span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span> <span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
  <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
@@ -239,7 +239,7 @@ o valor de cada iteração.</p>
 <h3>8.3.2 Iterando para trás<a class="headerlink" href="#iterando-para-tras" title="Link permanente para este título">¶</a></h3>
 <p>Caso você queira iterar inversamente o array, basta informar como
 segundo argumento um valor negativo.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
@@ -261,7 +261,7 @@ segundo argumento um valor negativo.</p>
 <div class="section" id="iterando-arrays-mistos">
 <h3>8.3.3 Iterando arrays mistos<a class="headerlink" href="#iterando-arrays-mistos" title="Link permanente para este título">¶</a></h3>
 <p>Esse método também funciona com arrays associativos e arrays mistos.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
@@ -290,7 +290,7 @@ segundo argumento um valor negativo.</p>
 <h3>8.3.4 Realizando modificações<a class="headerlink" href="#realizando-modificacoes" title="Link permanente para este título">¶</a></h3>
 <p>Caso você necessite fazer modificações internas no array ao invés de somente obter dados,
 você precisará adicionar um <code class="docutils literal notranslate"><span class="pre">use</span></code> passando o seu objeto:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
@@ -303,7 +303,7 @@ você precisará adicionar um <code class="docutils literal notranslate"><span c
 <span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
 
 <span class="cm">/*</span>
-<span class="cm">    Cajudev\Classes\Arrays Object</span>
+<span class="cm">    Cajudev\Arrays Object</span>
 <span class="cm">    (</span>
 <span class="cm">        [content:protected] =&gt; Array</span>
 <span class="cm">            (</span>
@@ -324,7 +324,7 @@ você precisará adicionar um <code class="docutils literal notranslate"><span c
 <h3>8.3.5 Parando a iteração<a class="headerlink" href="#parando-a-iteracao" title="Link permanente para este título">¶</a></h3>
 <p>As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
 Nestes casos, basta que você retorne da função anônima os valores ‘break’ ou ‘continue’.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
 
@@ -348,7 +348,7 @@ Nestes casos, basta que você retorne da função anônima os valores ‘break�
 <h3>8.3.6 Exemplo de utilização<a class="headerlink" href="#exemplo-de-utilizacao" title="Link permanente para este título">¶</a></h3>
 <p>Dado um certo array com números de 0 a 100, como você faria para obter todos os
 números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é muito simples.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span>
     <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span>

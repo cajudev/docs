@@ -10,7 +10,7 @@ chaves com a forma ``$array[$key]``.
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays();
    $arrays['lorem'] = 'ipsum';
@@ -19,7 +19,7 @@ chaves com a forma ``$array[$key]``.
    print_r($arrays);
 
    /*
-    Cajudev\Classes\Arrays Object
+    Cajudev\Arrays Object
     (
         [content:protected] => Array
             (

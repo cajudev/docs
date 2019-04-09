@@ -174,7 +174,7 @@
 <div class="section" id="verificando-nulidade">
 <h2>7.1 Verificando Nulidade<a class="headerlink" href="#verificando-nulidade" title="Link permanente para este título">¶</a></h2>
 <p>Para verificar a existência de uma chave no array, você pode utilizar o método <code class="docutils literal notranslate"><span class="pre">isset</span></code>.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sit&#39;</span><span class="p">]);</span>
 
@@ -187,7 +187,7 @@
 <p class="last">Em todos os métodos dessa página, é possível aplicar o uso da notação de ponto,
 explicada na seção 5, como no exemplo abaixo:</p>
 </div>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span>
    <span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
@@ -216,7 +216,7 @@ explicada na seção 5, como no exemplo abaixo:</p>
 <h2>7.2 Verificando Valores Vazios<a class="headerlink" href="#verificando-valores-vazios" title="Link permanente para este título">¶</a></h2>
 <p>Para verificar se uma chave do array é vazia, utilize o método <code class="docutils literal notranslate"><span class="pre">empty</span></code>.
 Esse método equivale a utilização de <code class="docutils literal notranslate"><span class="pre">$arrays-&gt;noset($key)</span> <span class="pre">||</span> <span class="pre">$arrays-&gt;get($key)</span> <span class="pre">==</span> <span class="pre">false</span></code>.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
@@ -226,7 +226,7 @@ Esse método equivale a utilização de <code class="docutils literal notranslat
 </div>
 <p>Para verificar se um valor não é vazio, você pode utilizar o método filled, que nada mais é
 do que a negação do método anterior, equivalendo a <code class="docutils literal notranslate"><span class="pre">$arrays-&gt;isset($key)</span> <span class="pre">&amp;&amp;</span> <span class="pre">$arrays-&gt;get($key)</span> <span class="pre">==</span> <span class="pre">true</span></code>.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
 
@@ -238,7 +238,7 @@ do que a negação do método anterior, equivalendo a <code class="docutils lite
 <div class="section" id="removendo-valores">
 <h2>7.3 Removendo Valores<a class="headerlink" href="#removendo-valores" title="Link permanente para este título">¶</a></h2>
 <p>Para remover um elemento do array utilize o método <code class="docutils literal notranslate"><span class="pre">unset</span></code>.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Classes\Arrays</span><span class="p">;</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span>
    <span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>

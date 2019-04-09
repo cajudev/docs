@@ -7,13 +7,13 @@
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays();
    print_r($arrays);
 
    /*
-      Cajudev\Classes\Arrays Object
+      Cajudev\Arrays Object
       (
          [content:protected] => Array
             (
@@ -26,7 +26,7 @@
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $array = [1, '2', 'three' => 3];
 
@@ -34,7 +34,7 @@
    print_r($arrays);
 
    /*
-      Cajudev\Classes\Arrays Object
+      Cajudev\Arrays Object
       (
          [content:protected] => Array
             (
@@ -45,41 +45,12 @@
       )
    */
 
-1.3 Instanciando a partir de uma lista de valores
--------------------------------------------------
-
-.. code-block:: php
-
-   use Cajudev\Classes\Arrays;
-
-   $int    = 5;
-   $std    = new StdClass;
-   $string = 'lorem ipsum';
-
-   $arrays = new Arrays($int, $std, $string);
-   print_r($arrays);
-
-   /*
-      Cajudev\Classes\Arrays Object
-      (
-         [content:protected] => Array
-            (
-                  [0] => 5
-                  [1] => stdClass Object
-                     (
-                     )
-
-                  [2] => lorem ipsum
-            )
-      )
-   */
-
-1.4 Instanciando a partir de um objeto
+1.3 Instanciando a partir de um objeto
 --------------------------------------
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $object = new Class() {
       private   $lorem  = 1;
@@ -91,7 +62,7 @@
    print_r($arrays);
 
    /*
-      Cajudev\Classes\Arrays Object
+      Cajudev\Arrays Object
       (
          [content:protected] => Array
             (

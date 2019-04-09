@@ -9,7 +9,7 @@ Para verificar a existência de uma chave no array, você pode utilizar o métod
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays(['lorem' => 'ipsum', 'dolor' => 'sit']);
 
@@ -23,7 +23,7 @@ Para verificar a existência de uma chave no array, você pode utilizar o métod
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays([
       'lorem' => [
@@ -56,7 +56,7 @@ Esse método equivale a utilização de ``$arrays->noset($key) || $arrays->get($
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays();
 
@@ -68,7 +68,7 @@ do que a negação do método anterior, equivalendo a ``$arrays->isset($key) && 
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays();
 
@@ -82,7 +82,7 @@ Para remover um elemento do array utilize o método ``unset``.
 
 .. code-block:: php
 
-   use Cajudev\Classes\Arrays;
+   use Cajudev\Arrays;
 
    $arrays = new Arrays([  
       'lorem' => [
