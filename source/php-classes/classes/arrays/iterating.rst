@@ -22,6 +22,27 @@ A utilização da classe em um laço for-each é a mesma a de um array comum
         key: dolor value: sit
    */
 
+Ao trabalhar com foreach + arrays multidimensionais, por questões de desempenho,
+o retorno de cada iteração será um array convencional, ficando a cargo do
+programador instanciar um novo objeto caso precise usar algum método. Veja um
+exemplo abaixo:
+
+.. code-block:: php
+   
+   use Cajudev\Arrays;
+
+   $arrays = new Arrays();
+
+   $arrays[] = [1, 2, 3];
+   $arrays[] = [1, 2, 3];
+   $arrays[] = [1, 2, 3];
+
+   $arrays[0]->count(); // funciona
+
+   foreach ($arrays as $array) {
+        echo $array->count(); // não funciona
+    }
+
 8.2 Iterando em um laço while
 --------------------------------
 
@@ -72,8 +93,7 @@ o valor de cada iteração.
         key: 0 value: lorem
         key: 2 value: dolor
         key: 4 value: amet
-   */   
-
+   */
 
 8.3.2 Iterando para trás
 ........................
@@ -219,3 +239,10 @@ números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é 
     });
 
     // 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100,
+
+.. warning::
+
+    Diferentemente do foreach, quando estiver trabalhando com arrays multidimensionais
+    juntamente com o método for, o retorno de cada iteração será também, um objeto Arrays
+    munido de todas as suas funcionalidades. Por esse motivo em termos de desempenho,
+    é inferior a um foreach convencional.

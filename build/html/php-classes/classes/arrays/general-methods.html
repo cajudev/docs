@@ -187,8 +187,41 @@ a quantidade total de elementos e não apenas do nível atual.</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="countone">
+<h2>9.2 CountOne<a class="headerlink" href="#countone" title="Link permanente para este título">¶</a></h2>
+<p>Conta a quantidade de elementos de um array, salvando essa informação internamente
+na classe e retornando sempre que for chamado.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">]);</span>
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">countOne</span><span class="p">();</span>
+
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">    Cajudev\Arrays Object</span>
+<span class="cm">     (</span>
+<span class="cm">         [content:protected] =&gt; Array</span>
+<span class="cm">             (</span>
+<span class="cm">                 [0] =&gt; lorem</span>
+<span class="cm">                 [1] =&gt; ipsum</span>
+<span class="cm">                 [2] =&gt; dolor</span>
+<span class="cm">             )</span>
+
+<span class="cm">         [length:Cajudev\Arrays:private] =&gt; 3</span>
+<span class="cm">     )</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+<p>Útil para ser usado em loops, sem a necessidade de criar variáveis</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">&lt;</span> <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">countOne</span><span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// comandos</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="last">
-<h2>9.2 Last<a class="headerlink" href="#last" title="Link permanente para este título">¶</a></h2>
+<h2>9.3 Last<a class="headerlink" href="#last" title="Link permanente para este título">¶</a></h2>
 <p>Retorna o último elemento de um array (reinicia o ponteiro)</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
@@ -199,7 +232,7 @@ a quantidade total de elementos e não apenas do nível atual.</p>
 </div>
 </div>
 <div class="section" id="shift">
-<h2>9.3 Shift<a class="headerlink" href="#shift" title="Link permanente para este título">¶</a></h2>
+<h2>9.4 Shift<a class="headerlink" href="#shift" title="Link permanente para este título">¶</a></h2>
 <p>Remove o primeiro elemento de um array (reinicia o ponteiro)</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
@@ -211,7 +244,7 @@ a quantidade total de elementos e não apenas do nível atual.</p>
 </div>
 </div>
 <div class="section" id="pop">
-<h2>9.4 Pop<a class="headerlink" href="#pop" title="Link permanente para este título">¶</a></h2>
+<h2>9.5 Pop<a class="headerlink" href="#pop" title="Link permanente para este título">¶</a></h2>
 <p>Remove o último elemento de um array (reinicia o ponteiro)</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 

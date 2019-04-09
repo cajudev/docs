@@ -188,6 +188,25 @@
 <span class="cm">*/</span>
 </pre></div>
 </div>
+<p>Ao trabalhar com foreach + arrays multidimensionais, por questões de desempenho,
+o retorno de cada iteração será um array convencional, ficando a cargo do
+programador instanciar um novo objeto caso precise usar algum método. Veja um
+exemplo abaixo:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+
+<span class="nv">$arrays</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nv">$arrays</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nv">$arrays</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="nv">$arrays</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span> <span class="c1">// funciona</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$arrays</span> <span class="k">as</span> <span class="nv">$array</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">echo</span> <span class="nv">$array</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span> <span class="c1">// não funciona</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="iterando-em-um-laco-while">
 <h2>8.2 Iterando em um laço while<a class="headerlink" href="#iterando-em-um-laco-while" title="Link permanente para este título">¶</a></h2>
@@ -368,6 +387,13 @@ números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é 
 
 <span class="c1">// 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100,</span>
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Aviso</p>
+<p class="last">Diferentemente do foreach, quando estiver trabalhando com arrays multidimensionais
+juntamente com o método for, o retorno de cada iteração será também, um objeto Arrays
+munido de todas as suas funcionalidades. Por esse motivo em termos de desempenho,
+é inferior a um foreach convencional.</p>
 </div>
 </div>
 </div>
