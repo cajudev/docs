@@ -27,6 +27,8 @@ O método ``push`` é usado para adicionar (empurrar) um ou mais valores ao fina
                [4] => amet
                [5] => consectetur
             )
+            
+         [length:Cajudev\Arrays:private] => 
       )
    */
 
@@ -55,5 +57,7 @@ O método ``unshift`` é usado para adicionar (empurrar) um ou mais valores no i
                [4] => ipsum
                [5] => dolor
             )
+
+         [length:Cajudev\Arrays:private] => 
       )
    */

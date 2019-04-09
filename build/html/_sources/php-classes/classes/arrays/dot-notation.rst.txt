@@ -23,33 +23,21 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
    print_r($arrays); // Imprimindo todo o objeto
 
    /*
-    Cajudev\Arrays Object
+        Cajudev\Arrays Object
         (
             [content:protected] => Array
                 (
-                    [lorem] => Cajudev\Arrays Object
+                    [lorem] => Array
                         (
-                            [content:protected] => Array
+                            [ipsum] => Array
                                 (
-                                    [ipsum] => Cajudev\Arrays Object
+                                    [dolor] => amet
+                                    [0] => consectetur
+                                    [1] => Array
                                         (
-                                            [content:protected] => Array
+                                            [sit] => Array
                                                 (
-                                                    [dolor] => amet
-                                                    [0] => consectetur
-                                                    [1] => Cajudev\Arrays Object
-                                                        (
-                                                            [content:protected] => Array
-                                                                (
-                                                                    [sit] => Array
-                                                                        (
-                                                                            [amet] => dolor
-                                                                        )
-
-                                                                )
-
-                                                        )
-
+                                                    [amet] => dolor
                                                 )
 
                                         )
@@ -60,6 +48,7 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
 
                 )
 
+            [length:Cajudev\Arrays:private] => 
         )
    */
 

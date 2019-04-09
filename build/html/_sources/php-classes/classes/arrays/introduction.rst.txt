@@ -18,6 +18,8 @@
          [content:protected] => Array
             (
             )
+
+         [length:Cajudev\Arrays:private] => 
       )
    */
 
@@ -42,6 +44,8 @@
                   [1] => 2
                   [three] => 3
             )
+
+            [length:Cajudev\Arrays:private] => 
       )
    */
 
@@ -70,5 +74,7 @@
                   [ipsum] => 2
                   [dolor] => 3
             )
+
+            [length:Cajudev\Arrays:private] => 
       )
    */

@@ -162,7 +162,8 @@ você precisará adicionar um ``use`` passando o seu objeto:
                     [4] => Hello World
                     [5] => consectetur
                 )
-
+                
+            [length:Cajudev\Arrays:private] => 
         )
     */
 
