@@ -22,7 +22,7 @@ a quantidade total de elementos e não apenas do nível atual.
 
    echo $arrays->count(1); // 5
 
-9.2 CountOne
+9.2 countOnce
 ------------
 
 Conta a quantidade de elementos de um array, salvando essa informação internamente
@@ -33,7 +33,7 @@ na classe e retornando sempre que for chamado.
    use Cajudev\Arrays;
 
    $arrays = new Arrays(['lorem', 'ipsum', 'dolor']);
-   $arrays->countOne();
+   $arrays->countOnce();
 
    print_r($arrays);
 
@@ -55,7 +55,7 @@ na classe e retornando sempre que for chamado.
 
 .. code-block:: php
 
-   while ($foo < $arrays->countOne()) {
+   while ($foo < $arrays->countOnce()) {
        // comandos
    }
 
