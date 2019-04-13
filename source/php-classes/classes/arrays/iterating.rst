@@ -43,7 +43,27 @@ exemplo abaixo:
         echo $array->count(); // não funciona
     }
 
-8.2 Iterando em um laço while
+8.2 Iterando com o método each
+-------------------------------
+
+O método each performa um loop for-each internamente através de uma função callback
+
+.. code-block:: php
+
+   use Cajudev\Arrays;
+
+   $arrays = new Arrays(['lorem' => 'ipsum', 'dolor' => 'sit']);
+
+   $arrays->each(function($key, $value) {
+             echo "key: {$key} value: {$value}" . PHP_EOL;
+   });
+
+    /*
+        key: lorem value: ipsum
+        key: dolor value: sit
+   */
+
+8.3 Iterando em um laço while
 --------------------------------
 
 A utilização da classe em um laço while é realizada da seguinte maneira:
@@ -65,7 +85,7 @@ A utilização da classe em um laço while é realizada da seguinte maneira:
         key: dolor value: sit
    */   
 
-8.3 Iterando com o método for
+8.4 Iterando com o método for
 -----------------------------
 
 O método ``for`` é uma maneira interessante de se iterar por um objeto Arrays.
@@ -74,7 +94,7 @@ Ele recebe três argumentos, o primeiro é o ponto de partida, o segundo é o
 incremento, e o último é uma função anônima que recebe por meio de injeção a chave e
 o valor de cada iteração.
 
-8.3.1 Iterando para frente
+8.4.1 Iterando para frente
 ..........................
 
 .. code-block:: php
@@ -95,7 +115,7 @@ o valor de cada iteração.
         key: 4 value: amet
    */
 
-8.3.2 Iterando para trás
+8.4.2 Iterando para trás
 ........................
 
 Caso você queira iterar inversamente o array, basta informar como
@@ -120,7 +140,7 @@ segundo argumento um valor negativo.
         key: 0 value: lorem
     */   
 
-8.3.3 Iterando arrays mistos
+8.4.3 Iterando arrays mistos
 ............................
 
 Esse método também funciona com arrays associativos e arrays mistos.
@@ -150,7 +170,7 @@ Esse método também funciona com arrays associativos e arrays mistos.
         key: dolor value: sit
     */   
 
-8.3.4 Realizando modificações
+8.4.4 Realizando modificações
 .............................
 
 Caso você necessite fazer modificações internas no array ao invés de somente obter dados,
@@ -187,7 +207,7 @@ você precisará adicionar um ``use`` passando o seu objeto:
         )
     */
 
-8.3.5 Parando a iteração
+8.4.5 Parando a iteração
 ........................
 
 As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
@@ -213,7 +233,7 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
         echo $value . ' ';   // 0 1 3 4 5
     });
 
-8.3.6 Exemplo de utilização
+8.4.6 Exemplo de utilização
 ...........................
 
 Dado um certo array com números de 0 a 100, como você faria para obter todos os
@@ -244,5 +264,4 @@ números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é 
 
     Diferentemente do foreach, quando estiver trabalhando com arrays multidimensionais
     juntamente com o método for, o retorno de cada iteração será também, um objeto Arrays
-    munido de todas as suas funcionalidades. Por esse motivo em termos de desempenho,
-    é inferior a um foreach convencional.
+    munido de todas as suas funcionalidades.

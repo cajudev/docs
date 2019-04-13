@@ -208,8 +208,26 @@ exemplo abaixo:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="iterando-com-o-metodo-each">
+<h2>8.2 Iterando com o método each<a class="headerlink" href="#iterando-com-o-metodo-each" title="Link permanente para este título">¶</a></h2>
+<p>O método each performa um loop for-each internamente através de uma função callback</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sit&#39;</span><span class="p">]);</span>
+
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">each</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">echo</span> <span class="s2">&quot;key: </span><span class="si">{</span><span class="nv">$key</span><span class="si">}</span><span class="s2"> value: </span><span class="si">{</span><span class="nv">$value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">});</span>
+
+ <span class="cm">/*</span>
+<span class="cm">     key: lorem value: ipsum</span>
+<span class="cm">     key: dolor value: sit</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="iterando-em-um-laco-while">
-<h2>8.2 Iterando em um laço while<a class="headerlink" href="#iterando-em-um-laco-while" title="Link permanente para este título">¶</a></h2>
+<h2>8.3 Iterando em um laço while<a class="headerlink" href="#iterando-em-um-laco-while" title="Link permanente para este título">¶</a></h2>
 <p>A utilização da classe em um laço while é realizada da seguinte maneira:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
@@ -229,13 +247,13 @@ exemplo abaixo:</p>
 </div>
 </div>
 <div class="section" id="iterando-com-o-metodo-for">
-<h2>8.3 Iterando com o método for<a class="headerlink" href="#iterando-com-o-metodo-for" title="Link permanente para este título">¶</a></h2>
+<h2>8.4 Iterando com o método for<a class="headerlink" href="#iterando-com-o-metodo-for" title="Link permanente para este título">¶</a></h2>
 <p>O método <code class="docutils literal notranslate"><span class="pre">for</span></code> é uma maneira interessante de se iterar por um objeto Arrays.</p>
 <p>Ele recebe três argumentos, o primeiro é o ponto de partida, o segundo é o
 incremento, e o último é uma função anônima que recebe por meio de injeção a chave e
 o valor de cada iteração.</p>
 <div class="section" id="iterando-para-frente">
-<h3>8.3.1 Iterando para frente<a class="headerlink" href="#iterando-para-frente" title="Link permanente para este título">¶</a></h3>
+<h3>8.4.1 Iterando para frente<a class="headerlink" href="#iterando-para-frente" title="Link permanente para este título">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span> <span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
  <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
@@ -255,7 +273,7 @@ o valor de cada iteração.</p>
 </div>
 </div>
 <div class="section" id="iterando-para-tras">
-<h3>8.3.2 Iterando para trás<a class="headerlink" href="#iterando-para-tras" title="Link permanente para este título">¶</a></h3>
+<h3>8.4.2 Iterando para trás<a class="headerlink" href="#iterando-para-tras" title="Link permanente para este título">¶</a></h3>
 <p>Caso você queira iterar inversamente o array, basta informar como
 segundo argumento um valor negativo.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -278,7 +296,7 @@ segundo argumento um valor negativo.</p>
 </div>
 </div>
 <div class="section" id="iterando-arrays-mistos">
-<h3>8.3.3 Iterando arrays mistos<a class="headerlink" href="#iterando-arrays-mistos" title="Link permanente para este título">¶</a></h3>
+<h3>8.4.3 Iterando arrays mistos<a class="headerlink" href="#iterando-arrays-mistos" title="Link permanente para este título">¶</a></h3>
 <p>Esse método também funciona com arrays associativos e arrays mistos.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
@@ -306,7 +324,7 @@ segundo argumento um valor negativo.</p>
 </div>
 </div>
 <div class="section" id="realizando-modificacoes">
-<h3>8.3.4 Realizando modificações<a class="headerlink" href="#realizando-modificacoes" title="Link permanente para este título">¶</a></h3>
+<h3>8.4.4 Realizando modificações<a class="headerlink" href="#realizando-modificacoes" title="Link permanente para este título">¶</a></h3>
 <p>Caso você necessite fazer modificações internas no array ao invés de somente obter dados,
 você precisará adicionar um <code class="docutils literal notranslate"><span class="pre">use</span></code> passando o seu objeto:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -341,7 +359,7 @@ você precisará adicionar um <code class="docutils literal notranslate"><span c
 </div>
 </div>
 <div class="section" id="parando-a-iteracao">
-<h3>8.3.5 Parando a iteração<a class="headerlink" href="#parando-a-iteracao" title="Link permanente para este título">¶</a></h3>
+<h3>8.4.5 Parando a iteração<a class="headerlink" href="#parando-a-iteracao" title="Link permanente para este título">¶</a></h3>
 <p>As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
 Nestes casos, basta que você retorne da função anônima os valores ‘break’ ou ‘continue’.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -365,7 +383,7 @@ Nestes casos, basta que você retorne da função anônima os valores ‘break�
 </div>
 </div>
 <div class="section" id="exemplo-de-utilizacao">
-<h3>8.3.6 Exemplo de utilização<a class="headerlink" href="#exemplo-de-utilizacao" title="Link permanente para este título">¶</a></h3>
+<h3>8.4.6 Exemplo de utilização<a class="headerlink" href="#exemplo-de-utilizacao" title="Link permanente para este título">¶</a></h3>
 <p>Dado um certo array com números de 0 a 100, como você faria para obter todos os
 números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é muito simples.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -392,8 +410,7 @@ números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é 
 <p class="first admonition-title">Aviso</p>
 <p class="last">Diferentemente do foreach, quando estiver trabalhando com arrays multidimensionais
 juntamente com o método for, o retorno de cada iteração será também, um objeto Arrays
-munido de todas as suas funcionalidades. Por esse motivo em termos de desempenho,
-é inferior a um foreach convencional.</p>
+munido de todas as suas funcionalidades.</p>
 </div>
 </div>
 </div>
