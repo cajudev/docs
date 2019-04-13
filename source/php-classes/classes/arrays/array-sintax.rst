@@ -20,15 +20,15 @@ chaves com a forma ``$array[$key]``.
 
    /*
     Cajudev\Arrays Object
-    (
-        [content:protected] => Array
-            (
-                [lorem] => ipsum
-                [0] => dolor
-            )
+        (
+            [length:Cajudev\Arrays:private] => 2
+            [content:protected] => Array
+                (
+                    [lorem] => ipsum
+                    [0] => dolor
+                )
 
-        [length:Cajudev\Arrays:private] => 
-    )
+        )
    */
 
 4.2 Acessando valores

@@ -22,44 +22,7 @@ a quantidade total de elementos e não apenas do nível atual.
 
    echo $arrays->count(1); // 5
 
-9.2 countOnce
-------------
-
-Conta a quantidade de elementos de um array, salvando essa informação internamente
-na classe e retornando sempre que for chamado.
-
-.. code-block:: php
-
-   use Cajudev\Arrays;
-
-   $arrays = new Arrays(['lorem', 'ipsum', 'dolor']);
-   $arrays->countOnce();
-
-   print_r($arrays);
-
-   /*
-       Cajudev\Arrays Object
-        (
-            [content:protected] => Array
-                (
-                    [0] => lorem
-                    [1] => ipsum
-                    [2] => dolor
-                )
-
-            [length:Cajudev\Arrays:private] => 3
-        )
-   */
-
-Útil para ser usado em loops, sem a necessidade de criar variáveis
-
-.. code-block:: php
-
-   while ($foo < $arrays->countOnce()) {
-       // comandos
-   }
-
-9.3 Last
+9.2 Last
 ---------
 
 Retorna o último elemento de um array (reinicia o ponteiro)
@@ -72,7 +35,7 @@ Retorna o último elemento de um array (reinicia o ponteiro)
 
    echo $arrays->last(); // 'dolor'
 
-9.4 Shift
+9.3 Shift
 ---------
 
 Remove o primeiro elemento de um array (reinicia o ponteiro)
@@ -86,7 +49,7 @@ Remove o primeiro elemento de um array (reinicia o ponteiro)
 
    echo $arrays; // ["ipsum","dolor"]
 
-9.5 Pop
+9.4 Pop
 -------
 
 Remove o último elemento de um array (reinicia o ponteiro)

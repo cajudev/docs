@@ -14,13 +14,13 @@
 
    /*
       Cajudev\Arrays Object
-      (
-         [content:protected] => Array
-            (
-            )
+         (
+            [length:Cajudev\Arrays:private] => 0
+            [content:protected] => Array
+               (
+               )
 
-         [length:Cajudev\Arrays:private] => 
-      )
+         )
    */
 
 1.2 Instanciando a partir de um array
@@ -37,16 +37,16 @@
 
    /*
       Cajudev\Arrays Object
-      (
-         [content:protected] => Array
-            (
-                  [0] => 1
-                  [1] => 2
-                  [three] => 3
-            )
+         (
+            [length:Cajudev\Arrays:private] => 3
+            [content:protected] => Array
+               (
+                     [0] => 1
+                     [1] => 2
+                     [three] => 3
+               )
 
-            [length:Cajudev\Arrays:private] => 
-      )
+         )
    */
 
 1.3 Instanciando a partir de um objeto
@@ -67,14 +67,14 @@
 
    /*
       Cajudev\Arrays Object
-      (
-         [content:protected] => Array
-            (
-                  [lorem] => 1
-                  [ipsum] => 2
-                  [dolor] => 3
-            )
+         (
+            [length:Cajudev\Arrays:private] => 3
+            [content:protected] => Array
+               (
+                     [lorem] => 1
+                     [ipsum] => 2
+                     [dolor] => 3
+               )
 
-            [length:Cajudev\Arrays:private] => 
-      )
+         )
    */

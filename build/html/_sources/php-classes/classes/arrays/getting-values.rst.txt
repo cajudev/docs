@@ -13,7 +13,7 @@ retornará todo o array interno da classe.
 
    use Cajudev\Arrays;
 
-   $arrays = new Arrays('lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]);
+   $arrays = new Arrays(['lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]]);
 
    echo $arrays->get(0); //lorem
 
@@ -28,7 +28,7 @@ retornará todo o array interno da classe.
 
    use Cajudev\Arrays;
 
-   $arrays = new Arrays('lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]);
+   $arrays = new Arrays(['lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]]);
    
    var_dump($arrays->get());
 
@@ -43,3 +43,18 @@ retornará todo o array interno da classe.
         }
     }
    */
+
+3.2 Recebendo o tamanho do array
+--------------------------------
+
+A cada inserção ou remoção de valores, o atributo interno ``length`` é atualizado,
+portanto para receber o tamanho do array, basta acessá-lo diretamente.
+
+.. code-block:: php
+
+   use Cajudev\Arrays;
+
+   $arrays = new Arrays(['lorem', 'ipsum', ['dolor' => ['sit', 'amet']]]);
+   
+   echo $arrays->length; // 3
+   echo $arrays[2]['dolor']->length; // 2

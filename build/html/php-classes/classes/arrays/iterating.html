@@ -200,23 +200,25 @@ exemplo abaixo:</p>
 <span class="nv">$arrays</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
 <span class="nv">$arrays</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
 
-<span class="nv">$arrays</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span> <span class="c1">// funciona</span>
+<span class="nv">$arrays</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span><span class="na">length</span><span class="p">;</span> <span class="c1">// funciona</span>
 
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$arrays</span> <span class="k">as</span> <span class="nv">$array</span><span class="p">)</span> <span class="p">{</span>
-     <span class="k">echo</span> <span class="nv">$array</span><span class="o">-&gt;</span><span class="na">count</span><span class="p">();</span> <span class="c1">// não funciona</span>
- <span class="p">}</span>
+    <span class="k">echo</span> <span class="nv">$array</span><span class="o">-&gt;</span><span class="na">length</span><span class="p">;</span> <span class="c1">// não funciona</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="iterando-com-o-metodo-each">
 <h2>8.2 Iterando com o método each<a class="headerlink" href="#iterando-com-o-metodo-each" title="Link permanente para este título">¶</a></h2>
-<p>O método each performa um loop for-each internamente através de uma função callback</p>
+<div class="section" id="percorrendo-o-array">
+<h3>8.2.1 Percorrendo o array<a class="headerlink" href="#percorrendo-o-array" title="Link permanente para este título">¶</a></h3>
+<p>O método each performa um loop for-each internamente através de uma função callback.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="s1">&#39;lorem&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;sit&#39;</span><span class="p">]);</span>
 
 <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">each</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
-          <span class="k">echo</span> <span class="s2">&quot;key: </span><span class="si">{</span><span class="nv">$key</span><span class="si">}</span><span class="s2"> value: </span><span class="si">{</span><span class="nv">$value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+     <span class="k">echo</span> <span class="s2">&quot;key: </span><span class="si">{</span><span class="nv">$key</span><span class="si">}</span><span class="s2"> value: </span><span class="si">{</span><span class="nv">$value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
 <span class="p">});</span>
 
  <span class="cm">/*</span>
@@ -224,6 +226,36 @@ exemplo abaixo:</p>
 <span class="cm">     key: dolor value: sit</span>
 <span class="cm">*/</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="parando-a-iteracao">
+<h3>8.2.2 Parando a iteração<a class="headerlink" href="#parando-a-iteracao" title="Link permanente para este título">¶</a></h3>
+<p>As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
+Nestes casos, basta que você retorne da função anônima os valores ‘break’ ou ‘continue’.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
+
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
+
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">each</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$value</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;break&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">echo</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s1">&#39; &#39;</span><span class="p">;</span>    <span class="c1">// 0 1 2</span>
+<span class="p">});</span>
+
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">each</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$value</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">&#39;continue&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">echo</span> <span class="nv">$value</span> <span class="o">.</span> <span class="s1">&#39; &#39;</span><span class="p">;</span>   <span class="c1">// 0 1 3 4 5</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Assim como no exemplo anterior, a cada iteração você receberá um array convencional,
+caso esteja lidando com arrays multidimensionais.</p>
+</div>
 </div>
 </div>
 <div class="section" id="iterando-em-um-laco-while">
@@ -252,8 +284,13 @@ exemplo abaixo:</p>
 <p>Ele recebe três argumentos, o primeiro é o ponto de partida, o segundo é o
 incremento, e o último é uma função anônima que recebe por meio de injeção a chave e
 o valor de cada iteração.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Caso tenha a intenção de percorrer todo o array, chave por chave, recomendamos
+o uso do método <code class="docutils literal notranslate"><span class="pre">each</span></code>, ao invés deste.</p>
+</div>
 <div class="section" id="iterando-para-frente">
-<h3>8.4.1 Iterando para frente<a class="headerlink" href="#iterando-para-frente" title="Link permanente para este título">¶</a></h3>
+<h3>8.4.1 Iterando “para frente”<a class="headerlink" href="#iterando-para-frente" title="Link permanente para este título">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span> <span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
  <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
@@ -273,7 +310,7 @@ o valor de cada iteração.</p>
 </div>
 </div>
 <div class="section" id="iterando-para-tras">
-<h3>8.4.2 Iterando para trás<a class="headerlink" href="#iterando-para-tras" title="Link permanente para este título">¶</a></h3>
+<h3>8.4.2 Iterando “para trás”<a class="headerlink" href="#iterando-para-tras" title="Link permanente para este título">¶</a></h3>
 <p>Caso você queira iterar inversamente o array, basta informar como
 segundo argumento um valor negativo.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -292,6 +329,16 @@ segundo argumento um valor negativo.</p>
 <span class="cm">    key: 1 value: ipsum</span>
 <span class="cm">    key: 0 value: lorem</span>
 <span class="cm">*/</span>
+</pre></div>
+</div>
+<p>Tome o cuidado de não informar um valor inválido</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">push</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">,</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">,</span> <span class="s1">&#39;dolor&#39;</span><span class="p">,</span> <span class="s1">&#39;sit&#39;</span><span class="p">,</span> <span class="s1">&#39;amet&#39;</span><span class="p">,</span> <span class="s1">&#39;consectetur&#39;</span><span class="p">);</span>
+
+<span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">&quot;key: </span><span class="si">{</span><span class="nv">$key</span><span class="si">}</span><span class="s2"> value: </span><span class="si">{</span><span class="nv">$value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">.</span> <span class="nx">PHP_EOL</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="c1">// Undefined offset: 7</span>
 </pre></div>
 </div>
 </div>
@@ -326,7 +373,7 @@ segundo argumento um valor negativo.</p>
 <div class="section" id="realizando-modificacoes">
 <h3>8.4.4 Realizando modificações<a class="headerlink" href="#realizando-modificacoes" title="Link permanente para este título">¶</a></h3>
 <p>Caso você necessite fazer modificações internas no array ao invés de somente obter dados,
-você precisará adicionar um <code class="docutils literal notranslate"><span class="pre">use</span></code> passando o seu objeto:</p>
+você precisará adicionar um <code class="docutils literal notranslate"><span class="pre">use</span></code> passando o próprio objeto:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
 <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
@@ -358,13 +405,13 @@ você precisará adicionar um <code class="docutils literal notranslate"><span c
 </pre></div>
 </div>
 </div>
-<div class="section" id="parando-a-iteracao">
-<h3>8.4.5 Parando a iteração<a class="headerlink" href="#parando-a-iteracao" title="Link permanente para este título">¶</a></h3>
+<div class="section" id="id1">
+<h3>8.4.5 Parando a iteração<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
 <p>As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
 Nestes casos, basta que você retorne da função anônima os valores ‘break’ ou ‘continue’.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
-<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
 
 <span class="nv">$arrays</span><span class="o">-&gt;</span><span class="na">for</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$value</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>

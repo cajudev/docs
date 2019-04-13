@@ -37,16 +37,19 @@ exemplo abaixo:
    $arrays[] = [1, 2, 3];
    $arrays[] = [1, 2, 3];
 
-   $arrays[0]->count(); // funciona
+   $arrays[0]->length; // funciona
 
    foreach ($arrays as $array) {
-        echo $array->count(); // não funciona
-    }
+       echo $array->length; // não funciona
+   }
 
 8.2 Iterando com o método each
 -------------------------------
 
-O método each performa um loop for-each internamente através de uma função callback
+8.2.1 Percorrendo o array
+.........................
+
+O método each performa um loop for-each internamente através de uma função callback.
 
 .. code-block:: php
 
@@ -55,13 +58,44 @@ O método each performa um loop for-each internamente através de uma função c
    $arrays = new Arrays(['lorem' => 'ipsum', 'dolor' => 'sit']);
 
    $arrays->each(function($key, $value) {
-             echo "key: {$key} value: {$value}" . PHP_EOL;
+        echo "key: {$key} value: {$value}" . PHP_EOL;
    });
 
     /*
         key: lorem value: ipsum
         key: dolor value: sit
    */
+   
+8.2.2 Parando a iteração
+........................
+
+As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
+Nestes casos, basta que você retorne da função anônima os valores 'break' ou 'continue'.
+
+.. code-block:: php
+
+    use Cajudev\Arrays;
+
+    $arrays = new Arrays([0, 1, 2, 3, 4, 5]);
+
+    $arrays->each(function($key, $value) {
+        if ($value > 2) {
+            return 'break';
+        }
+        echo $value . ' ';    // 0 1 2
+    });
+
+    $arrays->each(function($key, $value) {
+        if ($value == 2) {
+            return 'continue';
+        }
+        echo $value . ' ';   // 0 1 3 4 5
+    });
+
+.. note::
+
+    Assim como no exemplo anterior, a cada iteração você receberá um array convencional,
+    caso esteja lidando com arrays multidimensionais.
 
 8.3 Iterando em um laço while
 --------------------------------
@@ -94,8 +128,13 @@ Ele recebe três argumentos, o primeiro é o ponto de partida, o segundo é o
 incremento, e o último é uma função anônima que recebe por meio de injeção a chave e
 o valor de cada iteração.
 
-8.4.1 Iterando para frente
-..........................
+.. note::
+
+   Caso tenha a intenção de percorrer todo o array, chave por chave, recomendamos
+   o uso do método ``each``, ao invés deste.
+
+8.4.1 Iterando "para frente"
+............................
 
 .. code-block:: php
 
@@ -115,8 +154,8 @@ o valor de cada iteração.
         key: 4 value: amet
    */
 
-8.4.2 Iterando para trás
-........................
+8.4.2 Iterando "para trás"
+..........................
 
 Caso você queira iterar inversamente o array, basta informar como
 segundo argumento um valor negativo.
@@ -139,6 +178,18 @@ segundo argumento um valor negativo.
         key: 1 value: ipsum
         key: 0 value: lorem
     */   
+
+Tome o cuidado de não informar um valor inválido
+
+.. code-block:: php
+
+    $arrays->push('lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur');
+
+    $arrays->for(7, -1, function($key, $value) {
+        echo "key: {$key} value: {$value}" . PHP_EOL;
+    });
+
+    // Undefined offset: 7
 
 8.4.3 Iterando arrays mistos
 ............................
@@ -174,7 +225,7 @@ Esse método também funciona com arrays associativos e arrays mistos.
 .............................
 
 Caso você necessite fazer modificações internas no array ao invés de somente obter dados,
-você precisará adicionar um ``use`` passando o seu objeto:
+você precisará adicionar um ``use`` passando o próprio objeto:
 
 .. code-block:: php
 
@@ -217,7 +268,7 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
 
     use Cajudev\Arrays;
 
-    $arrays = new Arrays(0, 1, 2, 3, 4, 5);
+    $arrays = new Arrays([0, 1, 2, 3, 4, 5]);
 
     $arrays->for(0, 1, function($key, $value) {
         if ($value > 2) {

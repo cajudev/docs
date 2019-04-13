@@ -23,8 +23,9 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
    print_r($arrays); // Imprimindo todo o objeto
 
    /*
-        Cajudev\Arrays Object
+    Cajudev\Arrays Object
         (
+            [length:Cajudev\Arrays:private] => 1
             [content:protected] => Array
                 (
                     [lorem] => Array
@@ -48,7 +49,6 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
 
                 )
 
-            [length:Cajudev\Arrays:private] => 
         )
    */
 

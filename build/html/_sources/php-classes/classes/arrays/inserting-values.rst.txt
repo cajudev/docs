@@ -11,25 +11,25 @@ O método ``push`` é usado para adicionar (empurrar) um ou mais valores ao fina
 
    use Cajudev\Arrays;
 
-   $arrays = new Arrays('lorem', 'ipsum', 'dolor');
+   $arrays = new Arrays(['lorem', 'ipsum', 'dolor']);
    $arrays->push('sit', 'amet', 'consectetur');
    print_r($arrays);
 
    /*
       Cajudev\Arrays Object
-      (
-         [content:protected] => Array
-            (
-               [0] => lorem
-               [1] => ipsum
-               [2] => dolor
-               [3] => sit
-               [4] => amet
-               [5] => consectetur
-            )
-            
-         [length:Cajudev\Arrays:private] => 
-      )
+         (
+            [length:Cajudev\Arrays:private] => 6
+            [content:protected] => Array
+               (
+                     [0] => lorem
+                     [1] => ipsum
+                     [2] => dolor
+                     [3] => sit
+                     [4] => amet
+                     [5] => consectetur
+               )
+
+         )
    */
 
 2.2 Unshift
@@ -41,23 +41,22 @@ O método ``unshift`` é usado para adicionar (empurrar) um ou mais valores no i
 
    use Cajudev\Arrays;
 
-   $arrays = new Arrays('lorem', 'ipsum', 'dolor');
+   $arrays = new Arrays(['lorem', 'ipsum', 'dolor']);
    $arrays->unshift('sit', 'amet', 'consectetur');
    print_r($arrays);
 
    /*
       Cajudev\Arrays Object
-      (
-         [content:protected] => Array
-            (
-               [0] => sit
-               [1] => amet
-               [2] => consectetur
-               [3] => lorem
-               [4] => ipsum
-               [5] => dolor
-            )
-
-         [length:Cajudev\Arrays:private] => 
-      )
+         (
+            [length:Cajudev\Arrays:private] => 6
+            [content:protected] => Array
+               (
+                     [0] => sit
+                     [1] => amet
+                     [2] => consectetur
+                     [3] => lorem
+                     [4] => ipsum
+                     [5] => dolor
+               )
+         )
    */
