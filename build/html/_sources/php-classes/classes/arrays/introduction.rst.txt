@@ -62,7 +62,7 @@
       public    $dolor  = 3;
    };
 
-   $arrays = new Arrays($object);
+   $arrays = Arrays::fromObject($object);
    print_r($arrays);
 
    /*
