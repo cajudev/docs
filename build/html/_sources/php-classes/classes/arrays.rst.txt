@@ -11,10 +11,11 @@ Arrays
    3. Recebendo Valores <arrays/getting-values>
    4. Sintaxe de Array <arrays/array-sintax>
    5. Notação de Ponto <arrays/dot-notation>
-   6. Imprimindo o Objeto <arrays/printing-object>
-   7. Verificando e Removendo Valores <arrays/verifying-removing>
-   8. Iterando sobre o Objeto <arrays/iterating>
-   9. Métodos de Uso geral <arrays/general-methods>
+   6. Notação de Intervalo <arrays/interval-notation>
+   7. Imprimindo o Objeto <arrays/printing-object>
+   8. Verificando e Removendo Valores <arrays/verifying-removing>
+   9. Iterando sobre o Objeto <arrays/iterating>
+   10. Métodos de Uso geral <arrays/general-methods>
 
 Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 

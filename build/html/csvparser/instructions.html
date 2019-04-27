@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
     <link rel="next" title="Obtendo Dados" href="instructions/getdata.html" />
     <link rel="prev" title="Bem Vindo ao CsvParser" href="index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -161,80 +164,80 @@
 <div class="toctree-wrapper compound">
 </div>
 <p>Para as instruções que serão fornecidas à seguir, considere o seguinte arquivo como exemplo:</p>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="16%" />
-<col width="13%" />
-<col width="18%" />
-<col width="16%" />
-<col width="13%" />
-<col width="23%" />
+<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 23%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Data</th>
-<th class="head">Produto</th>
-<th class="head">Preço</th>
-<th class="head">Pagamento</th>
-<th class="head">Nome</th>
-<th class="head">Estado</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Data</p></th>
+<th class="head"><p>Produto</p></th>
+<th class="head"><p>Preço</p></th>
+<th class="head"><p>Pagamento</p></th>
+<th class="head"><p>Nome</p></th>
+<th class="head"><p>Estado</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>11/01/2019</td>
-<td>Produto1</td>
-<td>R$ 1.400,00</td>
-<td>Mastercard</td>
-<td>João</td>
-<td>Rio de Janeiro</td>
+<tbody>
+<tr class="row-even"><td><p>11/01/2019</p></td>
+<td><p>Produto1</p></td>
+<td><p>R$ 1.400,00</p></td>
+<td><p>Mastercard</p></td>
+<td><p>João</p></td>
+<td><p>Rio de Janeiro</p></td>
 </tr>
-<tr class="row-odd"><td>12/01/2019</td>
-<td>Produto2</td>
-<td>R$ 1.800,00</td>
-<td>Visa</td>
-<td>Maria</td>
-<td>São Paulo</td>
+<tr class="row-odd"><td><p>12/01/2019</p></td>
+<td><p>Produto2</p></td>
+<td><p>R$ 1.800,00</p></td>
+<td><p>Visa</p></td>
+<td><p>Maria</p></td>
+<td><p>São Paulo</p></td>
 </tr>
-<tr class="row-even"><td>11/01/2019</td>
-<td>Produto3</td>
-<td>R$ 1.200,00</td>
-<td>Mastercard</td>
-<td>Pedro</td>
-<td>Minas Gerais</td>
+<tr class="row-even"><td><p>11/01/2019</p></td>
+<td><p>Produto3</p></td>
+<td><p>R$ 1.200,00</p></td>
+<td><p>Mastercard</p></td>
+<td><p>Pedro</p></td>
+<td><p>Minas Gerais</p></td>
 </tr>
-<tr class="row-odd"><td>14/01/2019</td>
-<td>Produto3</td>
-<td>R$ 2.200,00</td>
-<td>Mastercard</td>
-<td>Henrique</td>
-<td>São Paulo</td>
+<tr class="row-odd"><td><p>14/01/2019</p></td>
+<td><p>Produto3</p></td>
+<td><p>R$ 2.200,00</p></td>
+<td><p>Mastercard</p></td>
+<td><p>Henrique</p></td>
+<td><p>São Paulo</p></td>
 </tr>
-<tr class="row-even"><td>11/01/2019</td>
-<td>Produto2</td>
-<td>R$ 1.200,00</td>
-<td>Visa</td>
-<td>Julio</td>
-<td>Minas Gerais</td>
+<tr class="row-even"><td><p>11/01/2019</p></td>
+<td><p>Produto2</p></td>
+<td><p>R$ 1.200,00</p></td>
+<td><p>Visa</p></td>
+<td><p>Julio</p></td>
+<td><p>Minas Gerais</p></td>
 </tr>
-<tr class="row-odd"><td>16/01/2019</td>
-<td>Produto2</td>
-<td>R$ 5.000,00</td>
-<td>Visa</td>
-<td>Emanuel</td>
-<td>Rio de Janeiro</td>
+<tr class="row-odd"><td><p>16/01/2019</p></td>
+<td><p>Produto2</p></td>
+<td><p>R$ 5.000,00</p></td>
+<td><p>Visa</p></td>
+<td><p>Emanuel</p></td>
+<td><p>Rio de Janeiro</p></td>
 </tr>
-<tr class="row-even"><td>17/01/2019</td>
-<td>Produto2</td>
-<td>R$ 3.600,00</td>
-<td>Visa</td>
-<td>Silvia</td>
-<td>São Paulo</td>
+<tr class="row-even"><td><p>17/01/2019</p></td>
+<td><p>Produto2</p></td>
+<td><p>R$ 3.600,00</p></td>
+<td><p>Visa</p></td>
+<td><p>Silvia</p></td>
+<td><p>São Paulo</p></td>
 </tr>
-<tr class="row-odd"><td>18/01/2019</td>
-<td>Produto1</td>
-<td>R$ 1.200,00</td>
-<td>Visa</td>
-<td>Reinaldo</td>
-<td>Minas Gerais</td>
+<tr class="row-odd"><td><p>18/01/2019</p></td>
+<td><p>Produto1</p></td>
+<td><p>R$ 1.200,00</p></td>
+<td><p>Visa</p></td>
+<td><p>Reinaldo</p></td>
+<td><p>Minas Gerais</p></td>
 </tr>
 </tbody>
 </table>
@@ -251,7 +254,7 @@
         <a href="instructions/getdata.html" class="btn btn-neutral float-right" title="Obtendo Dados" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Bem Vindo ao CsvParser" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Bem Vindo ao CsvParser" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -277,26 +280,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>8. Iterando sobre o Objeto &mdash; documentação Cajudev </title>
+  <title>9. Iterando sobre o Objeto &mdash; documentação Cajudev </title>
   
 
   
@@ -17,34 +17,37 @@
   
 
   
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Buscar" href="../../../search.html" />
-    <link rel="next" title="9. Métodos de Uso Geral" href="general-methods.html" />
-    <link rel="prev" title="7. Verificando e Removendo Valores" href="verifying-removing.html" /> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
-
+    <link rel="next" title="10. Métodos de Uso Geral" href="general-methods.html" />
+    <link rel="prev" title="8. Verificando e Removendo Valores" href="verifying-removing.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -85,10 +88,11 @@
 <li class="toctree-l3"><a class="reference internal" href="getting-values.html">3. Recebendo Valores</a></li>
 <li class="toctree-l3"><a class="reference internal" href="array-sintax.html">4. Sintaxe de Array</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dot-notation.html">5. Notação de Ponto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="printing-object.html">6. Imprimindo o Objeto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">7. Verificando e Removendo Valores</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">8. Iterando sobre o Objeto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="general-methods.html">9. Métodos de Uso geral</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interval-notation.html">6. Notação de Intervalo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="printing-object.html">7. Imprimindo o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="verifying-removing.html">8. Verificando e Removendo Valores</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">9. Iterando sobre o Objeto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general-methods.html">10. Métodos de Uso geral</a></li>
 </ul>
 </li>
 </ul>
@@ -152,7 +156,7 @@
         
           <li><a href="../arrays.html">Arrays</a> &raquo;</li>
         
-      <li>8. Iterando sobre o Objeto</li>
+      <li>9. Iterando sobre o Objeto</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,9 +174,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="iterando-sobre-o-objeto">
-<h1>8. Iterando sobre o Objeto<a class="headerlink" href="#iterando-sobre-o-objeto" title="Link permanente para este título">¶</a></h1>
+<h1>9. Iterando sobre o Objeto<a class="headerlink" href="#iterando-sobre-o-objeto" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="iterando-em-um-laco-for-each">
-<h2>8.1 Iterando em um laço for-each<a class="headerlink" href="#iterando-em-um-laco-for-each" title="Link permanente para este título">¶</a></h2>
+<h2>9.1 Iterando em um laço for-each<a class="headerlink" href="#iterando-em-um-laco-for-each" title="Link permanente para este título">¶</a></h2>
 <p>A utilização da classe em um laço for-each é a mesma a de um array comum</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
@@ -209,9 +213,9 @@ exemplo abaixo:</p>
 </div>
 </div>
 <div class="section" id="iterando-com-o-metodo-each">
-<h2>8.2 Iterando com o método each<a class="headerlink" href="#iterando-com-o-metodo-each" title="Link permanente para este título">¶</a></h2>
+<h2>9.2 Iterando com o método each<a class="headerlink" href="#iterando-com-o-metodo-each" title="Link permanente para este título">¶</a></h2>
 <div class="section" id="percorrendo-o-array">
-<h3>8.2.1 Percorrendo o array<a class="headerlink" href="#percorrendo-o-array" title="Link permanente para este título">¶</a></h3>
+<h3>9.2.1 Percorrendo o array<a class="headerlink" href="#percorrendo-o-array" title="Link permanente para este título">¶</a></h3>
 <p>O método each performa um loop for-each internamente através de uma função callback.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
@@ -229,7 +233,7 @@ exemplo abaixo:</p>
 </div>
 </div>
 <div class="section" id="parando-a-iteracao">
-<h3>8.2.2 Parando a iteração<a class="headerlink" href="#parando-a-iteracao" title="Link permanente para este título">¶</a></h3>
+<h3>9.2.2 Parando a iteração<a class="headerlink" href="#parando-a-iteracao" title="Link permanente para este título">¶</a></h3>
 <p>As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
 Nestes casos, basta que você retorne da função anônima os valores ‘break’ ou ‘continue’.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -252,14 +256,14 @@ Nestes casos, basta que você retorne da função anônima os valores ‘break�
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Assim como no exemplo anterior, a cada iteração você receberá um array convencional,
+<p class="admonition-title">Nota</p>
+<p>Assim como no exemplo anterior, a cada iteração você receberá um array convencional,
 caso esteja lidando com arrays multidimensionais.</p>
 </div>
 </div>
 </div>
 <div class="section" id="iterando-em-um-laco-while">
-<h2>8.3 Iterando em um laço while<a class="headerlink" href="#iterando-em-um-laco-while" title="Link permanente para este título">¶</a></h2>
+<h2>9.3 Iterando em um laço while<a class="headerlink" href="#iterando-em-um-laco-while" title="Link permanente para este título">¶</a></h2>
 <p>A utilização da classe em um laço while é realizada da seguinte maneira:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
@@ -279,18 +283,18 @@ caso esteja lidando com arrays multidimensionais.</p>
 </div>
 </div>
 <div class="section" id="iterando-com-o-metodo-for">
-<h2>8.4 Iterando com o método for<a class="headerlink" href="#iterando-com-o-metodo-for" title="Link permanente para este título">¶</a></h2>
+<h2>9.4 Iterando com o método for<a class="headerlink" href="#iterando-com-o-metodo-for" title="Link permanente para este título">¶</a></h2>
 <p>O método <code class="docutils literal notranslate"><span class="pre">for</span></code> é uma maneira interessante de se iterar por um objeto Arrays.</p>
 <p>Ele recebe três argumentos, o primeiro é o ponto de partida, o segundo é o
 incremento, e o último é uma função anônima que recebe por meio de injeção a chave e
 o valor de cada iteração.</p>
 <div class="admonition note">
-<p class="first admonition-title">Nota</p>
-<p class="last">Caso tenha a intenção de percorrer todo o array, chave por chave, recomendamos
+<p class="admonition-title">Nota</p>
+<p>Caso tenha a intenção de percorrer todo o array, chave por chave, recomendamos
 o uso do método <code class="docutils literal notranslate"><span class="pre">each</span></code>, ao invés deste.</p>
 </div>
 <div class="section" id="iterando-para-frente">
-<h3>8.4.1 Iterando “para frente”<a class="headerlink" href="#iterando-para-frente" title="Link permanente para este título">¶</a></h3>
+<h3>9.4.1 Iterando “para frente”<a class="headerlink" href="#iterando-para-frente" title="Link permanente para este título">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span> <span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
  <span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
@@ -310,7 +314,7 @@ o uso do método <code class="docutils literal notranslate"><span class="pre">ea
 </div>
 </div>
 <div class="section" id="iterando-para-tras">
-<h3>8.4.2 Iterando “para trás”<a class="headerlink" href="#iterando-para-tras" title="Link permanente para este título">¶</a></h3>
+<h3>9.4.2 Iterando “para trás”<a class="headerlink" href="#iterando-para-tras" title="Link permanente para este título">¶</a></h3>
 <p>Caso você queira iterar inversamente o array, basta informar como
 segundo argumento um valor negativo.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -343,7 +347,7 @@ segundo argumento um valor negativo.</p>
 </div>
 </div>
 <div class="section" id="iterando-arrays-mistos">
-<h3>8.4.3 Iterando arrays mistos<a class="headerlink" href="#iterando-arrays-mistos" title="Link permanente para este título">¶</a></h3>
+<h3>9.4.3 Iterando arrays mistos<a class="headerlink" href="#iterando-arrays-mistos" title="Link permanente para este título">¶</a></h3>
 <p>Esse método também funciona com arrays associativos e arrays mistos.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
 
@@ -371,7 +375,7 @@ segundo argumento um valor negativo.</p>
 </div>
 </div>
 <div class="section" id="realizando-modificacoes">
-<h3>8.4.4 Realizando modificações<a class="headerlink" href="#realizando-modificacoes" title="Link permanente para este título">¶</a></h3>
+<h3>9.4.4 Realizando modificações<a class="headerlink" href="#realizando-modificacoes" title="Link permanente para este título">¶</a></h3>
 <p>Caso você necessite fazer modificações internas no array ao invés de somente obter dados,
 você precisará adicionar um <code class="docutils literal notranslate"><span class="pre">use</span></code> passando o próprio objeto:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -406,7 +410,7 @@ você precisará adicionar um <code class="docutils literal notranslate"><span c
 </div>
 </div>
 <div class="section" id="id1">
-<h3>8.4.5 Parando a iteração<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
+<h3>9.4.5 Parando a iteração<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
 <p>As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
 Nestes casos, basta que você retorne da função anônima os valores ‘break’ ou ‘continue’.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -430,7 +434,7 @@ Nestes casos, basta que você retorne da função anônima os valores ‘break�
 </div>
 </div>
 <div class="section" id="exemplo-de-utilizacao">
-<h3>8.4.6 Exemplo de utilização<a class="headerlink" href="#exemplo-de-utilizacao" title="Link permanente para este título">¶</a></h3>
+<h3>9.4.6 Exemplo de utilização<a class="headerlink" href="#exemplo-de-utilizacao" title="Link permanente para este título">¶</a></h3>
 <p>Dado um certo array com números de 0 a 100, como você faria para obter todos os
 números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é muito simples.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="nx">Cajudev\Arrays</span><span class="p">;</span>
@@ -454,8 +458,8 @@ números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é 
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">Aviso</p>
-<p class="last">Diferentemente do foreach, quando estiver trabalhando com arrays multidimensionais
+<p class="admonition-title">Aviso</p>
+<p>Diferentemente do foreach, quando estiver trabalhando com arrays multidimensionais
 juntamente com o método for, o retorno de cada iteração será também, um objeto Arrays
 munido de todas as suas funcionalidades.</p>
 </div>
@@ -471,10 +475,10 @@ munido de todas as suas funcionalidades.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="general-methods.html" class="btn btn-neutral float-right" title="9. Métodos de Uso Geral" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="general-methods.html" class="btn btn-neutral float-right" title="10. Métodos de Uso Geral" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="verifying-removing.html" class="btn btn-neutral" title="7. Verificando e Removendo Valores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="verifying-removing.html" class="btn btn-neutral float-left" title="8. Verificando e Removendo Valores" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -500,26 +504,16 @@ munido de todas as suas funcionalidades.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/translations.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

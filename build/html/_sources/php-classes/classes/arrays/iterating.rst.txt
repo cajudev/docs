@@ -1,8 +1,8 @@
 ==========================
-8. Iterando sobre o Objeto
+9. Iterando sobre o Objeto
 ==========================
 
-8.1 Iterando em um laço for-each
+9.1 Iterando em um laço for-each
 --------------------------------
 
 A utilização da classe em um laço for-each é a mesma a de um array comum
@@ -43,10 +43,10 @@ exemplo abaixo:
        echo $array->length; // não funciona
    }
 
-8.2 Iterando com o método each
+9.2 Iterando com o método each
 -------------------------------
 
-8.2.1 Percorrendo o array
+9.2.1 Percorrendo o array
 .........................
 
 O método each performa um loop for-each internamente através de uma função callback.
@@ -66,7 +66,7 @@ O método each performa um loop for-each internamente através de uma função c
         key: dolor value: sit
    */
    
-8.2.2 Parando a iteração
+9.2.2 Parando a iteração
 ........................
 
 As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
@@ -97,7 +97,7 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
     Assim como no exemplo anterior, a cada iteração você receberá um array convencional,
     caso esteja lidando com arrays multidimensionais.
 
-8.3 Iterando em um laço while
+9.3 Iterando em um laço while
 --------------------------------
 
 A utilização da classe em um laço while é realizada da seguinte maneira:
@@ -119,7 +119,7 @@ A utilização da classe em um laço while é realizada da seguinte maneira:
         key: dolor value: sit
    */   
 
-8.4 Iterando com o método for
+9.4 Iterando com o método for
 -----------------------------
 
 O método ``for`` é uma maneira interessante de se iterar por um objeto Arrays.
@@ -133,7 +133,7 @@ o valor de cada iteração.
    Caso tenha a intenção de percorrer todo o array, chave por chave, recomendamos
    o uso do método ``each``, ao invés deste.
 
-8.4.1 Iterando "para frente"
+9.4.1 Iterando "para frente"
 ............................
 
 .. code-block:: php
@@ -154,7 +154,7 @@ o valor de cada iteração.
         key: 4 value: amet
    */
 
-8.4.2 Iterando "para trás"
+9.4.2 Iterando "para trás"
 ..........................
 
 Caso você queira iterar inversamente o array, basta informar como
@@ -191,7 +191,7 @@ Tome o cuidado de não informar um valor inválido
 
     // Undefined offset: 7
 
-8.4.3 Iterando arrays mistos
+9.4.3 Iterando arrays mistos
 ............................
 
 Esse método também funciona com arrays associativos e arrays mistos.
@@ -221,7 +221,7 @@ Esse método também funciona com arrays associativos e arrays mistos.
         key: dolor value: sit
     */   
 
-8.4.4 Realizando modificações
+9.4.4 Realizando modificações
 .............................
 
 Caso você necessite fazer modificações internas no array ao invés de somente obter dados,
@@ -258,7 +258,7 @@ você precisará adicionar um ``use`` passando o próprio objeto:
         )
     */
 
-8.4.5 Parando a iteração
+9.4.5 Parando a iteração
 ........................
 
 As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
@@ -284,7 +284,7 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
         echo $value . ' ';   // 0 1 3 4 5
     });
 
-8.4.6 Exemplo de utilização
+9.4.6 Exemplo de utilização
 ...........................
 
 Dado um certo array com números de 0 a 100, como você faria para obter todos os
