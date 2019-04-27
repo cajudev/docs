@@ -1,8 +1,8 @@
 =======================
-10. Métodos de Uso Geral
+11. Métodos de Uso Geral
 =======================
 
-10.1 Count
+11.1 Count
 ---------
 
 O método count retorna a quantidade de elementos do array
@@ -22,7 +22,7 @@ a quantidade total de elementos e não apenas do nível atual.
 
    echo $arrays->count(1); // 5
 
-10.2 Last
+11.2 Last
 ---------
 
 Retorna o último elemento de um array (reinicia o ponteiro)
@@ -35,7 +35,7 @@ Retorna o último elemento de um array (reinicia o ponteiro)
 
    echo $arrays->last(); // 'dolor'
 
-10.3 Shift
+11.3 Shift
 ---------
 
 Remove o primeiro elemento de um array (reinicia o ponteiro)
@@ -49,7 +49,7 @@ Remove o primeiro elemento de um array (reinicia o ponteiro)
 
    echo $arrays; // ["ipsum","dolor"]
 
-10.4 Pop
+11.4 Pop
 -------
 
 Remove o último elemento de um array (reinicia o ponteiro)
