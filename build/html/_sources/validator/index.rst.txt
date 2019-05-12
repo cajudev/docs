@@ -33,3 +33,8 @@ Características
 
 * Padrão PSR-4
 * Testes unitários com PHPUnit
+
+Instalação
+==========
+
+Realize a instalação utilizando o seguinte comando ``composer require cajudev/validator``

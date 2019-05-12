@@ -6,12 +6,12 @@ Seja bem vindo à nossa documentação
 
 .. toctree::
    :hidden:
-   :caption: PHP Classes:
+   :caption: Arrays:
    :glob:
    :titlesonly:
 
-   Introdução <php-classes/index>
-   Classes <php-classes/classes>
+   Boas Vindas <arrays/index>
+   Guia do Usuário <arrays/guide>
 
 .. toctree::
    :hidden:
@@ -19,7 +19,7 @@ Seja bem vindo à nossa documentação
    :glob:
    :titlesonly:
 
-   Introdução <validator/index>
+   Boas Vindas <validator/index>
    Classes <validator/classes>
 
 .. toctree::
@@ -28,8 +28,8 @@ Seja bem vindo à nossa documentação
    :glob:
    :titlesonly:
 
-   Introdução <csvparser/index>
-   Instruções <csvparser/instructions>
+   Boas Vindas <csvparser/index>
+   Guia do Usuário <csvparser/guide>
 
 No menu ao lado você encontrará todas as informações referentes às nossas bibliotecas de forma bem organizada.
 
