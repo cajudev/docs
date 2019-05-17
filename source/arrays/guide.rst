@@ -16,7 +16,8 @@ Guia do Usuário
    8. Verificando e Removendo Valores <pages/verifying-removing>
    9. Iterando sobre o Objeto <pages/iterating>
    10. Ordenando o Array <pages/sort>
-   11. Métodos de Uso geral <pages/general-methods>
+   11. Verificação de Tipo <pages/type-verification>
+   12. Métodos de Uso geral <pages/general-methods>
 
 Esta classe tem como função manipular pages, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 
