@@ -197,19 +197,74 @@ chaves com a forma <code class="docutils literal notranslate"><span class="pre">
 <span class="cm">*/</span>
 </pre></div>
 </div>
+<p>Uma caracteristica muito interessante é que não é necessário inicializar posições no array para
+utilizar os operadores de atribuição.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$array</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="c1">//Isso seria necessário caso estivesse utilizando um array normal</span>
+<span class="nv">$array</span><span class="p">[</span><span class="s1">&#39;sum&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">//Para só então poder acumular</span>
+<span class="nv">$array</span><span class="p">[</span><span class="s1">&#39;sum&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="nv">$valor</span><span class="p">;</span>
+
+<span class="c1">//Mas não é necessário quando estiver utilizando um objeto Arrays</span>
+<span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;sum&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="nv">$valor</span><span class="p">;</span> <span class="c1">// atribuição válida</span>
+</pre></div>
+</div>
+<p>Isso é válido para qualquer um dos operadores listados em
+<a class="reference external" href="https://www.php.net/manual/pt_BR/language.operators.assignment.php">https://www.php.net/manual/pt_BR/language.operators.assignment.php</a>.</p>
 </div>
 <div class="section" id="acessando-valores">
 <h2>4.2 Acessando valores<a class="headerlink" href="#acessando-valores" title="Link permanente para este título">¶</a></h2>
 <p>Para acessar uma chave anteriormente setada, basta fazer como o de costume:</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">];</span> <span class="c1">// ipsum</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+
+<span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ipsum&#39;</span><span class="p">;</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">];</span> <span class="c1">// ipsum</span>
 </pre></div>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Aviso</p>
-<p>Ao tentar acessar uma chave que ainda não foi setada, nenhum erro será emitido,
-porém a chave será criada automaticamente com o valor <code class="docutils literal notranslate"><span class="pre">null</span></code>, então é importante
-que utilize o método <code class="docutils literal notranslate"><span class="pre">isset</span></code> ou o operador <code class="docutils literal notranslate"><span class="pre">??</span></code> para verificar a existência
-de uma chave antes de acessá-la.</p>
+<p>Caso tente acessar uma chave inexistente, nenhum erro será emitido e o valor retornado será null
+porém como consequência a chave será inicializada. Veja abaixo.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">Cajudev\Arrays Object</span>
+<span class="cm">   (</span>
+<span class="cm">      [content:Cajudev\Arrays:private] =&gt; Array</span>
+<span class="cm">         (</span>
+<span class="cm">         )</span>
+<span class="cm">      [length:Cajudev\Arrays:private] =&gt; 0</span>
+<span class="cm">   )</span>
+<span class="cm">*/</span>
+
+<span class="k">echo</span> <span class="nv">$arrays</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">];</span> <span class="c1">// null</span>
+
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$arrays</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">Cajudev\Arrays Object</span>
+<span class="cm">   (</span>
+<span class="cm">      [content:Cajudev\Arrays:private] =&gt; Array</span>
+<span class="cm">         (</span>
+<span class="cm">            [lorem] =&gt;</span>
+<span class="cm">         )</span>
+<span class="cm">      [length:Cajudev\Arrays:private] =&gt; 0</span>
+<span class="cm">   )</span>
+<span class="cm">*/</span>
+</pre></div>
+</div>
+<p>Se esse não é o comportamento desejado, basta realizar uma verificação antes com o método <code class="docutils literal notranslate"><span class="pre">isset</span></code>,
+ou usufruir do operador de coalescência <code class="docutils literal notranslate"><span class="pre">??</span></code>.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$arrays</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Arrays</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="nv">$array</span><span class="o">-&gt;</span><span class="na">isset</span><span class="p">(</span><span class="s1">&#39;lorem&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="nv">$array</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">:</span> <span class="k">null</span><span class="p">;</span> <span class="c1">// null</span>
+
+<span class="k">echo</span> <span class="nv">$array</span><span class="p">[</span><span class="s1">&#39;lorem&#39;</span><span class="p">]</span> <span class="o">??</span> <span class="k">null</span><span class="p">;</span> <span class="c1">// null</span>
+</pre></div>
 </div>
 </div>
 </div>
