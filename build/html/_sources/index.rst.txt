@@ -15,6 +15,15 @@ Seja bem vindo à nossa documentação
 
 .. toctree::
    :hidden:
+   :caption: EasyForm:
+   :glob:
+   :titlesonly:
+
+   Boas Vindas <easyform/index>
+   Guia do Usuário <easyform/guide>
+
+.. toctree::
+   :hidden:
    :caption: Validator:
    :glob:
    :titlesonly:
@@ -31,7 +40,7 @@ Seja bem vindo à nossa documentação
    Boas Vindas <csvparser/index>
    Guia do Usuário <csvparser/guide>
 
-No menu ao lado você encontrará todas as informações referentes às nossas bibliotecas de forma bem organizada.
+No menu ao lado você encontrará todas as informações referentes às nossas bibliotecas.
 
 
 .. |github| image:: image/github.png

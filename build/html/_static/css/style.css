@@ -1,0 +1,51 @@
+.title-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 22px;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* COLORS */
+.color-blue {
+  color: #0d4cac;
+}
+.color-purple {
+  color: #770d69;
+}
+
+/* LIGHT COLORS */
+.color-light-blue {
+  color: #00c3ff;
+}
+.color-light-purple {
+  color: #c515a8;
+}
+
+/* BORDER COLORS */
+.border-blue {
+  border-color: #0d4cac;
+}
+.border-purple {
+  border-color: #770d69;
+}
+
+/* ARROW STYLES */
+.arrow-blue {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='blue' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.75rem center/8px 10px;
+}
+.arrow-purple {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='purple' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.75rem center/8px 10px;
+}
+
+.custom-select {
+  padding: 5px;
+  border-radius: 5px;
+  overflow: auto;
+}

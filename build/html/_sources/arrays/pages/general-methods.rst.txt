@@ -2,7 +2,7 @@
 12. Métodos de Uso Geral
 =======================
 
-12.1 Count ``Deprecated``
+12.1 Count ``(Deprecated)``
 ----------
 
 O método count retorna a quantidade de elementos do array
