@@ -10,6 +10,7 @@ Guia do Usuário
    2. Criando Templates <pages/first-template>
    3. Usando Variáveis <pages/variables>
    4. Estilização Dinâmica <pages/styling>
+   5. Propriedades <pages/properties>
 
 Esta classe tem como função facilitar a criação de formulários pelo back end.
 

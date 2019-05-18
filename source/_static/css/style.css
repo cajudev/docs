@@ -10,6 +10,13 @@
   padding: 2rem 0;
 }
 
+.required {
+  font-size: 30px;
+  position: relative;
+  top: 5px;
+  font-weight: bold;
+}
+
 /* COLORS */
 .color-blue {
   color: #0d4cac;

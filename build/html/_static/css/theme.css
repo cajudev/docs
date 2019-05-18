@@ -26,6 +26,10 @@ pre {
   font-variant-ligatures: common-ligatures;
 }
 
+.ethical-rtd {
+  display: none;
+}
+
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -6087,11 +6091,11 @@ footer p {
 .rst-content footer span.commit tt,
 footer span.commit .rst-content tt,
 footer span.commit code {
-  padding: 0;
-  font-size: 1em;
-  background: 0 0;
-  border: none;
-  color: gray;
+  display: none;
+}
+
+span.commit {
+  display: none;
 }
 
 .rst-footer-buttons:after,
@@ -6182,13 +6186,7 @@ footer span.commit code {
 }
 
 .rst-versions {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 300px;
-  color: #fcfcfc;
-  background: #1f1d1d;
-  z-index: 400;
+  display: none;
 }
 
 .rst-versions a {
