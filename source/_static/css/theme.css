@@ -6087,11 +6087,11 @@ footer p {
 .rst-content footer span.commit tt,
 footer span.commit .rst-content tt,
 footer span.commit code {
-  padding: 0;
-  font-size: 1em;
-  background: 0 0;
-  border: none;
-  color: gray;
+  display: none;
+}
+
+span.commit {
+  display: none;
 }
 
 .rst-footer-buttons:after,
