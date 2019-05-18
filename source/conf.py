@@ -91,6 +91,8 @@ html_static_path = ['_static']
 def setup(app):
     app.add_stylesheet('css/bootstrap.min.css')
     app.add_stylesheet('css/style.css')
+    app.add_javascript('http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js')
+    app.add_javascript('js/highlight.js')
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
