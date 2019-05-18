@@ -26,6 +26,10 @@ pre {
   font-variant-ligatures: common-ligatures;
 }
 
+.ethical-rtd {
+  display: nonde;
+}
+
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -6182,13 +6186,7 @@ span.commit {
 }
 
 .rst-versions {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 300px;
-  color: #fcfcfc;
-  background: #1f1d1d;
-  z-index: 400;
+  display: none;
 }
 
 .rst-versions a {
