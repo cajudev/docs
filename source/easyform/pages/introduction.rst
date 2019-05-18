@@ -55,9 +55,11 @@ Pode pode realizar o download dos arquivos de exemplo clicando aqui_:
    </body>
    </html>
 
+Resultado:
+
 .. raw:: html
 
-   <div class="container mt-5">
+   <div class="container mb-4">
       <div class="title-container">
          <h1 class="title">Guia do Usuário Easy Form</h1>
       </div>
