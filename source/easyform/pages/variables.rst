@@ -18,8 +18,8 @@ Dois pontos, seguido do nome da variável, seguido opcionalmente por um operador
       ],
       'input' => [
          'attributes' => [
-               'class' => 'form-control',
-               'type'  => '::type'
+            'class' => 'form-control',
+            'type'  => '::type'
          ],
       ]
    ]);
@@ -87,15 +87,15 @@ através de uma única variável a mais que colocaremos em nosso template.
    $inputTemplate = new \Cajudev\UI\Template('input', [
       'label' => [
          'attributes' => [
-               'for' => '::id' // variável nova aqui
+            'for' => '::id' // variável nova aqui
          ],
          'text' => '::label'
       ],
       'input' => [
          'attributes' => [
-               'id'    => '::id', // mesma variável aqui
-               'class' => 'form-control',
-               'type'  => '::type'
+            'id'    => '::id', // mesma variável aqui
+            'class' => 'form-control',
+            'type'  => '::type'
          ],
       ]
    ]);
@@ -146,7 +146,7 @@ Para informar a hierarquia entre o fieldset e os demais, utilizamos a chave ``ch
    $inputTemplate = new \Cajudev\UI\Template('input', [
       'fieldset' => [ // novo elemento adicionado
          'attributes' => [
-               'class' => 'form-group'
+            'class' => 'form-group'
          ],
          'children' => [ // indica que os próximos elementos estarão dentro do elemento fieldset
             'label' => [
