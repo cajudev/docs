@@ -7,7 +7,9 @@ Guia do Usuário
    :glob:
 
    1. Introdução <pages/introduction>
-   2. Criando Templates <pages/creating-templates>
+   2. Criando Templates <pages/first-template>
+   3. Usando Variáveis <pages/variables>
+   4. Estilização Dinâmica <pages/styling>
 
 Esta classe tem como função facilitar a criação de formulários pelo back end.
 

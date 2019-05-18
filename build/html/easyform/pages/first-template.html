@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Primeiro Template &mdash; documentação Cajudev </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="3. Usando Variáveis" href="variables.html" />
+    <link rel="prev" title="1. Introdução" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cajudev
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Arrays:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arrays/index.html">Boas Vindas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arrays/guide.html">Guia do Usuário</a></li>
+</ul>
+<p class="caption"><span class="caption-text">EasyForm:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Boas Vindas</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide.html">Guia do Usuário</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">1. Introdução</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Criando Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">3. Usando Variáveis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styling.html">4. Estilização Dinâmica</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../validator/index.html">Boas Vindas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../validator/classes.html">Classes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CsvParser:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/index.html">Boas Vindas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/guide.html">Guia do Usuário</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cajudev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../guide.html">Guia do Usuário</a> &raquo;</li>
+        
+      <li>2. Primeiro Template</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="primeiro-template">
+<h1>2. Primeiro Template<a class="headerlink" href="#primeiro-template" title="Link permanente para este título">¶</a></h1>
+<p>Antes de podermos criar elementos de um formulário, é necessário primeiro criar
+templates que serão como componentes pré configurados. O código fica assim.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="k">require_once</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+
+<span class="nv">$loader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Twig\Loader\FilesystemLoader</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">);</span>
+<span class="nv">$twig</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Twig\Environment</span><span class="p">(</span><span class="nv">$loader</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cache&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;./&#39;</span><span class="p">]);</span>
+<span class="nv">$template</span> <span class="o">=</span> <span class="nv">$twig</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">);</span>
+
+<span class="c1">// Aqui instanciamos um objeto Template, que recebe 2 argumentos.</span>
+<span class="c1">// O primeiro é o nome do template e o segundo é sua estrutura</span>
+<span class="c1">// Em nosso caso criamos a mesma estrutura que antes foi criada diretamente no HTML</span>
+ <span class="nv">$inputTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\UI\Template</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+     <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+         <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Nome de Usuário&#39;</span>
+     <span class="p">],</span>
+     <span class="s1">&#39;input&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+         <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+             <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-control&#39;</span><span class="p">,</span>
+             <span class="s1">&#39;type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;text&#39;</span>
+         <span class="p">],</span>
+     <span class="p">]</span>
+ <span class="p">]);</span>
+
+ <span class="c1">//Em seguida instanciaremos um objeto EasyForm</span>
+ <span class="nv">$easyForm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\EasyForm</span><span class="p">();</span>
+
+ <span class="c1">//E adicionamos o template criado anteriormente</span>
+ <span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">templates</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$inputTemplate</span><span class="p">);</span>
+
+ <span class="c1">//Finalmente, podemos criar o componente input</span>
+ <span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">);</span>
+
+ <span class="c1">//E passamos o objeto para ser renderizado</span>
+ <span class="k">echo</span> <span class="nv">$template</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">([</span><span class="s1">&#39;formulario&#39;</span> <span class="o">=&gt;</span> <span class="nv">$easyForm</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>Se tudo ocorreu bem, você deverá visualizar o mesmo resultado de quando havia criado em HTML</p>
+<div class="container mb-4">
+   <div class="title-container">
+     <h1 class="title">Guia do Usuário Easy Form</h1>
+   </div>
+   <form><label>Nome de Usuário</label><input class="form-control"/></form>
+ </div><p>Agora podemos criar quandos componentes quisermos de maneira muito fácil</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="c1">// Ocultamos o restante do código para poupar espaço</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">);</span>
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">);</span>
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">);</span>
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$template</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">([</span><span class="s1">&#39;formulario&#39;</span> <span class="o">=&gt;</span> <span class="nv">$easyForm</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="container mb-4">
+   <div class="title-container">
+      <h1 class="title">Guia do Usuário Easy Form</h1>
+   </div>
+   <form>
+      <label>Nome de Usuário</label>
+      <input class="form-control" />
+      <label>Nome de Usuário</label>
+      <input class="form-control" />
+      <label>Nome de Usuário</label>
+      <input class="form-control" />
+      <label>Nome de Usuário</label>
+      <input class="form-control" />
+   </form>
+</div><p>Obviamente não faz sentido ter diversos inputs para nome de usuário, veremos na próxima seção
+como utilizar variáveis na criação de templates.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="variables.html" class="btn btn-neutral float-right" title="3. Usando Variáveis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral float-left" title="1. Introdução" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Richard Lopes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

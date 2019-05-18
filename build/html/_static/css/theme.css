@@ -5793,7 +5793,6 @@ html {
 .wy-menu-vertical li.toctree-l2.current > a {
   color: white;
   background: #ff5c33;
-  padding: 0.4045em 2.427em;
 }
 
 .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {

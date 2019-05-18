@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
-    <link rel="next" title="Bem Vindo ao Validator" href="../../validator/index.html" />
+    <link rel="next" title="2. Primeiro Template" href="first-template.html" />
     <link rel="prev" title="Guia do Usuário" href="../guide.html" /> 
 </head>
 
@@ -90,6 +90,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Boas Vindas</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../guide.html">Guia do Usuário</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1. Introdução</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-template.html">2. Criando Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">3. Usando Variáveis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styling.html">4. Estilização Dinâmica</a></li>
 </ul>
 </li>
 </ul>
@@ -168,8 +171,6 @@
             
   <div class="section" id="introducao">
 <h1>1. Introdução<a class="headerlink" href="#introducao" title="Link permanente para este título">¶</a></h1>
-<div class="section" id="fundamentos">
-<h2>1.1 Fundamentos<a class="headerlink" href="#fundamentos" title="Link permanente para este título">¶</a></h2>
 <p>O primeiro passo para entender a motivação e o funcionamento dessa biblioteca é pensar que
 geralmente, elementos de formulário possuem estruturas padronizadas.</p>
 <div class="admonition note">
@@ -185,7 +186,6 @@ de uma tag label.</p>
 </pre></div>
 </div>
 <p>Colocaremos isso dentro de uma estrutura básica HTML e veremos sua renderização na tela</p>
-<p>Pode pode realizar o download dos arquivos de exemplo clicando <a class="reference external" href="http://www.google.com.br/">aqui</a>:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;pt-br&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -222,10 +222,54 @@ de uma tag label.</p>
       <label for="username">Nome de Usuário</label>
       <input id="username" type="text" class="form-control" />
    </form>
-</div><p>Agora removeremos o formulário do HTML deixando uma tag como referência para ser substituída pelo back end.
+</div><p>O css usado pode ser observado a seguir</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">title-container</span> <span class="p">{</span>
+   <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+   <span class="k">border-radius</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+   <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">title</span> <span class="p">{</span>
+   <span class="k">font-size</span><span class="p">:</span> <span class="mi">22</span><span class="kt">px</span><span class="p">;</span>
+   <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+   <span class="k">padding</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Agora removeremos o formulário do HTML deixando uma tag como referência para ser substituída pelo back end.
 Esse trabalho geralmente é feito usando um template engine, no nosso caso utilizaremos o <a class="reference external" href="https://twig.symfony.com/">twig</a>, mas fique a
 vontade para escolher outro.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container mt-5&quot;</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;title-container&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;title&quot;</span><span class="p">&gt;</span>Guia do Usuário Easy Form<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+   {{ formulario | raw }}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
 </div>
+<p>Para instalar o twig basta usar o comando <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">require</span> <span class="pre">&quot;twig/twig:^2.0&quot;</span></code></p>
+<p>O arquivo php fica assim:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="k">require_once</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+
+<span class="c1">// inicializa as variáveis do twig</span>
+<span class="nv">$loader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Twig\Loader\FilesystemLoader</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">);</span>
+<span class="nv">$twig</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Twig\Environment</span><span class="p">(</span><span class="nv">$loader</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cache&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;./&#39;</span><span class="p">]);</span>
+
+<span class="c1">// carrega o arquivo html que você criou</span>
+<span class="nv">$template</span> <span class="o">=</span> <span class="nv">$twig</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$template</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">([</span><span class="s1">&#39;formulario&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Olá Mundo&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>Ao executar esse arquivo, você deverá obter o seguinte resultado</p>
+<div class="container mb-4">
+   <div class="title-container">
+      <h1 class="title">Guia do Usuário Easy Form</h1>
+   </div>
+   Olá Mundo
+</div><p>Se tudo ocorreu bem, você pode prosseguir para a próxima etapa.</p>
 </div>
 
 
@@ -236,7 +280,7 @@ vontade para escolher outro.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../validator/index.html" class="btn btn-neutral float-right" title="Bem Vindo ao Validator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="first-template.html" class="btn btn-neutral float-right" title="2. Primeiro Template" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../guide.html" class="btn btn-neutral float-left" title="Guia do Usuário" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

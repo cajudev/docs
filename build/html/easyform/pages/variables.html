@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="pt-BR" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Usando Variáveis &mdash; documentação Cajudev </title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="next" title="4. Estilização Dinâmica" href="styling.html" />
+    <link rel="prev" title="2. Primeiro Template" href="first-template.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cajudev
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Arrays:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../arrays/index.html">Boas Vindas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../arrays/guide.html">Guia do Usuário</a></li>
+</ul>
+<p class="caption"><span class="caption-text">EasyForm:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Boas Vindas</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../guide.html">Guia do Usuário</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">1. Introdução</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first-template.html">2. Criando Templates</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. Usando Variáveis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styling.html">4. Estilização Dinâmica</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Validator:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../validator/index.html">Boas Vindas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../validator/classes.html">Classes</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CsvParser:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/index.html">Boas Vindas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csvparser/guide.html">Guia do Usuário</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cajudev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../guide.html">Guia do Usuário</a> &raquo;</li>
+        
+      <li>3. Usando Variáveis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="usando-variaveis">
+<h1>3. Usando Variáveis<a class="headerlink" href="#usando-variaveis" title="Link permanente para este título">¶</a></h1>
+<p>Modificaremos nosso template criado anteriormente, tornando dinâmico o texto que será atribuído a tag label
+bem como o tipo do input.</p>
+<p>A sintaxe para a criação de variáveis é:
+Dois pontos, seguido do nome da variável, seguido opcionalmente por um operador especial.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="nv">$inputTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\UI\Template</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::label&#39;</span>
+   <span class="p">],</span>
+   <span class="s1">&#39;input&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-control&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;::type&#39;</span>
+      <span class="p">],</span>
+   <span class="p">]</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\EasyForm</span><span class="p">();</span>
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">templates</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$inputTemplate</span><span class="p">);</span>
+
+<span class="c1">//Agora na criação dos componentes, devemos informar os valores das variáveis</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Nome de Usuário&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Senha&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Repita a Senha&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+<span class="p">]);</span>
+
+<span class="k">echo</span> <span class="nv">$template</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">([</span><span class="s1">&#39;formulario&#39;</span> <span class="o">=&gt;</span> <span class="nv">$easyForm</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="container mb-4">
+   <div class="title-container">
+     <h1 class="title">Guia do Usuário Easy Form</h1>
+   </div>
+   <form>
+      <label>Nome de Usuário</label>
+      <input class="form-control" type="text"/>
+      <label>Senha</label>
+      <input class="form-control" type="password"/>
+      <label>Repita a Senha</label>
+      <input class="form-control" type="password"/>
+   </form>
+</div><p>O código HTML até então está sendo gerado assim:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Nome de Usuário<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Senha<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Repita a Senha<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Geralmente labels e inputs são relacionado pelos atributos for e id, adicionaremos essa relação
+através de uma única variável a mais que colocaremos em nosso template.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+
+<span class="nv">$inputTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\UI\Template</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;for&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span> <span class="c1">// variável nova aqui</span>
+      <span class="p">],</span>
+      <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::label&#39;</span>
+   <span class="p">],</span>
+   <span class="s1">&#39;input&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;id&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span><span class="p">,</span> <span class="c1">// mesma variável aqui</span>
+            <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-control&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;::type&#39;</span>
+      <span class="p">],</span>
+   <span class="p">]</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\EasyForm</span><span class="p">();</span>
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">templates</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$inputTemplate</span><span class="p">);</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::id&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Nome de Usuário&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::id&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Senha&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::id&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;repeat-password&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Repita a Senha&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+<span class="p">]);</span>
+
+<span class="k">echo</span> <span class="nv">$template</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">([</span><span class="s1">&#39;formulario&#39;</span> <span class="o">=&gt;</span> <span class="nv">$easyForm</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>Resultado:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;username&quot;</span><span class="p">&gt;</span>Nome de Usuário<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;username&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">/&gt;</span>
+   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;</span>Senha<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">/&gt;</span>
+   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;repeat-password&quot;</span><span class="p">&gt;</span>Senha<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;repeat-password&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Agora adicionaremos outras duas tags em nosso template, um fieldset para agrupar os elementos
+e um small para incluir uma explicação mais detalhada em cada um.</p>
+<p>Para informar a hierarquia entre o fieldset e os demais, utilizamos a chave <code class="docutils literal notranslate"><span class="pre">children</span></code>.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$inputTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\UI\Template</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;fieldset&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="c1">// novo elemento adicionado</span>
+      <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-group&#39;</span>
+      <span class="p">],</span>
+      <span class="s1">&#39;children&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="c1">// indica que os próximos elementos estarão dentro do elemento fieldset</span>
+         <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+               <span class="s1">&#39;for&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::label&#39;</span>
+         <span class="p">],</span>
+         <span class="s1">&#39;input&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+               <span class="s1">&#39;id&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-control&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;::type&#39;</span>
+            <span class="p">],</span>
+         <span class="p">],</span>
+         <span class="s1">&#39;small&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="c1">// novo elemento adicionado</span>
+            <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::small&#39;</span>
+         <span class="p">]</span>
+      <span class="p">]</span>
+   <span class="p">],</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\EasyForm</span><span class="p">();</span>
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">templates</span><span class="o">-&gt;</span><span class="na">add</span><span class="p">(</span><span class="nv">$inputTemplate</span><span class="p">);</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::id&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Nome de Usuário&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;text&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::small&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Informe um nome de usuário sem caracteres especiais&#39;</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::id&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Senha&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::small&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Informe uma senha de 8 caracteres, incluindo letras e números&#39;</span>
+<span class="p">]);</span>
+
+<span class="nv">$easyForm</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">[</span>
+   <span class="s1">&#39;::id&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Repita a Senha&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::type&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;::small&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Confirme a senha informada anteriormente&#39;</span>
+<span class="p">]);</span>
+
+<span class="k">echo</span> <span class="nv">$template</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">([</span><span class="s1">&#39;formulario&#39;</span> <span class="o">=&gt;</span> <span class="nv">$easyForm</span><span class="p">]);</span>
+</pre></div>
+</div>
+<p>Resultado:</p>
+<form>
+   <fieldset class="form-group">
+      <label for="username">Nome de Usuário</label>
+      <input id="username" class="form-control" type="text"/>
+      <small>Informe um nome de usuário sem caracteres especiais</small>
+   </fieldset>
+   <fieldset class="form-group">
+      <label for="password">Senha</label>
+      <input id="password" class="form-control" type="password"/>
+      <small>Informe uma senha de 8 caracteres, incluindo letras e números</small>
+   </fieldset>
+   <fieldset class="form-group">
+      <label for="password">Repita a Senha</label>
+      <input id="password" class="form-control" type="password"/>
+      <small>Confirme a senha informada anteriormente</small>
+   </fieldset>
+</form></div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="styling.html" class="btn btn-neutral float-right" title="4. Estilização Dinâmica" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="first-template.html" class="btn btn-neutral float-left" title="2. Primeiro Template" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Richard Lopes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
