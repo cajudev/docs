@@ -178,7 +178,7 @@ Resultado:
       </fieldset>
    </form>
 
-8.1 Método DrawLine
+8.2 Método DrawLine
 -------------------
 
 O método drawLine também permite inserir uma quebra de linha, porém adicionando também uma borda.
