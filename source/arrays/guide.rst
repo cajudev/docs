@@ -19,6 +19,6 @@ Guia do Usuário
    11. Verificação de Tipo <pages/type-verification>
    12. Métodos de Uso geral <pages/general-methods>
 
-Esta classe tem como função manipular pages, de maneira bem encapsulada.
+Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 
 porém com alguns diferenciais interessantes que você verá ao longo desta documentação.
