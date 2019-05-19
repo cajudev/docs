@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
-    <link rel="next" title="Bem Vindo ao Validator" href="../../validator/index.html" />
+    <link rel="next" title="6. Operadores Especiais" href="operators.html" />
     <link rel="prev" title="4. Estilização Dinâmica" href="styling.html" /> 
 </head>
 
@@ -94,6 +94,9 @@
 <li class="toctree-l2"><a class="reference internal" href="variables.html">3. Usando Variáveis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="styling.html">4. Estilização Dinâmica</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5. Propriedades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operators.html">6. Operadores Especiais</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element-list.html">7. Lista de Elementos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="breakline.html">8. Quebras de Linha</a></li>
 </ul>
 </li>
 </ul>
@@ -329,31 +332,40 @@ atributos “value” e os valores são os nós de texto.</p>
 construir estruturas mais complexas, como a do exemplo abaixo.</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$selectTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\UI\Template</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="p">[</span>
    <span class="s1">&#39;fieldset&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-   <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-group col-::col&#39;</span><span class="p">],</span>
-   <span class="s1">&#39;children&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-      <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-         <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-::color text-weight-bold&#39;</span><span class="p">,</span> <span class="s1">&#39;for&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span><span class="p">],</span>
-         <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::label&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;children&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-         <span class="s1">&#39;span&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-            <span class="s1">&#39;display&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::required!&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-::color required&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;*&#39;</span>
-         <span class="p">]</span>
-         <span class="p">]</span>
+      <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+         <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-group col-::col&#39;</span>
       <span class="p">],</span>
-      <span class="s1">&#39;select&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-         <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-         <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;custom-select color-::color border-::color arrow-::color&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span><span class="p">,</span> <span class="s1">&#39;::multiple&#39;</span><span class="p">,</span> <span class="s1">&#39;::required&#39;</span>
+      <span class="s1">&#39;children&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+         <span class="s1">&#39;label&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+               <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-::color text-weight-bold&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;for&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::label&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;children&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+               <span class="s1">&#39;span&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                  <span class="s1">&#39;display&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::required!&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                     <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-::color required&#39;</span>
+                  <span class="p">],</span>
+                  <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;*&#39;</span>
+               <span class="p">]</span>
+            <span class="p">]</span>
          <span class="p">],</span>
-         <span class="s1">&#39;options&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::options&#39;</span>
+         <span class="s1">&#39;select&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+               <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;custom-select color-::color border-::color arrow-::color&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span><span class="p">,</span> <span class="s1">&#39;::multiple&#39;</span><span class="p">,</span> <span class="s1">&#39;::required&#39;</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;options&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::options&#39;</span>
+         <span class="p">],</span>
+         <span class="s1">&#39;small&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+               <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-light-::color float-right font-italic&#39;</span>
+            <span class="p">],</span>
+            <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::small&#39;</span>
+         <span class="p">]</span>
       <span class="p">],</span>
-      <span class="s1">&#39;small&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-         <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-light-::color float-right font-italic&#39;</span><span class="p">],</span>
-         <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::small&#39;</span>
-      <span class="p">]</span>
-   <span class="p">],</span>
    <span class="p">],</span>
 <span class="p">]);</span>
 
@@ -416,7 +428,61 @@ construir estruturas mais complexas, como a do exemplo abaixo.</p>
       </select>
       <small class="color-light-blue float-right font-italic">Selecione sua cidade</small>
    </fieldset>
-</form></div>
+</form><p>O css adicionado foi o seguinte</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">required</span> <span class="p">{</span>
+   <span class="k">font-size</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+   <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+   <span class="k">top</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+   <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Se você é o tipo de pessoa que prefere olhar as coisas de maneira mais desacoplada,
+uma possibilidade seria desmembrar as partes da estrutura como no exemplo a seguir,
+onde criamos o template por partes. O resultado é o mesmo.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$selectStructure</span><span class="p">[</span><span class="s1">&#39;fieldset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;form-group col-::col&#39;</span>
+   <span class="p">],</span>
+<span class="p">];</span>
+
+<span class="nv">$fieldset</span> <span class="o">=&amp;</span> <span class="nv">$selectStructure</span><span class="p">[</span><span class="s1">&#39;fieldset&#39;</span><span class="p">][</span><span class="s1">&#39;children&#39;</span><span class="p">];</span>
+
+<span class="nv">$fieldset</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-::color text-weight-bold&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;for&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span>
+   <span class="p">],</span>
+   <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::label&#39;</span><span class="p">,</span>
+<span class="p">];</span>
+
+<span class="nv">$label</span> <span class="o">=&amp;</span> <span class="nv">$fieldset</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">][</span><span class="s1">&#39;children&#39;</span><span class="p">];</span>
+
+<span class="nv">$label</span><span class="p">[</span><span class="s1">&#39;span&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s1">&#39;display&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::required!&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-::color required&#39;</span><span class="p">],</span>
+   <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;*&#39;</span>
+<span class="p">];</span>
+
+<span class="nv">$fieldset</span><span class="p">[</span><span class="s1">&#39;select&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;custom-select color-::color border-::color arrow-::color&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;id&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::id&#39;</span><span class="p">,</span> <span class="s1">&#39;::multiple&#39;</span><span class="p">,</span> <span class="s1">&#39;::required&#39;</span>
+   <span class="p">],</span>
+   <span class="s1">&#39;options&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::options&#39;</span>
+<span class="p">];</span>
+
+<span class="nv">$fieldset</span><span class="p">[</span><span class="s1">&#39;small&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="s1">&#39;attributes&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+      <span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;color-light-::color float-right font-italic&#39;</span>
+   <span class="p">],</span>
+   <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;::small&#39;</span>
+<span class="p">];</span>
+
+<span class="nv">$selectTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\Cajudev\UI\Template</span><span class="p">(</span><span class="s1">&#39;select&#39;</span><span class="p">,</span> <span class="nv">$selectStructure</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -427,7 +493,7 @@ construir estruturas mais complexas, como a do exemplo abaixo.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../validator/index.html" class="btn btn-neutral float-right" title="Bem Vindo ao Validator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="operators.html" class="btn btn-neutral float-right" title="6. Operadores Especiais" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="styling.html" class="btn btn-neutral float-left" title="4. Estilização Dinâmica" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

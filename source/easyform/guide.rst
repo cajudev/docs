@@ -11,6 +11,9 @@ Guia do Usuário
    3. Usando Variáveis <pages/variables>
    4. Estilização Dinâmica <pages/styling>
    5. Propriedades <pages/properties>
+   6. Operadores Especiais <pages/operators>
+   7. Lista de Elementos <pages/element-list>
+   8. Quebras de Linha <pages/breakline>
 
 Esta classe tem como função facilitar a criação de formulários pelo back end.
 

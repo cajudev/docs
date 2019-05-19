@@ -196,31 +196,40 @@ construir estruturas mais complexas, como a do exemplo abaixo.
 
    $selectTemplate = new \Cajudev\UI\Template('select', [
       'fieldset' => [
-      'attributes' => ['class' => 'form-group col-::col'],
-      'children' => [
-         'label' => [
-            'attributes' => ['class' => 'color-::color text-weight-bold', 'for' => '::id'],
-            'text' => '::label',
-            'children' => [
-            'span' => [
-               'display' => '::required!',
-               'attributes' => ['class' => 'color-::color required'],
-               'text' => '*'
-            ]
-            ]
-         ], 
-         'select' => [
-            'attributes' => [
-            'class' => 'custom-select color-::color border-::color arrow-::color',
-            'id' => '::id', '::multiple', '::required'
-            ],
-            'options' => '::options'
+         'attributes' => [
+            'class' => 'form-group col-::col'
          ],
-         'small' => [
-            'attributes' => ['class' => 'color-light-::color float-right font-italic'],
-            'text' => '::small'
-         ]
-      ],
+         'children' => [
+            'label' => [
+               'attributes' => [
+                  'class' => 'color-::color text-weight-bold',
+                  'for' => '::id'
+               ],
+               'text' => '::label',
+               'children' => [
+                  'span' => [
+                     'display' => '::required!',
+                     'attributes' => [
+                        'class' => 'color-::color required'
+                     ],
+                     'text' => '*'
+                  ]
+               ]
+            ], 
+            'select' => [
+               'attributes' => [
+                  'class' => 'custom-select color-::color border-::color arrow-::color',
+                  'id' => '::id', '::multiple', '::required'
+               ],
+               'options' => '::options'
+            ],
+            'small' => [
+               'attributes' => [
+                  'class' => 'color-light-::color float-right font-italic'
+               ],
+               'text' => '::small'
+            ]
+         ],
       ],
    ]);
 
@@ -287,3 +296,61 @@ Resultado:
          <small class="color-light-blue float-right font-italic">Selecione sua cidade</small>
       </fieldset>
    </form>
+
+O css adicionado foi o seguinte
+
+.. code:: css
+
+   .required {
+      font-size: 30px;
+      position: relative;
+      top: 5px;
+      font-weight: bold;
+   }
+
+Se você é o tipo de pessoa que prefere olhar as coisas de maneira mais desacoplada,
+uma possibilidade seria desmembrar as partes da estrutura como no exemplo a seguir,
+onde criamos o template por partes. O resultado é o mesmo.
+
+.. code:: php
+
+   $selectStructure['fieldset'] = [
+      'attributes' => [
+         'class' => 'form-group col-::col'
+      ],
+   ];
+
+   $fieldset =& $selectStructure['fieldset']['children'];
+
+   $fieldset['label'] = [
+      'attributes' => [
+         'class' => 'color-::color text-weight-bold',
+         'for' => '::id'
+      ],
+      'text' => '::label',
+   ];
+
+   $label =& $fieldset['label']['children'];
+
+   $label['span'] = [
+      'display' => '::required!',
+      'attributes' => ['class' => 'color-::color required'],
+      'text' => '*'
+   ];
+
+   $fieldset['select'] = [
+      'attributes' => [
+         'class' => 'custom-select color-::color border-::color arrow-::color',
+         'id' => '::id', '::multiple', '::required'
+      ],
+      'options' => '::options'
+   ];
+
+   $fieldset['small'] = [
+      'attributes' => [
+         'class' => 'color-light-::color float-right font-italic'
+      ],
+      'text' => '::small'
+   ];
+
+   $selectTemplate = new \Cajudev\UI\Template('select', $selectStructure);
