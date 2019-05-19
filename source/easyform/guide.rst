@@ -14,6 +14,7 @@ Guia do Usuário
    6. Operadores Especiais <pages/operators>
    7. Lista de Elementos <pages/element-list>
    8. Quebras de Linha <pages/breakline>
+   9. Criando Seções <pages/sections>
 
 Esta classe tem como função facilitar a criação de formulários pelo back end.
 

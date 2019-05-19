@@ -50,6 +50,19 @@
   border: solid 1px #71a6ff;
 }
 
+.section-container {
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom, #ff471a 0%, #ec3b0f 100%);
+}
+
+.section-title {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+
 /* COLORS */
 .color-blue {
   color: #0d4cac;
