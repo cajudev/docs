@@ -64,7 +64,7 @@ O método ``unshift`` é usado para adicionar (empurrar) um ou mais valores no i
 2.3 Set
 -------
 
-Esse método ``set`` é usado para associar uma chave à um valor.  Como primeiro argumento, deve ser
+O método ``set`` é usado para associar uma chave à um valor.  Como primeiro argumento, deve ser
 informado o valor, e os demais são as chaves. Ele também suporta a notação de ponto descrita na seção 5.
 
 .. code:: php
@@ -80,3 +80,31 @@ informado o valor, e os demais são as chaves. Ele também suporta a notação d
 
    // ou com a notação de ponto
    $arrays->set('lorem', 'ipsum.dolor.amet');
+
+2.4 setByReference
+------------------
+
+Esse método permitir atribuir por referência um conteúdo à classe.
+
+.. code:: php
+
+   use Cajudev\Arrays;
+
+   $session = new Arrays();
+
+   $session->setByReference($_SESSION);
+   
+   $session->set('Lorem', 'hello.world');
+
+   print_r($_SESSION);
+
+   /*
+      Array
+         (
+            [hello] => Array
+               (
+                     [world] => Lorem
+               )
+
+         )
+   */

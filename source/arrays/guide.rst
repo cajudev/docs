@@ -19,6 +19,7 @@ Guia do Usuário
    11. Map, Filter e Reduce <pages/map-filter-reduce>
    12. Verificação de Tipo <pages/type-verification>
    13. Métodos de Uso geral <pages/general-methods>
+   14. Métodos Estáticos <pages/static-methods>
 
 Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 
