@@ -1,5 +1,5 @@
 ======================
-11. Verificação de Tipo
+12. Verificação de Tipo
 ======================
 
 Esta classe implementa os principais métodos de verificação de tipos, para facilitar esse tipo de trabalho. Observe abaixo:
