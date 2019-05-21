@@ -49,7 +49,7 @@ retornará todo o array interno da classe. Esse método também suporta a notaç
     }
    */
 
-3.2 Recebendo o tamanho do array
+3.3 Recebendo o tamanho do array
 --------------------------------
 
 A cada inserção ou remoção de valores, o atributo interno ``length`` é atualizado,
