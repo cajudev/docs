@@ -68,3 +68,7 @@ Para os exemplos que serão mostrados abaixo, considere o objeto anteriormente c
 
    echo $arrays['lorem.ipsum'][1]['sit.amet']; //dolor
 
+.. note::
+
+   Diversos métodos também suportam essa notação, como **get**, **set**, **isset**, **empty**, entre outros.
+   Todos estão descritos nessa documentação.

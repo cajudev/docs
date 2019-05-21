@@ -2,20 +2,7 @@
 12. Métodos de Uso Geral
 =======================
 
-12.1 Count ``(Deprecated)``
-----------
-
-O método count retorna a quantidade de elementos do array
-
-.. code-block:: php
-
-   use Cajudev\Arrays;
-
-   $arrays = new Arrays('lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]);
-
-   echo $arrays->count(); // 3
-
-12.2 Last
+12.1 Last
 ---------
 
 Retorna o último elemento de um array (reinicia o ponteiro)
@@ -28,7 +15,7 @@ Retorna o último elemento de um array (reinicia o ponteiro)
 
    echo $arrays->last(); // 'dolor'
 
-12.3 Shift
+12.2 Shift
 ---------
 
 Remove o primeiro elemento de um array (reinicia o ponteiro)
@@ -42,7 +29,7 @@ Remove o primeiro elemento de um array (reinicia o ponteiro)
 
    echo $arrays; // ["ipsum","dolor"]
 
-12.4 Pop
+12.3 Pop
 -------
 
 Remove o último elemento de um array (reinicia o ponteiro)
@@ -55,3 +42,16 @@ Remove o último elemento de um array (reinicia o ponteiro)
    $arrays->pop();
 
    echo $arrays; // ["lorem","ipsum"]
+
+12.4 Count ``(Deprecated)``
+----------
+
+O método count retorna a quantidade de elementos do array.
+
+.. code-block:: php
+
+   use Cajudev\Arrays;
+
+   $arrays = new Arrays('lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]);
+
+   echo $arrays->count(); // 3

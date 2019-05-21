@@ -4,7 +4,7 @@
 
 O método ``get`` possui função dupla. Ele pode receber como argumento uma chave ou mais
 retornando assim um valor correpondente, ou, caso não seja passado nenhum argumento
-retornará todo o array interno da classe.
+retornará todo o array interno da classe. Esse método também suporta a notação de ponto descrita na seção 5.
 
 3.1 Selecionando dados
 ----------------------
@@ -17,9 +17,14 @@ retornará todo o array interno da classe.
 
    echo $arrays->get(0); //lorem
 
+   // chamadas encadeadas...
    echo $arrays->get(2)->get('dolor')->get('sit'); //amet
 
+   // ou com argumentos variáveis...
    echo $arrays->get(2, 'dolor', 'sit'); //amet
+
+   // ou ainda com a notação de ponto...
+   echo $arrays->get('2.dolor.sit'); //amet
 
 3.2 Recebendo todo o conteúdo
 -----------------------------
