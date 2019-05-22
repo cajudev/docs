@@ -43,6 +43,7 @@ Novidades
 
 Estão chegando as versão 1.1 (php 7.1+) e 0.1 (php 7.0), confira a lista de novos métodos que serão implementados.
 
+- Flip
 - Search
 - Reverse
 - Unique
