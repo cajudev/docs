@@ -34,4 +34,22 @@ Características
 Instalação
 ==========
 
-Realize a instalação utilizando o seguinte comando ``composer require cajudev/arrays``
+Para PHP 7.0 ``composer require cajudev/arrays "0.x.x"``
+
+Para PHP 7.1+ ``composer require cajudev/arrays "1.x.x"``
+
+Novidades
+=========
+
+Estão chegando as versão 1.1 (php 7.1+) e 0.1 (php 7.0), confira a lista de novos métodos que serão implementados.
+
+- Unique
+- Merge 
+- Union
+- Diff
+- Intersect
+- Complement
+- Cartesian
+- Power
+- Backup
+- Restore
