@@ -41,8 +41,10 @@ Para PHP 7.1+ ``composer require cajudev/arrays "1.x.x"``
 Novidades
 =========
 
-Confira os novos métodos que chegaram na versão 1.1 e em breve estarão documentados.
+Confira os novos métodos que chegaram na versão 1.1 e já estão disponíveis, em breve estarão documentados.
 
+- Contains
+- Sum
 - Flip
 - Search
 - Reverse
