@@ -2,64 +2,89 @@
 3. Recebendo Valores
 ====================
 
-O método ``get`` possui função dupla. Ele pode receber como argumento uma chave ou mais
-retornando assim um valor correpondente, ou, caso não seja passado nenhum argumento
-retornará todo o array interno da classe. Esse método também suporta a notação de ponto descrita na seção 5.
+O método ``get()`` permite acessar posições no objeto.
 
-3.1 Selecionando dados
-----------------------
+Considere o exemplo abaixo:
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
-   $arrays = new Arrays(['lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]]);
+   $arrays = new Arrays(['lorem', 'ipsum', 'dolor' => ['sit' => 'amet']]);
 
-   echo $arrays->get(0); //lorem
+3.1 Acesso simples
+------------------
 
-   // chamadas encadeadas...
-   echo $arrays->get(2)->get('dolor')->get('sit'); //amet
+.. code:: php
 
-   // ou com argumentos variáveis...
-   echo $arrays->get(2, 'dolor', 'sit'); //amet
+    // ================================================================================================================ //
 
-   // ou ainda com a notação de ponto...
-   echo $arrays->get('2.dolor.sit'); //amet
+        $arrays->get(0); //lorem
 
-3.2 Recebendo todo o conteúdo
------------------------------
+    // ================================================================================================================ //
 
-.. code-block:: php
+3.2 Acesso encadeado
+--------------------
 
-   use Cajudev\Arrays;
+.. code:: php
 
-   $arrays = new Arrays(['lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]]);
+    // ================================================================================================================ //
+
+        $arrays->get('dolor')->get('sit'); //amet
+
+    // ================================================================================================================ //
+
+3.3 Acesso por múltiplos argumentos
+-----------------------------------
+
+.. code:: php
+
+    // ================================================================================================================ //
+
+        $arrays->get('dolor', 'sit'); //amet
+
+    // ================================================================================================================ //
+
+3.4 Acesso por notação de ponto
+-------------------------------
+
+.. code:: php
+
+    // ================================================================================================================ //
+
+        $arrays->get('dolor.sit'); //amet
+
+    // ================================================================================================================ //
+
+3.5 Acesso inválido
+-------------------
+
+.. code:: php
+
+    // ================================================================================================================ //
+
+        $arrays->get('invalid'); //null
+    
+    // ================================================================================================================ //
+
+3.6 Acesso total
+-----------------
+
+.. code:: php
+
+    // ================================================================================================================ //  
+
+        $arrays->get(); //['lorem', 'ipsum', 'dolor' => ['sit' => 'amet']]
+
+    // ================================================================================================================ //
+
+3.7 Acesso ao tamanho
+---------------------
+
+.. code:: php
+
+    // ================================================================================================================ //
    
-   var_dump($arrays->get());
+        echo $arrays->length; // 3
 
-   /*
-    array(3) {
-        [0] => string(5) "lorem"
-        [1] => string(5) "ipsum"
-        [2] => array(1) {
-            'dolor' => array(1) {
-                'sit' => string(4) "amet"
-            }
-        }
-    }
-   */
-
-3.3 Recebendo o tamanho do array
---------------------------------
-
-A cada inserção ou remoção de valores, o atributo interno ``length`` é atualizado,
-portanto para receber o tamanho do array, basta acessá-lo diretamente.
-
-.. code-block:: php
-
-   use Cajudev\Arrays;
-
-   $arrays = new Arrays(['lorem', 'ipsum', ['dolor' => ['sit', 'amet']]]);
-   
-   echo $arrays->length; // 3
-   echo $arrays[2]['dolor']->length; // 2
+    // ================================================================================================================ //

@@ -2,7 +2,7 @@
 Filtrando Dados
 ===============
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\CsvParser;
 
@@ -26,7 +26,7 @@ Filtrando Dados
 Ou se você preferir:
 --------------------
 
-.. code-block:: php
+.. code:: php
 
    $columns = ['Produto', 'Preço', 'Pagamento', 'Nome'];
 

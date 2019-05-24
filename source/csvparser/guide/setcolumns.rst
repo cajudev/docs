@@ -2,7 +2,7 @@
 Customizando o Retorno
 ======================
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\CsvParser;
 
@@ -21,7 +21,7 @@ Customizando o Retorno
 Ou se você preferir:
 --------------------
 
-.. code-block:: php
+.. code:: php
 
    $columns = ['Produto', 'Preço', 'Pagamento', 'Nome'];
 

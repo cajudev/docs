@@ -4,7 +4,7 @@
 
 Esta classe implementa os principais métodos de verificação de tipos, para facilitar esse tipo de trabalho. Observe abaixo:
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -15,7 +15,7 @@ Os seguinte métodos são suportados: ``isInt, isBool, isFloat, isNumeric, isStr
 
 Todos esses métodos também podem ser utilizados com a notação de ponto
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 

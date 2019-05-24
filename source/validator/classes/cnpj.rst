@@ -2,7 +2,7 @@
 Cnpj
 ====
 
-.. code-block:: php
+.. code:: php
 
    public static validate      (string $subject)
    public static validateArray (array  $array)
@@ -10,7 +10,7 @@ Cnpj
 validate( )
 -----------
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Validator\Cnpj;
 
@@ -28,7 +28,7 @@ validate( )
 validateArray( )
 ----------------
 
-.. code-block:: php
+.. code:: php
 
   use Cajudev\Validator\Cnpj;
 
@@ -47,7 +47,7 @@ validateArray( )
 Resultado:
 ..........
 
-.. code-block:: php
+.. code:: php
 
    Array
    (

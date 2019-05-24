@@ -26,6 +26,14 @@ pre {
   font-variant-ligatures: common-ligatures;
 }
 
+.code-description {
+    height: 40px;
+    background: #FFF;
+    font-size: 14px;
+    margin: 15px 0;
+    border: 1px solid #DADADA;
+}
+
 .ethical-rtd {
   display: none;
 }

@@ -7,7 +7,7 @@
 
 A utilização da classe em um laço for-each é a mesma a de um array comum
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -22,12 +22,11 @@ A utilização da classe em um laço for-each é a mesma a de um array comum
         key: dolor value: sit
    */
 
-Ao trabalhar com foreach + arrays multidimensionais, por questões de desempenho,
-o retorno de cada iteração será um array convencional, ficando a cargo do
-programador instanciar um novo objeto caso precise usar algum método. Veja um
-exemplo abaixo:
+Ao trabalhar com arrays multidimensionais, o valor retornado será um array comum.
 
-.. code-block:: php
+Caso queira utilizar os métodos da classe dentro de um foreach utilize ``$arrays[$key]``;
+
+.. code:: php
    
    use Cajudev\Arrays;
 
@@ -37,10 +36,9 @@ exemplo abaixo:
    $arrays[] = [1, 2, 3];
    $arrays[] = [1, 2, 3];
 
-   $arrays[0]->length; // funciona
-
-   foreach ($arrays as $array) {
+   foreach ($arrays as $key => $array) {
        echo $array->length; // não funciona
+       echo $arrays[$key]->length; // funciona
    }
 
 9.2 Iterando com o método each
@@ -51,7 +49,7 @@ exemplo abaixo:
 
 O método each performa um loop for-each internamente através de uma função callback.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -72,7 +70,7 @@ O método each performa um loop for-each internamente através de uma função c
 As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
 Nestes casos, basta que você retorne da função anônima os valores 'break' ou 'continue'.
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -92,17 +90,12 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
         echo $value . ' ';   // 0 1 3 4 5
     });
 
-.. note::
-
-    Assim como no exemplo anterior, a cada iteração você receberá um array convencional,
-    caso esteja lidando com arrays multidimensionais.
-
 9.3 Iterando em um laço while
 --------------------------------
 
 A utilização da classe em um laço while é realizada da seguinte maneira:
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -122,21 +115,16 @@ A utilização da classe em um laço while é realizada da seguinte maneira:
 9.4 Iterando com o método for
 -----------------------------
 
-O método ``for`` é uma maneira interessante de se iterar por um objeto Arrays.
+O método ``for`` permite iterar um objeto Arrays através de passos.
 
 Ele recebe três argumentos, o primeiro é o ponto de partida, o segundo é o 
 incremento, e o último é uma função anônima que recebe por meio de injeção a chave e
 o valor de cada iteração.
 
-.. note::
-
-   Caso tenha a intenção de percorrer todo o array, chave por chave, recomendamos
-   o uso do método ``each``, ao invés deste.
-
 9.4.1 Iterando "para frente"
 ............................
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -160,7 +148,7 @@ o valor de cada iteração.
 Caso você queira iterar inversamente o array, basta informar como
 segundo argumento um valor negativo.
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -181,7 +169,7 @@ segundo argumento um valor negativo.
 
 Tome o cuidado de não informar um valor inválido
 
-.. code-block:: php
+.. code:: php
 
     $arrays->push('lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur');
 
@@ -191,43 +179,13 @@ Tome o cuidado de não informar um valor inválido
 
     // Undefined offset: 7
 
-9.4.3 Iterando arrays mistos
-............................
-
-Esse método também funciona com arrays associativos e arrays mistos.
-
-.. code-block:: php
-
-    use Cajudev\Arrays;
-
-    $arrays = new Arrays();
-
-    $arrays['lorem'] = 'ipsum';
-    $arrays->push('lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur');
-    $arrays['dolor'] = 'sit';
-
-    $arrays->for(0, 1, function($key, $value) {
-        echo "key: {$key} value: {$value}" . PHP_EOL;
-    });
-
-    /*
-        key: lorem value: ipsum
-        key: 0 value: lorem
-        key: 1 value: ipsum
-        key: 2 value: dolor
-        key: 3 value: sit
-        key: 4 value: amet
-        key: 5 value: consectetur
-        key: dolor value: sit
-    */   
-
-9.4.4 Realizando modificações
+9.4.3 Realizando modificações
 .............................
 
 Caso você necessite fazer modificações internas no array ao invés de somente obter dados,
 você precisará adicionar um ``use`` passando o próprio objeto:
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -254,17 +212,17 @@ você precisará adicionar um ``use`` passando o próprio objeto:
                     [5] => consectetur
                 )
                 
-            [length:Cajudev\Arrays:private] => 
+            [length:Cajudev\Arrays:protected] => 
         )
     */
 
-9.4.5 Parando a iteração
+9.4.4 Parando a iteração
 ........................
 
 As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
 Nestes casos, basta que você retorne da função anônima os valores 'break' ou 'continue'.
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -284,13 +242,13 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
         echo $value . ' ';   // 0 1 3 4 5
     });
 
-9.4.6 Exemplo de utilização
+9.4.5 Exemplo de utilização
 ...........................
 
 Dado um certo array com números de 0 a 100, como você faria para obter todos os
 números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é muito simples.
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -313,6 +271,5 @@ números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é 
 
 .. warning::
 
-    Diferentemente do foreach, quando estiver trabalhando com arrays multidimensionais
-    juntamente com o método for, o retorno de cada iteração será também, um objeto Arrays
-    munido de todas as suas funcionalidades.
+    Diferentemente do foreach, o retorno de cada iteração será também, um objeto Arrays
+    munido de todas as suas funcionalidades (quando o retorno for um array).

@@ -7,6 +7,8 @@
 O método ``map``, permite aplicar uma função callback em todos os elementos do array. Sua implementação
 especial permite alterar tanto valores, quanto suas chaves.
 
+O retorno esperado é um novo array, sendo o primeiro elemento a chave e o segundo o valor.
+
 .. code:: php
 
    $arrays = new Arrays(['lorem', 'ipsum', 'dolor']);
@@ -19,13 +21,14 @@ especial permite alterar tanto valores, quanto suas chaves.
    /*
    Cajudev\Arrays Object
       (
-         [content:Cajudev\Arrays:private] => Array
+         [content:Cajudev\Arrays:protected] => Array
             (
                [10] => LOREM
                [11] => IPSUM
                [12] => DOLOR
             )
-         [length:Cajudev\Arrays:private] => 3
+         [backup:protected] => 
+         [length:protected] => 3
       )
    */
 
@@ -47,7 +50,7 @@ O método ``filter`` permite filtrar os elementos do array através de uma funç
    /*
    Cajudev\Arrays Object
       (
-         [content:Cajudev\Arrays:private] => Array
+         [content:Cajudev\Arrays:protected] => Array
             (
                [0] => 1
                [1] => 2
@@ -55,7 +58,8 @@ O método ``filter`` permite filtrar os elementos do array através de uma funç
                [3] => 4
             )
 
-         [length:Cajudev\Arrays:private] => 4
+         [backup:protected] => 
+         [length:protected] => 4
       )
    */
 
@@ -63,8 +67,9 @@ O método ``filter`` permite filtrar os elementos do array através de uma funç
 -----------
 
 O método ``reduce`` permite reduzir o array em um único valor. Ele recebe por parâmetro uma função callback a ser executada,
-e repassa sempre dois argumentos, o primeiro é o valor anterior e o segundo é o valor atual. Diferente dos métodos anteriores,
-que alteram o conteúdo interno do array, esse método apenas retorna o resultado.
+e repassa sempre dois argumentos, o primeiro é o valor anterior e o segundo é o valor atual.
+
+Diferente do tradicional, o valor inicial fornecido será o **primeiro elemento do array** e não ``null`` como o de costume.
 
 .. code:: php
 

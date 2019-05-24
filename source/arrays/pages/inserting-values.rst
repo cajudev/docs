@@ -2,12 +2,18 @@
 2. Inserindo valores
 ====================
 
-2.1 Push
---------
+2.1 Inserindo valores ao final do array
+---------------------------------------
 
-O método ``push`` é usado para adicionar (empurrar) um ou mais valores ao final do array
+.. raw:: php
+   
+   <?php
+   
+   highlight_string('<?php function push(string ...$values): self');
 
-.. code-block:: php
+O método ``push()`` aceita um número variável de argumentos e serve para adicionar (empurrar) valores ao final do array.
+
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -18,7 +24,6 @@ O método ``push`` é usado para adicionar (empurrar) um ou mais valores ao fina
    /*
       Cajudev\Arrays Object
          (
-            [length:Cajudev\Arrays:private] => 6
             [content:protected] => Array
                (
                   [0] => lorem
@@ -28,16 +33,17 @@ O método ``push`` é usado para adicionar (empurrar) um ou mais valores ao fina
                   [4] => amet
                   [5] => consectetur
                )
-
+            [backup:protected] => 
+            [length:Cajudev\Arrays:protected] => 6
          )
    */
 
-2.2 Unshift
------------
+2.2 Inserindo valores no início do array
+----------------------------------------
 
-O método ``unshift`` é usado para adicionar (empurrar) um ou mais valores no início do array
+O método ``unshift()`` aceita um número variável de argumentos e serve para adicionar valores no início do array
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -48,7 +54,6 @@ O método ``unshift`` é usado para adicionar (empurrar) um ou mais valores no i
    /*
       Cajudev\Arrays Object
          (
-            [length:Cajudev\Arrays:private] => 6
             [content:protected] => Array
                (
                   [0] => sit
@@ -58,13 +63,15 @@ O método ``unshift`` é usado para adicionar (empurrar) um ou mais valores no i
                   [4] => ipsum
                   [5] => dolor
                )
+               [backup:protected] => 
+               [length:Cajudev\Arrays:protected] => 6
          )
    */
 
-2.3 Set
--------
+2.3 Associando valores à chaves
+-------------------------------
 
-O método ``set`` é usado para associar uma chave à um valor.  Como primeiro argumento, deve ser
+O método ``set()`` é usado para associar uma chave à um valor.  Como primeiro argumento, deve ser
 informado o valor, e os demais são as chaves. Ele também suporta a notação de ponto descrita na seção 5.
 
 .. code:: php
@@ -81,10 +88,10 @@ informado o valor, e os demais são as chaves. Ele também suporta a notação d
    // ou com a notação de ponto
    $arrays->set('lorem', 'ipsum.dolor.amet');
 
-2.4 setByReference
-------------------
+2.4 Inserindo dados por referência
+----------------------------------
 
-Esse método permitir atribuir por referência um conteúdo à classe.
+O método ``setByReference()`` permitir atribuir por referência um conteúdo à classe.
 
 .. code:: php
 

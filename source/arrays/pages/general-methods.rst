@@ -7,7 +7,7 @@
 
 Retorna o último elemento de um array (reinicia o ponteiro)
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -20,7 +20,7 @@ Retorna o último elemento de um array (reinicia o ponteiro)
 
 Remove o primeiro elemento de um array (reinicia o ponteiro)
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -34,7 +34,7 @@ Remove o primeiro elemento de um array (reinicia o ponteiro)
 
 Remove o último elemento de um array (reinicia o ponteiro)
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -48,7 +48,7 @@ Remove o último elemento de um array (reinicia o ponteiro)
 
 Retorna a quantidade de elementos do array.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -61,7 +61,7 @@ Retorna a quantidade de elementos do array.
 
 Retorna um novo objeto contento as chaves do objeto atual
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -76,7 +76,7 @@ Retorna um novo objeto contento as chaves do objeto atual
 
 Retorna um novo objeto contento os valores do objeto atual
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -91,7 +91,7 @@ Retorna um novo objeto contento os valores do objeto atual
 
 Quebra o array em partes iguais. Caso receba ``true`` como segundo parâmetro preservará as chaves do array.
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 
@@ -104,7 +104,7 @@ Quebra o array em partes iguais. Caso receba ``true`` como segundo parâmetro pr
     /*
     Cajudev\Arrays Object
         (
-            [content:Cajudev\Arrays:private] => Array
+            [content:Cajudev\Arrays:protected] => Array
                 (
                     [0] => Array
                         (
@@ -121,7 +121,8 @@ Quebra o array em partes iguais. Caso receba ``true`` como segundo parâmetro pr
                             [0] => 5
                         )
                 )
-            [length:Cajudev\Arrays:private] => 3
+            [backup:protected] => 
+            [length:protected] => 3
         )
     */
 
@@ -130,7 +131,7 @@ Quebra o array em partes iguais. Caso receba ``true`` como segundo parâmetro pr
 
 Junta os elementos do array em uma string.
 
-.. code-block:: php
+.. code:: php
 
     use Cajudev\Arrays;
 

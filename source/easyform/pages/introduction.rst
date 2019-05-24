@@ -15,14 +15,14 @@ de uma tag label.
 
 Em HTML sua estrutura seria algo como:
 
-.. code-block:: html
+.. block:: html
 
    <label for="username">Nome de Usuário</label>
    <input id="username" type="text" class="form-control">
 
 Colocaremos isso dentro de uma estrutura básica HTML e veremos sua renderização na tela
 
-.. code-block:: html
+.. block:: html
 
    <!DOCTYPE html>
    <html lang="pt-br">

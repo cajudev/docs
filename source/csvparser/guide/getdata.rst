@@ -2,7 +2,7 @@
 Obtendo Dados
 =============
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\CsvParser;
 
@@ -19,7 +19,7 @@ Obtendo Dados
 Ou se você preferir:
 --------------------
 
-.. code-block:: php
+.. code:: php
 
    $results = $csv->setDelimiter(';')->parse();
 

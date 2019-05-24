@@ -11,7 +11,7 @@ de navegar entre seu conteúdo utilizando a notação de ponto.
 Para criar arrays multidimensionais facilmente, sem a utilização de milhares de colchetes,
 basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -25,7 +25,6 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
    /*
     Cajudev\Arrays Object
         (
-            [length:Cajudev\Arrays:private] => 1
             [content:protected] => Array
                 (
                     [lorem] => Array
@@ -48,6 +47,8 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
                         )
 
                 )
+            [backup:protected] => 
+            [length:Cajudev\Arrays:protected] => 1
 
         )
    */
@@ -58,7 +59,7 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
 Da mesma forma, é possível facilmente percorrer o objeto para acessar seu conteúdo.
 Para os exemplos que serão mostrados abaixo, considere o objeto anteriormente criado.
 
-.. code-block:: php
+.. code:: php
    
    // Navegando entre os valores
 

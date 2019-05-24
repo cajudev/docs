@@ -22,7 +22,7 @@ Y         ano       1970-2099
 Exemplos
 ========
 
-.. code-block:: php
+.. code:: php
 
    public static validate      (string $subject, string $format)
    public static validateArray (array  $array,   string $pattern)
@@ -30,7 +30,7 @@ Exemplos
 validate( )
 -----------
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Validator\Date;
 
@@ -52,7 +52,7 @@ validate( )
 validateArray( )
 ----------------
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Validator\Date;
 
@@ -71,7 +71,7 @@ validateArray( )
 Resultado:
 ..........
 
-.. code-block:: php
+.. code:: php
 
    Array
    (

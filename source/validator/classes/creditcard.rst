@@ -2,7 +2,7 @@
 CreditCard
 ==========
 
-.. code-block:: php
+.. code:: php
 
    public static validate      (string $subject)
    public static validateArray (array  $array)
@@ -10,7 +10,7 @@ CreditCard
 validate( )
 -----------
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Validator\CreditCard;
 
@@ -29,7 +29,7 @@ validate( )
 validateArray( )
 ----------------
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Validator\CreditCard;
 
@@ -48,7 +48,7 @@ validateArray( )
 Resultado:
 ..........
 
-.. code-block:: php
+.. code:: php
 
    Array
    (

@@ -2,7 +2,7 @@
 Cpf
 ===
 
-.. code-block:: php
+.. code:: php
 
    public static validate      (string $subject)
    public static validateArray (array  $array)
@@ -10,7 +10,7 @@ Cpf
 validate( )
 -----------
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Validator\Cpf;
 
@@ -28,7 +28,7 @@ validate( )
 validateArray( )
 ----------------
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Validator\Cpf;
 
@@ -47,7 +47,7 @@ validateArray( )
 Resultado:
 ..........
 
-.. code-block:: php
+.. code:: php
 
    Array
    (

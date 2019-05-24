@@ -7,7 +7,7 @@ um erro é emitido pelo php, pois o mesmo não sabe como tratar esse retorno. Fe
 nossa classe implementa um método que retorna nesses casos,
 o conteúdo do array interno em formato JSON.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 

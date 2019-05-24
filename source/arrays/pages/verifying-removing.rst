@@ -7,7 +7,7 @@
 
 Para verificar a existência de uma chave no array, você pode utilizar o método ``isset``.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -21,7 +21,7 @@ Para verificar a existência de uma chave no array, você pode utilizar o métod
    Em todos os métodos dessa página, é possível aplicar o uso da notação de ponto,
    explicada na seção 5, como no exemplo abaixo:
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -43,7 +43,7 @@ Para verificar a existência de uma chave no array, você pode utilizar o métod
 
 Caso queira executar a lógica inversa, você pode utilizar o método ``noset``.
 
-.. code-block:: php
+.. code:: php
 
    var_dump($arrays->noset('lorem')); // bool(false)
    var_dump($arrays->noset('ipsum')); // bool(true)
@@ -52,9 +52,9 @@ Caso queira executar a lógica inversa, você pode utilizar o método ``noset``.
 ------------------------------
 
 Para verificar se uma chave do array é vazia, utilize o método ``empty``.
-Esse método equivale a utilização de ``$arrays->noset($key) || $arrays->get($key) == false``.
+Esse método equivale a utilização de ``!isset($arrays[$key]) || $arrays[$key] == false``.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -64,9 +64,9 @@ Esse método equivale a utilização de ``$arrays->noset($key) || $arrays->get($
    var_dump($arrays->empty('lorem')); //bool(true);
 
 Para verificar se um valor não é vazio, você pode utilizar o método filled, que nada mais é
-do que a negação do método anterior, equivalendo a ``$arrays->isset($key) && $arrays->get($key) == true``.
+do que a negação do método anterior, equivalendo a ``isset($arrays[$key]) && $arrays[$key] == true``.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -80,7 +80,7 @@ do que a negação do método anterior, equivalendo a ``$arrays->isset($key) && 
 
 Para remover um elemento do array utilize o método ``unset``.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 

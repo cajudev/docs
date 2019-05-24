@@ -7,7 +7,7 @@
 
 Verifica se dado objeto é uma instância da classe Arrays ou que extenda dela
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -21,7 +21,7 @@ Verifica se dado objeto é uma instância da classe Arrays ou que extenda dela
 Combina dois arrays em um novo objeto, utilizando o primeiro para chaves e o segundo para valores.
 Ambos os argumentos podem ser simples arrays ou objetos dessa classe.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 

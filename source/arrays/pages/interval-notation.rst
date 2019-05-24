@@ -5,7 +5,7 @@
 Uma forma muito interessante de acessar parte de um objeto Arrays é através
 da notação de intervalo. Veja o exemplo abaixo.
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -20,7 +20,7 @@ da notação de intervalo. Veja o exemplo abaixo.
 Caso você informe um valor inicial maior que o valor final, o resultado será
 um array inverso do intervalo definido. 
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
@@ -35,7 +35,7 @@ um array inverso do intervalo definido.
 Vale ressaltar que é possível misturar todas as funcionalidades vistas até agora
 juntamente com a notação de intervalo. Observe abaixo:
 
-.. code-block:: php
+.. code:: php
 
    use Cajudev\Arrays;
 
