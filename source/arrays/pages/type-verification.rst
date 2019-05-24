@@ -1,8 +1,10 @@
 ======================
-12. Verificação de Tipo
+13. Verificação de Tipo
 ======================
 
-Esta classe implementa os principais métodos de verificação de tipos, para facilitar esse tipo de trabalho. Observe abaixo:
+Esta classe implementa seis métodos de verificação de tipos.
+
+São eles: ``isInt``, ``isBool``, ``isFloat``, ``isNumeric``, ``isString`` e ``isArray``.
 
 .. code:: php
 
@@ -10,8 +12,6 @@ Esta classe implementa os principais métodos de verificação de tipos, para fa
 
    $arrays['ten'] = 10;
    var_dump($arrays->isInt('ten')); // true
-
-Os seguinte métodos são suportados: ``isInt, isBool, isFloat, isNumeric, isString e isArray``.
 
 Todos esses métodos também podem ser utilizados com a notação de ponto
 
@@ -31,4 +31,4 @@ Todos esses métodos também podem ser utilizados com a notação de ponto
 .. note::
 
     Uma única ressalva é que o método **isArray** retornará **true**, independentemente
-    se o conteúdo for um **array** ou um objeto **Arrays**.
+    se o conteúdo for um **array** simples ou um objeto **Arrays**.

@@ -47,7 +47,7 @@ Caso queira utilizar os métodos da classe dentro de um foreach utilize ``$array
 9.2.1 Percorrendo o array
 .........................
 
-O método each performa um loop for-each internamente através de uma função callback.
+O método ``each()`` performa um loop for-each internamente através de uma função callback.
 
 .. code:: php
 
@@ -68,7 +68,7 @@ O método each performa um loop for-each internamente através de uma função c
 ........................
 
 As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
-Nestes casos, basta que você retorne da função anônima os valores 'break' ou 'continue'.
+Nestes casos, basta que você retorne da função anônima os valores ``break`` ou ``continue``.
 
 .. code:: php
 
@@ -115,7 +115,7 @@ A utilização da classe em um laço while é realizada da seguinte maneira:
 9.4 Iterando com o método for
 -----------------------------
 
-O método ``for`` permite iterar um objeto Arrays através de passos.
+O método ``for()`` permite iterar um objeto Arrays através de passos.
 
 Ele recebe três argumentos, o primeiro é o ponto de partida, o segundo é o 
 incremento, e o último é uma função anônima que recebe por meio de injeção a chave e
@@ -220,7 +220,7 @@ você precisará adicionar um ``use`` passando o próprio objeto:
 ........................
 
 As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
-Nestes casos, basta que você retorne da função anônima os valores 'break' ou 'continue'.
+Nestes casos, basta que você retorne da função anônima os valores ``break`` ou ``continue``.
 
 .. code:: php
 
@@ -246,7 +246,7 @@ Nestes casos, basta que você retorne da função anônima os valores 'break' ou
 ...........................
 
 Dado um certo array com números de 0 a 100, como você faria para obter todos os
-números pares maiores ou iguais a 70? Utilizando o método for, essa tarefa é muito simples.
+números pares maiores ou iguais a 70? Utilizando o método ``for()``, essa tarefa é muito simples.
 
 .. code:: php
 

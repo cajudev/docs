@@ -17,9 +17,10 @@ Guia do Usuário
    9. Iterando sobre o Objeto <pages/iterating>
    10. Ordenando o Array <pages/sort>
    11. Map, Filter e Reduce <pages/map-filter-reduce>
-   12. Verificação de Tipo <pages/type-verification>
-   13. Métodos de Uso geral <pages/general-methods>
-   14. Métodos Estáticos <pages/static-methods>
+   12. Operações com Conjuntos <pages/set-operations>
+   13. Verificação de Tipo <pages/type-verification>
+   14. Métodos de Uso geral <pages/general-methods>
+   15. Métodos Estáticos <pages/static-methods>
 
 Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 
