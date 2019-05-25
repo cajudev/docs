@@ -21,6 +21,7 @@ Guia do Usuário
    13. Verificação de Tipo <pages/type-verification>
    14. Métodos de Uso geral <pages/general-methods>
    15. Métodos Estáticos <pages/static-methods>
+   16. Backup e Restauração <pages/backup-restore>
 
 Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 

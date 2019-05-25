@@ -5,7 +5,7 @@
 14.1 Last
 ---------
 
-Retorna o último elemento de um array (reinicia o ponteiro)
+Retorna o último elemento do array (reinicia o ponteiro)
 
 .. code:: php
 
@@ -18,7 +18,7 @@ Retorna o último elemento de um array (reinicia o ponteiro)
 14.2 Shift
 ---------
 
-Remove o primeiro elemento de um array (reinicia o ponteiro)
+Remove o primeiro elemento do array (reinicia o ponteiro)
 
 .. code:: php
 
@@ -32,7 +32,7 @@ Remove o primeiro elemento de um array (reinicia o ponteiro)
 14.3 Pop
 -------
 
-Remove o último elemento de um array (reinicia o ponteiro)
+Remove o último elemento do array (reinicia o ponteiro)
 
 .. code:: php
 
@@ -59,7 +59,7 @@ Retorna a quantidade de elementos do array.
 14.5 Keys
 ---------
 
-Retorna um novo objeto contento as chaves do objeto atual
+Retorna um novo objeto contento as chaves do array atual
 
 .. code:: php
 
@@ -74,7 +74,7 @@ Retorna um novo objeto contento as chaves do objeto atual
 14.6 Values
 -----------
 
-Retorna um novo objeto contento os valores do objeto atual
+Retorna um novo objeto contento os valores do array atual
 
 .. code:: php
 
@@ -185,3 +185,94 @@ Altera para maiúsculo as chaves do array.
 
     echo $arrays->upper(); // {"LOREM":1,"IPSUM":2}
 
+14.12 Contains
+--------------
+
+Checa se determinado valor existe no array
+
+.. code:: php
+
+    use Cajudev\Arrays;
+
+    $arrays = new Arrays([1, 2, 3, 4, 5]);
+    $arrays->contains(2) //true
+    $arrays->contains(6) //false
+
+14.13 Sum
+---------
+
+Soma os elementos do array
+
+.. code:: php
+
+    use Cajudev\Arrays;
+
+    $arrays = new Arrays([1, 2, 3, 4, 5]);
+    $arrays->sum(); //15
+
+14.14 Flip
+----------
+
+Inverte as relações do array, ou seja, as chaves 
+passam a ser os valores e os valores passam a ser as chaves.
+
+.. code:: php
+
+    use Cajudev\Arrays;
+
+    $arrays = new Arrays(['lorem' => 'ipsum']);
+    $arrays->flip(); //['ipsum' => 'lorem]
+
+14.15 Search
+------------
+
+Procura por um valor no array e se o encontra, retorna sua chave correspondente.
+
+.. code:: php
+
+    use Cajudev\Arrays;
+
+    $arrays = new Arrays(['lorem' => 'ipsum']);
+    $arrays->search('ipsum'); //lorem
+    $arrays->search('dolor'); //null
+
+14.16 Reverse
+-------------
+
+Inverte o array.
+
+.. code:: php
+
+    use Cajudev\Arrays;
+
+    $arrays = new Arrays([1, 2, 3, 4, 5]);
+    $arrays->reverse(); //[5, 4, 3, 2, 1]
+
+14.17 Unique
+------------
+
+Remove valores duplicados.
+
+.. code:: php
+
+    use Cajudev\Arrays;
+
+    $arrays = new Arrays(['a', 'c', 'a', 'c', 'a', 'c', 'c', 'b']);
+    $arrays->unique(); //[0 => 'a', 1 => 'c', 7 => 'b']
+
+14.18 Merge
+-----------
+
+Mescla todas as dimensões do array
+
+.. code:: php
+
+    use Cajudev\Arrays;
+
+    $arrays = new Arrays([
+        [1, 2, 'a', 4],
+        ['a', '2', 'c'],
+        [3, 'c', 'd']
+    ]);
+
+    $arrays->merge(); //[1, 2, 'a', 4, 'a', '2', 'c', 3, 'c', 'd']
