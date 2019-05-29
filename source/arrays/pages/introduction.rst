@@ -2,14 +2,12 @@
 1. Introdução
 =============
 
-1.1 Instanciando um objeto vazio
---------------------------------
+1.1 Analisando a estrutura da classe
+------------------------------------
 
-Ao analisar a estrutura do objeto, podemos ver que o mesmo possui 3 atributos:
-``content``, ``backup`` e ``length``.
+Esta classe possui três atributos: ``content``, ``backup`` e ``length``.
 
-Todos possuem visibilidade ``protected``, permitindo com que você crie uma fachada
-para a classe em sua aplicação através de herança, se assim o quiser.
+Todos possuem visibilidade ``protected``, permitindo com que você use herança caso necessite.
 
 O atributo ``content`` armazena todo o conteúdo adicionado ao objeto.
 
@@ -37,11 +35,10 @@ desnecessário o uso de funções como ``count()``.
          )
    */
 
-1.2 Instanciando a partir de um array
--------------------------------------
+1.2 Criando uma instância a partir de um array
+----------------------------------------------
 
-Opcionalmente, o construtor do objeto pode receber como argumento
-um valor inicial em forma de array.
+Você pode inicializar o objeto passando um array para o seu construtor.
 
 .. code:: php
 
@@ -66,25 +63,59 @@ um valor inicial em forma de array.
          )
    */
 
-1.3 Instanciando a partir de um objeto
---------------------------------------
+1.3 Criando uma instância a partir de um objeto Arrays
+------------------------------------------------------
 
-O método estático ``fromObject()`` realiza a conversão dos 
-atributos de um objeto em um array associativo. 
+Você também pode sem problemas passar como argumento um objeto desta classe
+para o construtor, ele será convertido internamente.
 
-Repare que o método independe da visibilidade do atributo.
+.. code:: php
+
+   use Cajudev\Arrays;
+
+   $oldArrays = new Arrays([1, 2, 3, 4, 5]);
+
+   $newArrays = new Arrays($oldArrays);
+
+   print_r($newArrays); exit;
+
+   /*
+      Cajudev\Arrays Object
+         (
+            [content:protected] => Array
+               (
+                     [0] => 1
+                     [1] => 2
+                     [2] => 3
+                     [3] => 4
+                     [4] => 5
+               )
+
+            [backup:protected] => 
+            [length:protected] => 5
+         )
+   */
+
+1.4 Criando uma instância a partir de outros objetos
+----------------------------------------------------
+
+Outros objetos passados por parâmetro serão tratados de forma especial,
+sendo parseados internamente.
+
+Observe que a visibilidade dos atributos não afeta o parseamento.
 
 .. code:: php
 
    use Cajudev\Arrays;
 
    $object = new Class() {
-      protected   $lorem  = 1;
+      protected $lorem  = 1;
       protected $ipsum  = 2;
       public    $dolor  = 3;
    };
 
-   $arrays = Arrays::fromObject($object);
+   $arrays = new Arrays($object);
+
    print_r($arrays);
 
    /*
@@ -96,7 +127,8 @@ Repare que o método independe da visibilidade do atributo.
                      [ipsum] => 2
                      [dolor] => 3
                )
+
             [backup:protected] => 
-            [length:Cajudev\Arrays:protected] => 3
+            [length:protected] => 3
          )
    */

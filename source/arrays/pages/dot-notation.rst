@@ -17,47 +17,35 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
 
    $arrays = new Arrays();
    $arrays['lorem.ipsum.dolor'] = 'amet';
-   $arrays['lorem.ipsum'][] = 'consectetur';
-   $arrays['lorem.ipsum'][] = ['sit' => ['amet' => 'dolor']];
 
-   print_r($arrays); // Imprimindo todo o objeto
+   print_r($arrays);
 
    /*
-    Cajudev\Arrays Object
-        (
-            [content:protected] => Array
-                (
-                    [lorem] => Array
+   Cajudev\Arrays Object
+      (
+         [content:protected] => Array
+            (
+               [lorem] => Array
+                  (
+                     [ipsum] => Array
                         (
-                            [ipsum] => Array
-                                (
-                                    [dolor] => amet
-                                    [0] => consectetur
-                                    [1] => Array
-                                        (
-                                            [sit] => Array
-                                                (
-                                                    [amet] => dolor
-                                                )
-
-                                        )
-
-                                )
-
+                           [dolor] => amet
                         )
 
-                )
-            [backup:protected] => 
-            [length:Cajudev\Arrays:protected] => 1
+                  )
 
-        )
+            )
+
+         [backup:protected] => 
+         [length:protected] => 1
+      )
    */
+
 
 5.2 Acessando valores
 ---------------------
 
 Da mesma forma, é possível facilmente percorrer o objeto para acessar seu conteúdo.
-Para os exemplos que serão mostrados abaixo, considere o objeto anteriormente criado.
 
 .. code:: php
    

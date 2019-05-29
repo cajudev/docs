@@ -26,6 +26,9 @@ Ao trabalhar com arrays multidimensionais, o valor retornado será um array comu
 
 Caso queira utilizar os métodos da classe dentro de um foreach utilize ``$arrays[$key]``;
 
+Essa implementação permite maior flexibilidade e ganho de performance, visto que seria custoso,
+criar um novo objeto para cada iteração.
+
 .. code:: php
    
    use Cajudev\Arrays;
@@ -67,8 +70,7 @@ O método ``each()`` performa um loop for-each internamente através de uma fun�
 9.2.2 Parando a iteração
 ........................
 
-As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
-Nestes casos, basta que você retorne da função anônima os valores ``break`` ou ``continue``.
+Para pular uma iteração ou pará-la, retorne da função anônima os valores ``break`` ou ``continue``.
 
 .. code:: php
 
@@ -219,8 +221,7 @@ você precisará adicionar um ``use`` passando o próprio objeto:
 9.4.4 Parando a iteração
 ........................
 
-As vezes existe a necessite de pular uma iteração ou até mesmo pará-la.
-Nestes casos, basta que você retorne da função anônima os valores ``break`` ou ``continue``.
+Para pular uma iteração ou pará-la, retorne da função anônima os valores ``break`` ou ``continue``.
 
 .. code:: php
 
@@ -271,5 +272,5 @@ números pares maiores ou iguais a 70? Utilizando o método ``for()``, essa tare
 
 .. warning::
 
-    Diferentemente do foreach, o retorno de cada iteração será também, um objeto Arrays
-    munido de todas as suas funcionalidades (quando o retorno for um array).
+    Diferentemente do foreach, em arrays multidimensionais o retorno de cada iteração será também um objeto,
+    visto que o objetivo deste método não é realizar uma iteração completa o que o torna menos custoso.

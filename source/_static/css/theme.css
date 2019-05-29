@@ -26,6 +26,10 @@ pre {
   font-variant-ligatures: common-ligatures;
 }
 
+.admonition-title {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
 .code-description {
     height: 40px;
     background: #FFF;
@@ -4044,6 +4048,7 @@ button {
 .wy-alert.wy-alert-info .rst-content .admonition-title,
 .wy-alert.wy-alert-info .wy-alert-title {
   background: #6ab0de;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .rst-content .hint,

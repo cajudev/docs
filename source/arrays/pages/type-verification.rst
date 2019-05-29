@@ -6,6 +6,8 @@ Esta classe implementa seis métodos de verificação de tipos.
 
 São eles: ``isInt``, ``isBool``, ``isFloat``, ``isNumeric``, ``isString`` e ``isArray``.
 
+Não confunda, a verificação o tipo é realizada internamente, observe abaixo:
+
 .. code:: php
 
    use Cajudev\Arrays;

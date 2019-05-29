@@ -32,26 +32,32 @@ um array inverso do intervalo definido.
 
     echo $arrays['6:3']; // {"six":6,"five":5,"four":4,"three":3}
 
-Vale ressaltar que é possível misturar todas as funcionalidades vistas até agora
-juntamente com a notação de intervalo. Observe abaixo:
+Vale ressaltar que é possível misturar todas essas funcionalidades.
 
 .. code:: php
 
    use Cajudev\Arrays;
 
-        $arrays = new Arrays([
-            'numbers' => [
-                'even' => ['two' => 2, 'four' => 4, 'six' => 6, 'eight' => 8],
-                'odd'  => ['one' => 1, 'three' => 3, 'five' => 5, 'seven' => 7],
-            ],
-        ]);
+      $arrays = new Arrays([
+         'numbers' => [
+            'even' => ['two' => 2, 'four' => 4, 'six' => 6, 'eight' => 8],
+            'odd'  => ['one' => 1, 'three' => 3, 'five' => 5, 'seven' => 7],
+         ],
+      ]);
     
-        $arrays['numbers.even']['0:2']->each(function($key, $value) {
-            echo "key: {$key} value: {$value}" . PHP_EOL;
-        });
+      print_r($arrays['numbers.even']['0:2']);
 
-        /*
-            key: two value: 2
-            key: four value: 4
-            key: six value: 6
-        */
+      /*
+      Cajudev\Arrays Object
+         (
+            [content:protected] => Array
+               (
+                  [two] => 2
+                  [four] => 4
+                  [six] => 6
+               )
+
+            [backup:protected] => 
+            [length:protected] => 3
+         )
+      */

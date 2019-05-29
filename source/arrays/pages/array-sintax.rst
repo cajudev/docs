@@ -30,31 +30,7 @@
         )
    */
 
-4.2 Acumulando Valores
-----------------------
-
-Uma caracteristica interessante dessa classe é que não é necessário inicializar posições no array para
-utilizar os operadores de atribuição.
-
-.. code:: php
-
-   $array = [];
-
-   //Isso seria necessário caso estivesse utilizando um array normal
-   $array['sum'] = 0;
-
-   //Para só então poder acumular
-   $array['sum'] += $valor;
-
-   //Mas não é necessário quando estiver utilizando um objeto Arrays
-   $arrays = new Arrays();
-   $arrays['sum'] += $valor; // atribuição válida
-
-Isso é válido para qualquer um dos operadores listados em 
-https://www.php.net/manual/pt_BR/language.operators.assignment.php.
-
-
-4.3 Acessando valores
+4.2 Acessando valores
 ---------------------
 
 Para acessar uma chave anteriormente setada, basta fazer como o de costume:
@@ -67,46 +43,37 @@ Para acessar uma chave anteriormente setada, basta fazer como o de costume:
 
    echo $arrays['lorem']; // ipsum
 
-Caso tente acessar uma chave inexistente, nenhum erro será emitido e o valor retornado será null
-porém como consequência a chave será inicializada. Veja abaixo.
+Diferentemente do método ``get`` que nos retorna ``null`` em casos de chave inexistente tornando não
+necessário o uso de verificações, a sintaxe de array requer um pequeno cuidado.
+
+Caso você tente acessar uma posição inexistente, essa posição será inicializada como um array.
 
 .. code:: php
 
    $arrays = new Arrays();
 
-   // antes do acesso
-   print_r($arrays);
+   $var = $arrays['lorem'];
+
+   print_r($arrays); exit;
 
    /*
    Cajudev\Arrays Object
       (
-         [content:Cajudev\Arrays:protected] => Array
+         [content:protected] => Array
             (
+                  [lorem] => Array
+                     (
+                     )
+
             )
+
          [backup:protected] => 
-         [length:Cajudev\Arrays:protected] => 0
+         [length:protected] => 1
       )
    */
 
-   echo $arrays['lorem']; // null
 
-   // após o acesso
-   print_r($arrays);
-
-   /*
-   Cajudev\Arrays Object
-      (
-         [content:Cajudev\Arrays:protected] => Array
-            (
-               [lorem] => 
-            )
-         [backup:protected] => 
-         [length:Cajudev\Arrays:protected] => 0
-      )
-   */
-
-Para contornar isso, basta realizar uma verificação antes com o método ``isset()``,
-ou usufruir do operador de coalescência ``??``.
+Nesses casos sempre verifique antes utilizando o método ``isset()``, ou o operador de coalescência ``??``.
 
 .. code:: php
 
@@ -115,5 +82,3 @@ ou usufruir do operador de coalescência ``??``.
    echo $array->isset('lorem') ? $array['lorem'] : null; // null
 
    echo $array['lorem'] ?? null; // null
-
-Uma alternativa seria o uso do método ``get()`` descrito na seção anterior.
