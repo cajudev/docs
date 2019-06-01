@@ -2,8 +2,10 @@
 6. Notação de Intervalo
 =======================
 
-Uma forma muito interessante de acessar parte de um objeto Arrays é através
-da notação de intervalo. Veja o exemplo abaixo.
+6.1 Acessando Valores
+---------------------
+
+É possível receber parte de um objeto Arrays, através da notação de intervalo.
 
 .. code:: php
 
@@ -31,33 +33,48 @@ um array inverso do intervalo definido.
     ]);
 
     echo $arrays['6:3']; // {"six":6,"five":5,"four":4,"three":3}
+    
 
-Vale ressaltar que é possível misturar todas essas funcionalidades.
+6.2 Inserindo Valores
+---------------------
+
+Uma maneira fácil de inicializar várias posições no array com um valor padrão.
 
 .. code:: php
 
    use Cajudev\Arrays;
 
-      $arrays = new Arrays([
-         'numbers' => [
-            'even' => ['two' => 2, 'four' => 4, 'six' => 6, 'eight' => 8],
-            'odd'  => ['one' => 1, 'three' => 3, 'five' => 5, 'seven' => 7],
-         ],
-      ]);
-    
-      print_r($arrays['numbers.even']['0:2']);
+   $arrays = new Arrays();
+   $arrays['0:5'] = 'lorem';
+   echo $arrays; // ["lorem","lorem","lorem","lorem","lorem","lorem"]
 
-      /*
-      Cajudev\Arrays Object
-         (
-            [content:protected] => Array
-               (
-                  [two] => 2
-                  [four] => 4
-                  [six] => 6
-               )
+6.3 Verificando Nulidade
+------------------------
 
-            [backup:protected] => 
-            [length:protected] => 3
-         )
-      */
+Verifique a existência de multiplas posições no array.
+
+.. code:: php
+
+   use Cajudev\Arrays;
+
+   $arrays = new Arrays(['a', 'b', 'c', 'd', 'e']);
+
+   $arrays->isset('0:4'); // true
+   isset($arrays['0:4']); // true
+
+   $arrays->isset('0:5'); // false
+   isset($arrays['0:5']); // false
+
+6.4 Apagando Intervalos
+-----------------------
+
+Remova diversos valores do array.
+
+.. code:: php
+
+   use Cajudev\Arrays;
+
+   $arrays = new Arrays(['a', 'b', 'c', 'd', 'e']);
+
+   $arrays->unset('0:2');
+   echo $arrays; // {"3":"d","4":"e"}
