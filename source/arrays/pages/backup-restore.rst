@@ -1,7 +1,7 @@
-16. Backup e Restauração
+15. Backup e Restauração
 ========================
 
-16.1 Backup
+15.1 Backup
 -----------
 
 O método ``backup`` permite criar uma cópia de segurança do estado atual do objeto.
@@ -98,7 +98,7 @@ Podemos processar os dados como quisermos:
         )
     */
 
-16.2 Restauração
+15.2 Restauração
 ----------------
 
 O método ``restore`` permite restaurar os dados anteriormente salvos, limpando o backup.

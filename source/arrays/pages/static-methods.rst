@@ -1,8 +1,8 @@
 =====================
-15. Métodos Estáticos
+14. Métodos Estáticos
 =====================
 
-15.1 isArrays
+14.1 isArrays
 -------------
 
 Verifica se dado objeto é uma instância da classe Arrays ou que extenda dela
@@ -15,7 +15,7 @@ Verifica se dado objeto é uma instância da classe Arrays ou que extenda dela
 
    Arrays::isArrays(10); // false
 
-15.2 Combine
+14.2 Combine
 -------------
 
 Combina dois arrays em um novo objeto, utilizando o primeiro para chaves e o segundo para valores.
