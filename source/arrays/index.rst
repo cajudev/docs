@@ -34,6 +34,14 @@ Características
 Instalação
 ==========
 
-Para PHP 7.0 ``composer require cajudev/arrays "0.x.x"``
+PHP 7.3+ ``composer require cajudev/arrays "^2"``
 
-Para PHP 7.1+ ``composer require cajudev/arrays "1.x.x"``
+PHP 7.0 ``composer require cajudev/arrays "^1"``
+
+PHP 5.6 ``composer require cajudev/arrays "^0"``
+
+.. note::
+
+   Nas versões **PHP5.6** alguns métodos possuem nomenclatura modificada devido à limitação do parser nessa versão, no
+   caso são acrescidos um _ (underscore) antes do nome.
+   São eles: _isset, _empty, _unset e _for.
