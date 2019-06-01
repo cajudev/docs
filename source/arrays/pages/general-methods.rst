@@ -1,8 +1,8 @@
 =======================
-13. Métodos de Uso Geral
+14. Métodos de Uso Geral
 =======================
 
-13.1 Last
+14.1 Last
 ---------
 
 Retorna o último elemento do array (reinicia o ponteiro)
@@ -15,7 +15,7 @@ Retorna o último elemento do array (reinicia o ponteiro)
 
    echo $arrays->last(); // 'dolor'
 
-13.2 Shift
+14.2 Shift
 ---------
 
 Remove o primeiro elemento do array (reinicia o ponteiro)
@@ -29,7 +29,7 @@ Remove o primeiro elemento do array (reinicia o ponteiro)
 
    echo $arrays; // ["ipsum","dolor"]
 
-13.3 Pop
+14.3 Pop
 -------
 
 Remove o último elemento do array (reinicia o ponteiro)
@@ -43,7 +43,7 @@ Remove o último elemento do array (reinicia o ponteiro)
 
    echo $arrays; // ["lorem","ipsum"]
 
-13.4 Count ``(Deprecated)``
+14.4 Count ``(Deprecated)``
 ----------
 
 Retorna a quantidade de elementos do array.
@@ -56,7 +56,7 @@ Retorna a quantidade de elementos do array.
 
    echo $arrays->count(); // 3
 
-13.5 Keys
+14.5 Keys
 ---------
 
 Retorna um novo objeto contento as chaves do array atual
@@ -71,7 +71,7 @@ Retorna um novo objeto contento as chaves do array atual
 
     echo $keys; // ["three", "eight", "two"]
 
-13.6 Values
+14.6 Values
 -----------
 
 Retorna um novo objeto contento os valores do array atual
@@ -86,7 +86,7 @@ Retorna um novo objeto contento os valores do array atual
 
     echo $values; // [3, 8, 2]
 
-13.7 Chunk
+14.7 Chunk
 ----------
 
 Quebra o array em partes iguais. Caso receba ``true`` como segundo parâmetro preservará as chaves do array.
@@ -126,7 +126,7 @@ Quebra o array em partes iguais. Caso receba ``true`` como segundo parâmetro pr
         )
     */
 
-13.8 Join
+14.8 Join
 ----------
 
 Junta os elementos do array em uma string.
@@ -141,7 +141,7 @@ Junta os elementos do array em uma string.
 
     echo $result; // 1-2-3-4-5
 
-13.9 Column
+14.9 Column
 -----------
 
 Retorna um objeto contento os valores da coluna informada.
@@ -159,7 +159,7 @@ Retorna um objeto contento os valores da coluna informada.
 
     echo $arrays->column('lorem'); // ["1234","4321","9999","1111"]
 
-13.10 Lower
+14.10 Lower
 -----------
 
 Altera para minúsculo as chaves do array.
@@ -172,7 +172,7 @@ Altera para minúsculo as chaves do array.
 
     echo $arrays->lower(); // {"lorem":1,"ipsum":2}
 
-13.11 Upper
+14.11 Upper
 -----------
 
 Altera para maiúsculo as chaves do array.
@@ -185,7 +185,7 @@ Altera para maiúsculo as chaves do array.
 
     echo $arrays->upper(); // {"LOREM":1,"IPSUM":2}
 
-13.12 Contains
+14.12 Contains
 --------------
 
 Checa se determinado valor existe no array
@@ -198,7 +198,7 @@ Checa se determinado valor existe no array
     $arrays->contains(2) //true
     $arrays->contains(6) //false
 
-13.13 Sum
+14.13 Sum
 ---------
 
 Soma os elementos do array
@@ -210,7 +210,7 @@ Soma os elementos do array
     $arrays = new Arrays([1, 2, 3, 4, 5]);
     $arrays->sum(); //15
 
-13.14 Flip
+14.14 Flip
 ----------
 
 Inverte as relações do array, ou seja, as chaves 
@@ -223,7 +223,7 @@ passam a ser os valores e os valores passam a ser as chaves.
     $arrays = new Arrays(['lorem' => 'ipsum']);
     $arrays->flip(); //['ipsum' => 'lorem]
 
-13.15 Search
+14.15 Search
 ------------
 
 Procura por um valor no array e se o encontra, retorna sua chave correspondente.
@@ -236,7 +236,7 @@ Procura por um valor no array e se o encontra, retorna sua chave correspondente.
     $arrays->search('ipsum'); //lorem
     $arrays->search('dolor'); //null
 
-13.16 Reverse
+14.16 Reverse
 -------------
 
 Inverte o array.
@@ -248,7 +248,7 @@ Inverte o array.
     $arrays = new Arrays([1, 2, 3, 4, 5]);
     $arrays->reverse(); //[5, 4, 3, 2, 1]
 
-13.17 Unique
+14.17 Unique
 ------------
 
 Remove valores duplicados.
@@ -260,7 +260,7 @@ Remove valores duplicados.
     $arrays = new Arrays(['a', 'c', 'a', 'c', 'a', 'c', 'c', 'b']);
     $arrays->unique(); //[0 => 'a', 1 => 'c', 7 => 'b']
 
-13.18 Merge
+14.18 Merge
 -----------
 
 Mescla todas as dimensões do array

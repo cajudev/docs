@@ -1,7 +1,7 @@
-11. Map, Filter e Reduce
+12. Map, Filter e Reduce
 ========================
 
-11.1 Map
+12.1 Map
 --------
 
 O método ``map``, permite aplicar uma função callback em todos os elementos do array. Sua implementação
@@ -24,7 +24,7 @@ O retorno esperado é um novo array, sendo o primeiro elemento a chave e o segun
          [content:Cajudev\Arrays:protected] => Array
             (
                [10] => LOREM
-               [11] => IPSUM
+               [12] => IPSUM
                [12] => DOLOR
             )
          [backup:protected] => 
@@ -32,7 +32,7 @@ O retorno esperado é um novo array, sendo o primeiro elemento a chave e o segun
       )
    */
 
-11.2 Filter
+12.2 Filter
 -----------
 
 O método ``filter`` permite filtrar os elementos do array através de uma função callback. A função receberá valor e chave respectivamente.
@@ -63,7 +63,7 @@ O método ``filter`` permite filtrar os elementos do array através de uma funç
       )
    */
 
-11.3 Reduce
+12.3 Reduce
 -----------
 
 O método ``reduce`` permite reduzir o array em um único valor. Ele recebe por parâmetro uma função callback a ser executada,

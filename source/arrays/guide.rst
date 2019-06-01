@@ -10,17 +10,18 @@ Guia do Usuário
    2. Inserindo Valores <pages/inserting-values>
    3. Recebendo Valores <pages/getting-values>
    4. Sintaxe de Array <pages/array-sintax>
-   5. Notação de Ponto <pages/dot-notation>
-   6. Notação de Intervalo <pages/interval-notation>
-   7. Imprimindo o Objeto <pages/printing-object>
-   8. Verificando e Removendo Valores <pages/verifying-removing>
-   9. Iterando sobre o Objeto <pages/iterating>
-   10. Ordenando o Array <pages/sort>
-   11. Map, Filter e Reduce <pages/map-filter-reduce>
-   12. Operações com Conjuntos <pages/set-operations>
-   13. Métodos de Uso geral <pages/general-methods>
-   14. Métodos Estáticos <pages/static-methods>
-   15. Backup e Restauração <pages/backup-restore>
+   5. Sintaxe de Objeto <pages/object-sintax>
+   6. Notação de Ponto <pages/dot-notation>
+   7. Notação de Intervalo <pages/interval-notation>
+   8. Imprimindo o Objeto <pages/printing-object>
+   9. Verificando e Removendo Valores <pages/verifying-removing>
+   10. Iterando sobre o Objeto <pages/iterating>
+   11. Ordenando o Array <pages/sort>
+   12. Map, Filter e Reduce <pages/map-filter-reduce>
+   13. Operações com Conjuntos <pages/set-operations>
+   14. Métodos de Uso geral <pages/general-methods>
+   15. Métodos Estáticos <pages/static-methods>
+   16. Backup e Restauração <pages/backup-restore>
 
 Esta classe tem como função manipular arrays, de maneira bem encapsulada.
 Ela funciona de forma semelhante à Spl ArrayObject, 

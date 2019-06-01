@@ -1,5 +1,5 @@
 ===========================
-12. Operações com Conjuntos
+13. Operações com Conjuntos
 ===========================
 
 Todos os métodos descritos nesta seção seguem a seguinte lógica: Cada index do objeto equivale à um conjunto.
@@ -17,7 +17,7 @@ O que significa que o objeto abaixo...
 
 ... possui dois conjuntos de números inteiros.
 
-12.1 União
+13.1 União
 ----------
 
 O método ``union()`` realiza a união entre todos os conjuntos do objeto. Valores repetidos são removidos.
@@ -26,7 +26,7 @@ O método ``union()`` realiza a união entre todos os conjuntos do objeto. Valor
 
    $arrays->union(); // [1, 2, 3, 4, 5]
 
-12.2 Diferença
+13.2 Diferença
 --------------
 
 O método ``diff()`` realiza a diferença entre todos os conjuntos do objeto. 
@@ -48,7 +48,7 @@ A ordem dos conjuntos altera diretamente o valor final.
 
    $arrays->diff(); // [4, 5]
 
-12.3 Intersecção
+13.3 Intersecção
 ----------------
 
 O método ``intersect()`` realiza a intersecção entre todos os conjuntos do objeto.
@@ -62,7 +62,7 @@ O método ``intersect()`` realiza a intersecção entre todos os conjuntos do ob
 
    $arrays->intersect(); // [3, 4]
 
-12.4 Produto cartesiano
+13.4 Produto cartesiano
 -----------------------
 
 O método ``cartesian()`` realiza o produto cartesiano entre todos os conjuntos do objeto.

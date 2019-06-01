@@ -1,11 +1,11 @@
 ===================
-5. Notação de Ponto
+6. Notação de Ponto
 ===================
 
 Uma característica muito interessante que essa classe possui é a possibilidade
 de navegar entre seu conteúdo utilizando a notação de ponto.
 
-5.1 Inserindo valores
+6.1 Inserindo valores
 ---------------------
 
 Para criar arrays multidimensionais facilmente, sem a utilização de milhares de colchetes,
@@ -42,7 +42,7 @@ basta realizar a atribuição com a notação de ponto, como no exemplo abaixo:
    */
 
 
-5.2 Acessando valores
+6.2 Acessando valores
 ---------------------
 
 Da mesma forma, é possível facilmente percorrer o objeto para acessar seu conteúdo.

@@ -1,8 +1,8 @@
 =======================
-6. Notação de Intervalo
+7. Notação de Intervalo
 =======================
 
-6.1 Acessando Valores
+7.1 Acessando Valores
 ---------------------
 
 É possível receber parte de um objeto Arrays, através da notação de intervalo.
@@ -35,7 +35,7 @@ um array inverso do intervalo definido.
     echo $arrays['6:3']; // {"six":6,"five":5,"four":4,"three":3}
     
 
-6.2 Inserindo Valores
+7.2 Inserindo Valores
 ---------------------
 
 Uma maneira fácil de inicializar várias posições no array com um valor padrão.
@@ -48,7 +48,7 @@ Uma maneira fácil de inicializar várias posições no array com um valor padr�
    $arrays['0:5'] = 'lorem';
    echo $arrays; // ["lorem","lorem","lorem","lorem","lorem","lorem"]
 
-6.3 Verificando Nulidade
+7.3 Verificando Nulidade
 ------------------------
 
 Verifique a existência de multiplas posições no array.
@@ -65,7 +65,7 @@ Verifique a existência de multiplas posições no array.
    $arrays->isset('0:5'); // false
    isset($arrays['0:5']); // false
 
-6.4 Apagando Intervalos
+7.4 Apagando Intervalos
 -----------------------
 
 Remova diversos valores do array.
