@@ -71,22 +71,70 @@ O método ``unshift()`` aceita um número variável de argumentos e serve para a
 2.3 Associando valores à chaves
 -------------------------------
 
-O método ``set()`` é usado para associar uma chave à um valor.  Como primeiro argumento, deve ser
+O método ``set()`` é usado para associar uma ou mais chaves à um valor.  Como primeiro argumento, deve ser
 informado o valor, e os demais são as chaves. Ele também suporta a notação de ponto descrita na seção 5.
 
 .. code:: php
 
    // adicionando o valor 'lorem' na chave 'ipsum'
    $arrays->set('lorem', 'ipsum');
+   print_r($arrays);
 
-   // adicionando o valor 'lorem' na chave 'ipsum > dolor'
+   /*
+      Cajudev\Arrays Object
+         (
+            [content:protected] => Array
+               (
+                     [ipsum] => lorem
+               )
+
+            [length:protected] => 1
+            [backup:protected] => 
+         )
+   */
+
+   // adicionando o valor 'lorem' nas chaves 'ipsum e dolor'
    $arrays->set('lorem', 'ipsum', 'dolor');
+   print_r($arrays); 
 
-   // adicionando o valor 'lorem' na chave 'ipsum > dolor > amet' e assim por diante.
-   $arrays->set('lorem', 'ipsum', 'dolor', 'amet');
+   /*
+      Cajudev\Arrays Object
+         (
+            [content:protected] => Array
+               (
+                     [ipsum] => lorem
+                     [dolor] => lorem
+               )
 
-   // ou com a notação de ponto
+            [length:protected] => 2
+            [backup:protected] => 
+         )
+   */
+
+   // adicionando de maneira multidimensional
    $arrays->set('lorem', 'ipsum.dolor.amet');
+   print_r($arrays);
+
+   /*
+      Cajudev\Arrays Object
+         (
+            [content:protected] => Array
+               (
+                     [ipsum] => Array
+                        (
+                           [dolor] => Array
+                                 (
+                                    [amet] => lorem
+                                 )
+
+                        )
+
+               )
+
+            [length:protected] => 1
+            [backup:protected] => 
+         )
+   */
 
 2.4 Inserindo dados por referência
 ----------------------------------
