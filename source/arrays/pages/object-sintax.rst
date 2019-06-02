@@ -2,7 +2,7 @@
 5. Sintaxe de Objeto
 ====================
 
-É possível manipular os valores do array interno dessa classe como se fosse propriedades.
+É possível manipular os valores do array interno dessa classe como se fossem propriedades.
 
 5.1 Inserindo valores
 ---------------------
