@@ -43,10 +43,13 @@ Remove o último elemento do array (reinicia o ponteiro)
 
    echo $arrays; // ["lorem","ipsum"]
 
-14.4 Count ``(Deprecated)``
+14.4 Count
 ----------
 
-Retorna a quantidade de elementos do array.
+Retorna a quantidade de elementos do array. 
+
+Não há necessidade de utilizar esse método (exceto em modo recursivo)
+visto que o atributo length armazena o tamanho atual do array.
 
 .. code:: php
 
@@ -55,6 +58,12 @@ Retorna a quantidade de elementos do array.
    $arrays = new Arrays('lorem', 'ipsum', ['dolor' => ['sit' => 'amet']]);
 
    echo $arrays->count(); // 3
+   echo $arrays->length; // 3
+
+   $arrays = new Arrays([1, [2, 3], [2 => [1, 2, 3]]]);
+
+   echo $arrays->count(COUNT_RECURSIVE); // 9
+   echo $arrays->length; // 3
 
 14.5 Keys
 ---------
