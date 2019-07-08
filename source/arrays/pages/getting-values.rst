@@ -45,7 +45,7 @@ Considere o objeto abaixo para todos os exemplos desta página:
 
     // ================================================================================================================ //
 
-        $arrays->get('ipsum', 'dolor'); // ['consectetur', ['sit' => 'amet']]
+        $arrays->get('ipsum', 'dolor'); // ['ipsum' => 'consectetur', 'dolor' => ['sit' => 'amet']]
 
     // ================================================================================================================ //
 

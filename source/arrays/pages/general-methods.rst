@@ -18,29 +18,31 @@ Retorna o último elemento do array (reinicia o ponteiro)
 14.2 Shift
 ---------
 
-Remove o primeiro elemento do array (reinicia o ponteiro)
+Remove o primeiro elemento do array retornando o elemento removido (reinicia o ponteiro)
 
 .. code:: php
 
    use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', 'dolor');
-   $arrays->shift();
+   $value  = $arrays->shift();
 
+   echo $value;  // lorem;
    echo $arrays; // ["ipsum","dolor"]
 
 14.3 Pop
 -------
 
-Remove o último elemento do array (reinicia o ponteiro)
+Remove o último elemento do array retornando o elemento removido (reinicia o ponteiro)
 
 .. code:: php
 
    use Cajudev\Arrays;
 
    $arrays = new Arrays('lorem', 'ipsum', 'dolor');
-   $arrays->pop();
+   $value  = $arrays->pop();
 
+   echo $value;  // dolor
    echo $arrays; // ["lorem","ipsum"]
 
 14.4 Count
@@ -171,7 +173,7 @@ Retorna um objeto contento os valores da coluna informada.
 14.10 Lower
 -----------
 
-Altera para minúsculo as chaves do array.
+Altera recursivamente as chaves do array para minúsculo.
 
 .. code:: php
 
@@ -184,7 +186,7 @@ Altera para minúsculo as chaves do array.
 14.11 Upper
 -----------
 
-Altera para maiúsculo as chaves do array.
+Altera recursivamente as chaves do array para maiúsculo.
 
 .. code:: php
 

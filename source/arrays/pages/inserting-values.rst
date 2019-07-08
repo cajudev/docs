@@ -71,13 +71,13 @@ O método ``unshift()`` aceita um número variável de argumentos e serve para a
 2.3 Associando valores à chaves
 -------------------------------
 
-O método ``set()`` é usado para associar uma ou mais chaves à um valor.  Como primeiro argumento, deve ser
-informado o valor, e os demais são as chaves. Ele também suporta a notação de ponto descrita na seção 5.
+O método ``set()`` é usado para associar uma ou mais chaves à um valor.
+Ele também suporta a notação de ponto descrita na seção 5.
 
 .. code:: php
 
-   // adicionando o valor 'lorem' na chave 'ipsum'
    $arrays->set('lorem', 'ipsum');
+   
    print_r($arrays);
 
    /*
@@ -85,7 +85,7 @@ informado o valor, e os demais são as chaves. Ele também suporta a notação d
          (
             [content:protected] => Array
                (
-                     [ipsum] => lorem
+                     [lorem] => ipsum
                )
 
             [length:protected] => 1
@@ -93,26 +93,12 @@ informado o valor, e os demais são as chaves. Ele também suporta a notação d
          )
    */
 
-   // adicionando o valor 'lorem' nas chaves 'ipsum e dolor'
-   $arrays->set('lorem', 'ipsum', 'dolor');
-   print_r($arrays); 
+Realizando a associação de maneira multidimensional:
 
-   /*
-      Cajudev\Arrays Object
-         (
-            [content:protected] => Array
-               (
-                     [ipsum] => lorem
-                     [dolor] => lorem
-               )
+.. code:: php
 
-            [length:protected] => 2
-            [backup:protected] => 
-         )
-   */
+   $arrays->set('ipsum.dolor.amet', 'lorem');
 
-   // adicionando de maneira multidimensional
-   $arrays->set('lorem', 'ipsum.dolor.amet');
    print_r($arrays);
 
    /*
