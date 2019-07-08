@@ -76,7 +76,7 @@ Ele também suporta a notação de ponto descrita na seção 5.
 
 .. code:: php
 
-   $arrays->set('lorem', 'ipsum');
+   $arrays->set('ipsum', 'lorem');
    
    print_r($arrays);
 
@@ -97,7 +97,7 @@ Realizando a associação de maneira multidimensional:
 
 .. code:: php
 
-   $arrays->set('ipsum.dolor.amet', 'lorem');
+   $arrays->set('lorem', 'ipsum.dolor.amet');
 
    print_r($arrays);
 
