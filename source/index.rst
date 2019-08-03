@@ -20,7 +20,6 @@ Seja bem vindo à nossa documentação
    :titlesonly:
 
    Boas Vindas <arrays/index>
-   Guia do Usuário <arrays/guide>
 
 .. toctree::
    :hidden:

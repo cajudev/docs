@@ -1,47 +1,7 @@
-===================
-Bem Vindo ao Arrays
-===================
+=========
+Bem Vindo
+=========
 
-.. image:: https://img.shields.io/packagist/v/cajudev/arrays.svg
-   :target: https://packagist.org/packages/cajudev/arrays
+Esse projeto foi migrado para Collection_ 
 
-.. image:: https://img.shields.io/packagist/dt/cajudev/arrays.svg
-   :target: https://packagist.org/packages/cajudev/arrays
-
-.. image:: https://img.shields.io/github/license/cajudev/arrays.svg
-   :target: https://raw.githubusercontent.com/cajudev/arrays/master/LICENSE
-
-.. image:: https://img.shields.io/travis/cajudev/arrays.svg
-   :target: https://travis-ci.org/cajudev/arrays
-
-.. image:: https://coveralls.io/repos/github/cajudev/arrays/badge.svg?branch=master
-   :target: https://coveralls.io/github/cajudev/arrays
-
-.. image:: https://img.shields.io/github/issues/cajudev/arrays.svg
-   :target: https://github.com/cajudev/arrays/issues
-
-.. image:: https://img.shields.io/github/contributors/cajudev/arrays.svg
-   :target: https://github.com/cajudev/arrays/graphs/contributors
-
-Tornando sua programação em php mais orientada à objetos
-
-Características
-===============
-
-* Padrão PSR-4
-* Testes unitários com PHPUnit
-
-Instalação
-==========
-
-PHP 7.3+ ``composer require cajudev/arrays "^2"``
-
-PHP 7.0 ``composer require cajudev/arrays "^1"``
-
-PHP 5.6 ``composer require cajudev/arrays "^0"``
-
-.. note::
-
-   Nas versões **PHP5.6** alguns métodos possuem nomenclatura modificada devido à limitação do parser nessa versão, no
-   caso são acrescidos um _ (underscore) antes do nome.
-   São eles: _isset, _empty, _unset e _for.
+.. _Collection: https://cajudev.readthedocs.io/pt_BR/latest/collection/
