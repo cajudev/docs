@@ -21,14 +21,16 @@ desnecessário o uso de funções como ``count()``.
 
    print_r($collection);
 
-   Cajudev\Collection Object
-   (
-      [content:protected] => Array
-         (
-         )
+   /*
+      Cajudev\Collection Object
+      (
+         [content:protected] => Array
+            (
+            )
 
-      [length:protected] => 0
-   )
+         [length:protected] => 0
+      )
+   */
 
 1.2 Criando uma instância a partir de um array
 ----------------------------------------------
