@@ -9,7 +9,7 @@ Esta classe possui dois atributos: ``content``, e ``length``.
 
 Ambos possuem visibilidade ``protected``, permitindo com que você use herança caso necessite.
 
-O atributo ``content`` armazena todo o conteúdo adicionado ao objeto, euquanto 
+O atributo ``content`` armazena todo o conteúdo adicionado ao objeto, enquanto 
 o atributo ``length``, armazena o tamanho atual do array, tornando
 desnecessário o uso de funções como ``count()``.
 
