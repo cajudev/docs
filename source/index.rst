@@ -6,6 +6,15 @@ Seja bem vindo à nossa documentação
 
 .. toctree::
    :hidden:
+   :caption: Collection:
+   :glob:
+   :titlesonly:
+
+   Boas Vindas <collection/index>
+   Guia do Usuário <collection/guide>
+
+.. toctree::
+   :hidden:
    :caption: Arrays:
    :glob:
    :titlesonly:
