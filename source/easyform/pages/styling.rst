@@ -2,7 +2,7 @@
 4. Estilização Dinâmica
 =======================
 
-Agora que temos uma melhor estrutura, adicionamentos variáveis responsáveis pela estilização
+Agora que temos uma melhor estrutura, adicionaremos variáveis responsáveis pela estilização
 dos nossos elementos
 
 .. code:: php
