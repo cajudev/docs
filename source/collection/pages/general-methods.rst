@@ -286,3 +286,16 @@ Mescla todas as dimensões do array
     ]);
 
     $collection->merge(); //[1, 2, 'a', 4, 'a', '2', 'c', 3, 'c', 'd']
+
+14.19 Coalesce
+--------------
+
+Retorna o primeiro valor não nulo
+
+.. code:: php
+
+    use Cajudev\Collection;
+
+    $collection = new Collection([null, null, null, 'lorem', null]);
+
+    $collection->coalesce(); //lorem
