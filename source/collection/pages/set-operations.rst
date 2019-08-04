@@ -48,7 +48,21 @@ A ordem dos conjuntos altera diretamente o valor final.
 
    $collection->diff(); // [4, 5]
 
-13.3 Intersecção
+13.3 Diferença Total
+--------------------
+
+O método ``outer()`` realiza a diferença total entre conjuntos.
+
+.. code:: php
+
+   $collection = new Collection([
+      [1, 2, 3],
+      [3, 4, 5],
+   ]);
+
+   $collection->outer(); // [[1, 2], [4, 5]]
+
+13.4 Intersecção
 ----------------
 
 O método ``intersect()`` realiza a intersecção entre todos os conjuntos do objeto.
@@ -62,7 +76,7 @@ O método ``intersect()`` realiza a intersecção entre todos os conjuntos do ob
 
    $collection->intersect(); // [3, 4]
 
-13.4 Produto cartesiano
+13.5 Produto cartesiano
 -----------------------
 
 O método ``cartesian()`` realiza o produto cartesiano entre todos os conjuntos do objeto.
