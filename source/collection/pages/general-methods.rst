@@ -2,10 +2,23 @@
 14. Métodos de Uso Geral
 =======================
 
-14.1 Last
+14.1 First
+----------
+
+Retorna o primeiro elemento do array (A partir da versão 3, não reinicia mais o ponteiro)
+
+.. code:: php
+
+   use Cajudev\Collection;
+
+   $collection = new Collection('lorem', 'ipsum', 'dolor');
+
+   echo $collection->first(); // 'lorem'
+
+14.2 Last
 ---------
 
-Retorna o último elemento do array (reinicia o ponteiro)
+Retorna o último elemento do array (A partir da versão 3, não reinicia mais o ponteiro)
 
 .. code:: php
 
@@ -15,7 +28,7 @@ Retorna o último elemento do array (reinicia o ponteiro)
 
    echo $collection->last(); // 'dolor'
 
-14.2 Shift
+14.3 Shift
 ---------
 
 Remove o primeiro elemento do array retornando o elemento removido (reinicia o ponteiro)
@@ -30,7 +43,7 @@ Remove o primeiro elemento do array retornando o elemento removido (reinicia o p
    echo $value;  // lorem;
    echo $collection; // ["ipsum","dolor"]
 
-14.3 Pop
+14.4 Pop
 -------
 
 Remove o último elemento do array retornando o elemento removido (reinicia o ponteiro)
@@ -45,7 +58,7 @@ Remove o último elemento do array retornando o elemento removido (reinicia o po
    echo $value;  // dolor
    echo $collection; // ["lorem","ipsum"]
 
-14.4 Count
+14.5 Count
 ----------
 
 Retorna a quantidade de elementos do array. 
@@ -67,7 +80,7 @@ visto que o atributo length armazena o tamanho atual do array.
    echo $collection->count(COUNT_RECURSIVE); // 9
    echo $collection->length; // 3
 
-14.5 Keys
+14.6 Keys
 ---------
 
 Retorna um objeto contento as chaves do array atual
@@ -82,7 +95,7 @@ Retorna um objeto contento as chaves do array atual
 
     echo $keys; // ["three", "eight", "two"]
 
-14.6 Values
+14.7 Values
 -----------
 
 Retorna um objeto contento os valores do array atual
@@ -97,7 +110,7 @@ Retorna um objeto contento os valores do array atual
 
     echo $values; // [3, 8, 2]
 
-14.7 Chunk
+14.8 Chunk
 ----------
 
 Quebra o array em partes iguais. Caso receba ``true`` como segundo parâmetro preservará as chaves do array.
@@ -136,7 +149,7 @@ Quebra o array em partes iguais. Caso receba ``true`` como segundo parâmetro pr
         )
     */
 
-14.8 Join
+14.9 Join
 ----------
 
 Junta os elementos do array em uma string.
@@ -151,7 +164,7 @@ Junta os elementos do array em uma string.
 
     echo $result; // 1-2-3-4-5
 
-14.9 Column
+14.10 Column
 -----------
 
 Retorna um objeto contento os valores da coluna informada.
@@ -169,7 +182,7 @@ Retorna um objeto contento os valores da coluna informada.
 
     echo $collection->column('lorem'); // ["1234","4321","9999","1111"]
 
-14.10 Lower
+14.11 Lower
 -----------
 
 Altera recursivamente as chaves do array para minúsculo.
@@ -182,7 +195,7 @@ Altera recursivamente as chaves do array para minúsculo.
 
     echo $collection->lower(); // {"lorem":1,"ipsum":2}
 
-14.11 Upper
+14.12 Upper
 -----------
 
 Altera recursivamente as chaves do array para maiúsculo.
@@ -195,7 +208,7 @@ Altera recursivamente as chaves do array para maiúsculo.
 
     echo $collection->upper(); // {"LOREM":1,"IPSUM":2}
 
-14.12 Contains
+14.13 Contains
 --------------
 
 Checa se determinado valor existe no array
@@ -208,7 +221,7 @@ Checa se determinado valor existe no array
     $collection->contains(2) //true
     $collection->contains(6) //false
 
-14.13 Sum
+14.14 Sum
 ---------
 
 Soma os elementos do array
@@ -220,7 +233,7 @@ Soma os elementos do array
     $collection = new Collection([1, 2, 3, 4, 5]);
     $collection->sum(); //15
 
-14.14 Flip
+14.15 Flip
 ----------
 
 Inverte as relações do array, ou seja, as chaves 
@@ -233,7 +246,7 @@ passam a ser os valores e os valores passam a ser as chaves.
     $collection = new Collection(['lorem' => 'ipsum']);
     $collection->flip(); //['ipsum' => 'lorem]
 
-14.15 Search
+14.16 Search
 ------------
 
 Procura por um valor no array e se o encontra, retorna sua chave correspondente.
@@ -246,7 +259,7 @@ Procura por um valor no array e se o encontra, retorna sua chave correspondente.
     $collection->search('ipsum'); //lorem
     $collection->search('dolor'); //null
 
-14.16 Reverse
+14.17 Reverse
 -------------
 
 Inverte o array.
@@ -258,7 +271,7 @@ Inverte o array.
     $collection = new Collection([1, 2, 3, 4, 5]);
     $collection->reverse(); //[5, 4, 3, 2, 1]
 
-14.17 Unique
+14.18 Unique
 ------------
 
 Remove valores duplicados.
@@ -270,7 +283,7 @@ Remove valores duplicados.
     $collection = new Collection(['a', 'c', 'a', 'c', 'a', 'c', 'c', 'b']);
     $collection->unique(); //[0 => 'a', 1 => 'c', 7 => 'b']
 
-14.18 Merge
+14.19 Merge
 -----------
 
 Mescla todas as dimensões do array
@@ -287,7 +300,7 @@ Mescla todas as dimensões do array
 
     $collection->merge(); //[1, 2, 'a', 4, 'a', '2', 'c', 3, 'c', 'd']
 
-14.19 Coalesce
+14.20 Coalesce
 --------------
 
 Retorna o primeiro valor não nulo
@@ -299,3 +312,29 @@ Retorna o primeiro valor não nulo
     $collection = new Collection([null, null, null, 'lorem', null]);
 
     $collection->coalesce(); //lorem
+
+14.21 Random
+------------
+
+Retorna um elemento aleatório
+
+.. code:: php
+
+    use Cajudev\Collection;
+
+    $collection = new Collection(['lorem', 'ipsum', 'dolor']);
+
+    $collection->random(); //ipsum
+
+14.22 Shuffle
+-------------
+
+Embaralha os valores do objeto
+
+.. code:: php
+
+    use Cajudev\Collection;
+
+    $collection = new Collection(['lorem', 'ipsum', 'dolor']);
+
+    $collection->shuffle(); // ['dolor', 'lorem', 'ipsum']

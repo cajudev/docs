@@ -33,3 +33,20 @@ Ambos os argumentos podem ser simples arrays ou objetos dessa classe.
 
    echo $result; // {"lorem":1,"ipsum":2,"dolor":3}
 
+15.3 Range
+-------------
+
+Cria um objeto collection a partir de um intervalo
+
+.. code:: php
+
+   use Cajudev\Collection;
+
+   $numbers = Collection::range($start = 10, $end = 20, $step = 2);
+
+   echo $numbers; // [10, 12, 14, 16, 18, 20]
+   
+
+   $letters = Collection::range($start = 'A', $end = 'F');
+
+   echo $letters; // ["A", "B", "C", "D", "E", "F"]

@@ -79,14 +79,24 @@ No exemplo abaixo, vocẽ poderá observar sua utilização em um laço while.
 
    $iterator = $collection->getIterator();
 
-    while ($iterator->valid()) {
-        echo "key {$iterator->key()} value: {$iterator->current()}" . PHP_EOL;
-        $iterator->next();
+    while ($iterator->valid()) { // verifica se a posição atual é válida
+
+        echo "key {$iterator->key()}"; //acessa a chave da posição atual
+
+        echo "value: {$iterator->current()}"; //acessa o valor da posição atual
+        
+        $iterator->next(); // avança para a próxima posição
     }
 
+    $iterator->previous(); //retorna uma posição
+    $iterator->rewind(); // retorna ao inicio
+
    /*
-        key: lorem value: ipsum
-        key: dolor value: sit
+        key: lorem 
+        value: ipsum
+
+        key: dolor
+        value: sit
    */   
 
 10.4 Iterando com o método for
@@ -189,4 +199,85 @@ você precisará adicionar um ``use`` passando o próprio objeto:
                 
             [length:Cajudev\Collection:protected] => 
         )
+    */
+
+10.5 Iterando recursivamente
+----------------------------
+
+O método ``walk()`` permite percorrer recursivamente todos os elementos do objeto.
+
+10.5.1 Percorrendo folhas
+.........................
+
+O modo padrão deste método é LEAVES_ONLY, ou seja, percorre apenas nós-folha, como no exemplo abaixo:
+
+.. code:: php
+
+    use Cajudev\Collection;
+
+    $collection = new Collection(['lorem', ['ipsum', 'dolor'], ['sit' => ['amet' => 'consectetur']]]);
+
+    $collection->walk(function($key, $value) {
+        var_dump($key, $value);
+    });
+
+    /*
+        int(0)
+        string(5) "lorem"
+
+        int(0)
+        string(5) "ipsum"
+
+        int(1)
+        string(5) "dolor"
+
+        string(4) "amet"
+        string(11) "consectetur"
+    */
+
+10.5.2 Demais modos
+...................
+
+Quatro constantes da classe ``RecursiveIteratorIterator`` podem ser passadas como segundo parâmetro desse método.
+
+São elas: ``LEAVES_ONLY``, ``SELF_FIRST``, ``CHILD_FIRST`` e ``CATCH_GET_CHILD``.
+
+Veja o mesmo exemplo anterior, porém desta vez utilizando outro modo.
+
+.. code:: php
+
+    $collection->walk(function($key, $value) {
+        var_dump($key, $value);
+    }, RecursiveIteratorIterator::CHILD_FIRST);
+
+    /*
+        int(0)
+        string(5) "lorem"
+
+        int(0)
+        string(5) "ipsum"
+
+        int(1)
+        string(5) "dolor"
+
+        int(1)
+        array(2) {
+            [0] => string(5) "ipsum"
+            [1] => string(5) "dolor"
+        }
+
+        string(4) "amet"
+        string(11) "consectetur"
+
+        string(3) "sit"
+        array(1) {
+            'amet' => string(11) "consectetur"
+        }
+
+        int(2)
+        array(1) {
+            'sit' => array(1) {
+                'amet' => string(11) "consectetur"
+            }
+        }
     */
