@@ -5,7 +5,7 @@
 15.1 isCollection
 -------------
 
-Verifica se dado objeto é uma instância da classe Arrays ou que extenda dela
+Verifica se dado objeto é uma instância da classe Collection ou que extenda dela
 
 .. code:: php
 
@@ -18,7 +18,7 @@ Verifica se dado objeto é uma instância da classe Arrays ou que extenda dela
 15.2 Combine
 -------------
 
-Combina dois arrays em um novo objeto, utilizando o primeiro para chaves e o segundo para valores.
+Combina dois arrays/objetos em um novo objeto, utilizando o primeiro para chaves e o segundo para valores.
 Ambos os argumentos podem ser simples arrays ou objetos dessa classe.
 
 .. code:: php

@@ -145,3 +145,42 @@ O método ``setByReference()`` permitir atribuir por referência um conteúdo à
 
          )
    */
+
+2.5 Inserindo outro Collection
+------------------------------
+
+Você irá reparar que se nós inserirmos um objeto Collection dentro de outro, 
+ele não será inserido como um objeto, mas sim como um array. Isso é uma característica dessa classe.
+
+.. code:: php
+
+   use Cajudev\Collection;
+
+   $collection = new Collection(['primeiro' => new Collection(['lorem', 'ipsum', 'dolor'])]);
+
+   $collection->set('segundo', new Collection(['lorem', 'ipsum', 'dolor']));
+
+   print_r($collection);
+
+   /*
+   Cajudev\Collection Object
+      (
+         [content:protected] => Array
+            (
+               [primeiro] => Array
+                  (
+                     [0] => lorem
+                     [1] => ipsum
+                     [2] => dolor
+                  )
+
+               [segundo] => Array
+                  (
+                     [0] => lorem
+                     [1] => ipsum
+                     [2] => dolor
+                  )
+            )
+         [length:protected] => 2
+      )
+   */

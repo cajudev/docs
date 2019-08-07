@@ -1,3 +1,7 @@
+.highlight > pre {
+  line-height: 20px!important;
+}
+
 .title-container {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 1rem;

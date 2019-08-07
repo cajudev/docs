@@ -92,3 +92,52 @@ Considere o objeto abaixo para todos os exemplos desta página:
         echo $collection->length; // 3
 
     // ================================================================================================================ //
+
+
+3.8 Como é possível acessar métodos de maneira encadeada?
+---------------------------------------------------------
+
+Qualquer array desse objeto, imediatamente ao ser acessado se transformará em um objeto collection, fornecendo todos os
+seus métodos.
+
+.. code:: php
+
+    // ================================================================================================================ //
+
+    print_r($collection);
+
+    /*
+    Cajudev\Collection Object
+        (
+            [content:protected] => Array
+                (
+                    [0] => lorem
+                    [ipsum] => consectetur
+                    [dolor] => Array       -----------> Aqui 'dolor' ainda é um array comum
+                        (
+                            [sit] => amet
+                        )
+
+                )
+
+            [length:protected] => 3
+        )
+    */
+
+    $dolor = $collection->get('dolor');  //  -------------> Ao ser acessado, é transformado em Collection
+
+    print_r($dolor);
+
+    /*
+    Cajudev\Collection Object
+        (
+            [content:protected] => Array
+                (
+                    [sit] => amet
+                )
+
+            [length:protected] => 1
+        )
+    */
+
+    // ================================================================================================================ //

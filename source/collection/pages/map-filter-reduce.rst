@@ -11,7 +11,7 @@ especial permite alterar tanto valores, quanto suas chaves.
 
    $collection = new Collection(['lorem', 'ipsum', 'dolor']);
    $map = $collection->map(function($key, $value) {
-      return [$key + 10 => strtoupper($value)];
+      return [$key + 10 => strtoupper($value)]; // ----------> Repare bem a sintaxe de retorno
    });
 
    print_r($map);
@@ -28,6 +28,27 @@ especial permite alterar tanto valores, quanto suas chaves.
          [length:protected] => 3
       )
    */
+
+.. note::
+
+   Por padrão os valores passados à função callback serão, quando forem, arrays comums.
+
+   Esse comportamento pode ser alterado através da passagem de um segundo parâmetro, que
+   faz com que os argumentos recebidos, em casos de arrays, sejam Collections.
+
+.. code:: php
+
+    $collection = new Collection([['lorem', 'ipsum'], ['dolor', 'sit']]);
+
+    $collection->map(function($key, $value) {
+        // ...
+    }, Collection::ARRAY_TO_COLLECTION);
+
+        // ou 
+
+    $collection->map(function($key, $value) {
+        // ...
+    }, true);
 
 12.2 Filter
 -----------
@@ -59,6 +80,27 @@ O método ``filter`` permite filtrar os elementos do array através de uma funç
       )
    */
 
+.. note::
+
+   Assim como o método anterior, por padrão os valores passados à função callback serão, quando forem, arrays comums.
+
+   Esse comportamento pode ser alterado através da passagem de um segundo parâmetro, que
+   faz com que os argumentos recebidos, em casos de arrays, sejam Collections.
+
+.. code:: php
+
+    $collection = new Collection([['lorem', 'ipsum'], ['dolor', 'sit']]);
+
+    $collection->filter(function($key, $value) {
+        // ...
+    }, Collection::ARRAY_TO_COLLECTION);
+
+        // ou 
+
+    $collection->filter(function($key, $value) {
+        // ...
+    }, true);
+
 12.3 Reduce
 -----------
 
@@ -76,3 +118,24 @@ Diferente do tradicional, o valor inicial fornecido será o **primeiro elemento 
    });
 
    echo $result; // 10
+
+.. note::
+
+   Assim como o método anterior, por padrão os valores passados à função callback serão, quando forem, arrays comums.
+
+   Esse comportamento pode ser alterado através da passagem de um segundo parâmetro, que
+   faz com que os argumentos recebidos, em casos de arrays, sejam Collections.
+
+.. code:: php
+
+    $collection = new Collection([['lorem', 'ipsum'], ['dolor', 'sit']]);
+
+    $collection->reduce(function($a, $b) {
+        // ...
+    }, Collection::ARRAY_TO_COLLECTION);
+
+        // ou 
+
+    $collection->reduce(function($a, $b) {
+        // ...
+    }, true);

@@ -14,36 +14,40 @@ A utilização da classe em um laço for-each é a mesma a de um array comum
    $collection = new Collection(['lorem' => 'ipsum', 'dolor' => 'sit']);
 
    foreach ($collection as $key => $value) {
-        echo "key: {$key} value: {$value}" . PHP_EOL;
+        // ...
    }
-
-   /*
-        key: lorem value: ipsum
-        key: dolor value: sit
-   */
 
 10.2 Iterando com o método each
 -------------------------------
 
-10.2.1 Percorrendo o array
+O método ``each()`` performa um loop for-each internamente através de uma função callback.
+
+10.2.1 Percorrendo o objeto
 .........................
 
-O método ``each()`` performa um loop for-each internamente através de uma função callback.
+Neste primeiro caso o valor será fornecido como um array comum.
 
 .. code:: php
 
-   use Cajudev\Collection;
-
-   $collection = new Collection(['lorem' => 'ipsum', 'dolor' => 'sit']);
+   $collection = new Collection(['lorem' => ['ipsum', 'dolor', 'sit']]);
 
    $collection->each(function($key, $value) {
-        echo "key: {$key} value: {$value}" . PHP_EOL;
+        echo gettype($value); // array
    });
 
-    /*
-        key: lorem value: ipsum
-        key: dolor value: sit
-   */
+Mas podemos alterar esse comportamento para que o valor fornecido seja um Collection.
+
+.. code:: php
+
+    $collection->each(function($key, $value) {
+        echo get_class($value); // Cajudev\Collection;
+    }, Collection::ARRAY_TO_COLLECTION);
+
+        // ou 
+
+    $collection->each(function($key, $value) {
+        echo get_class($value); // Cajudev\Collection;
+    }, true);
    
 10.2.2 Parando a iteração
 ........................
@@ -90,14 +94,6 @@ No exemplo abaixo, vocẽ poderá observar sua utilização em um laço while.
 
     $iterator->previous(); //retorna uma posição
     $iterator->rewind(); // retorna ao inicio
-
-   /*
-        key: lorem 
-        value: ipsum
-
-        key: dolor
-        value: sit
-   */   
 
 10.4 Iterando com o método for
 -----------------------------
@@ -163,6 +159,23 @@ Tome o cuidado de não informar um valor inválido, como no exemplo abaixo:
     });
 
     // Undefined offset: 7
+
+Assim como o método ``each``, o valor fornecido por padrão (caso seja um array) será um array comum.
+Para alterar esse comportamento, você pode informar um segundo parâmetro.
+
+.. code:: php
+
+    $collection = new Collection([['lorem', 'ipsum'], ['dolor', 'sit']]);
+
+    $collection->for(0, 2, function($key, $value) {
+        echo get_class($value); // Cajudev\Collection;
+    }, Collection::ARRAY_TO_COLLECTION);
+
+        // ou 
+
+    $collection->for(0, 2, function($key, $value) {
+        echo get_class($value); // Cajudev\Collection;
+    }, true);
 
 10.4.3 Realizando modificações
 .............................
@@ -281,3 +294,20 @@ Veja o mesmo exemplo anterior, porém desta vez utilizando outro modo.
             }
         }
     */
+
+Assim como os métodos anteriores, o valor fornecido por padrão (caso seja um array) será um array comum.
+Para alterar esse comportamento, você pode informar um terceiro parâmetro.
+
+.. code:: php
+
+    $collection = new Collection([['lorem', 'ipsum'], ['dolor', 'sit']]);
+
+    $collection->walk(function($key, $value) {
+        // ...
+    }, RecursiveIteratorIterator::CHILD_FIRST, Collection::ARRAY_TO_COLLECTION);
+
+        // ou 
+
+    $collection->walk(function($key, $value) {
+        // ...
+    }, RecursiveIteratorIterator::CHILD_FIRST, true);
