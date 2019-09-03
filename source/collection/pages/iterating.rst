@@ -1,9 +1,9 @@
-==========================
+===========================
 10. Iterando sobre o Objeto
-==========================
+===========================
 
 10.1 Iterando em um laço for-each
---------------------------------
+---------------------------------
 
 A utilização da classe em um laço for-each é a mesma a de um array comum
 
@@ -23,7 +23,7 @@ A utilização da classe em um laço for-each é a mesma a de um array comum
 O método ``each()`` performa um loop for-each internamente através de uma função callback.
 
 10.2.1 Percorrendo o objeto
-.........................
+...........................
 
 Neste primeiro caso o valor será fornecido como um array comum.
 
@@ -50,7 +50,7 @@ Mas podemos alterar esse comportamento para que o valor fornecido seja um Collec
     }, true);
    
 10.2.2 Parando a iteração
-........................
+.........................
 
 Para pular uma iteração basta utilizar um ``return``.
 
@@ -68,7 +68,7 @@ Para pular uma iteração basta utilizar um ``return``.
     });
 
 10.3 Iterando em um laço while
---------------------------------
+------------------------------
 
 O objeto responsável por iterar entre os valores dessa classe é o ``CollectionIterator``.
 
@@ -96,14 +96,14 @@ No exemplo abaixo, vocẽ poderá observar sua utilização em um laço while.
     $iterator->rewind(); // retorna ao inicio
 
 10.4 Iterando com o método for
------------------------------
+------------------------------
 
 O método ``for()`` permite iterar um objeto Collection através de passos.
 
 Ele recebe três argumentos: O ponto de partida, o incremento e uma função que recebe chave e valor.
 
 10.4.1 Iterando "para frente"
-............................
+.............................
 
 .. code:: php
 
@@ -124,7 +124,7 @@ Ele recebe três argumentos: O ponto de partida, o incremento e uma função que
    */
 
 10.4.2 Iterando "para trás"
-..........................
+...........................
 
 Caso você queira iterar inversamente o objeto, basta informar como
 segundo argumento um valor negativo.
@@ -178,7 +178,7 @@ Para alterar esse comportamento, você pode informar um segundo parâmetro.
     }, true);
 
 10.4.3 Realizando modificações
-.............................
+..............................
 
 Caso você necessite fazer modificações internas ao invés de somente obter dados,
 você precisará adicionar um ``use`` passando o próprio objeto:

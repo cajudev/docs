@@ -1,6 +1,6 @@
-=======================
+========================
 14. Métodos de Uso Geral
-=======================
+========================
 
 14.1 First
 ----------
@@ -29,7 +29,7 @@ Retorna o último elemento do array (A partir da versão 3, não reinicia mais o
    echo $collection->last(); // 'dolor'
 
 14.3 Shift
----------
+----------
 
 Remove o primeiro elemento do array retornando o elemento removido (reinicia o ponteiro)
 
@@ -44,7 +44,7 @@ Remove o primeiro elemento do array retornando o elemento removido (reinicia o p
    echo $collection; // ["ipsum","dolor"]
 
 14.4 Pop
--------
+--------
 
 Remove o último elemento do array retornando o elemento removido (reinicia o ponteiro)
 
@@ -165,7 +165,7 @@ Junta os elementos do array em uma string.
     echo $result; // 1-2-3-4-5
 
 14.10 Column
------------
+------------
 
 Retorna um objeto contento os valores da coluna informada.
 

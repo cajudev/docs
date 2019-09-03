@@ -15,6 +15,15 @@ Seja bem vindo à nossa documentação
 
 .. toctree::
    :hidden:
+   :caption: EasyForm:
+   :glob:
+   :titlesonly:
+
+   Boas Vindas <easyform/index>
+   Guia do Usuário <easyform/guide>
+
+.. toctree::
+   :hidden:
    :caption: Regex:
    :glob:
    :titlesonly:
@@ -24,20 +33,20 @@ Seja bem vindo à nossa documentação
 
 .. toctree::
    :hidden:
+   :caption: Getter & Setter:
+   :glob:
+   :titlesonly:
+
+   Boas Vindas <getter-setter/index>
+   Guia do Usuário <getter-setter/guide>
+
+.. toctree::
+   :hidden:
    :caption: Arrays:
    :glob:
    :titlesonly:
 
    Boas Vindas <arrays/index>
-
-.. toctree::
-   :hidden:
-   :caption: EasyForm:
-   :glob:
-   :titlesonly:
-
-   Boas Vindas <easyform/index>
-   Guia do Usuário <easyform/guide>
 
 .. toctree::
    :hidden:

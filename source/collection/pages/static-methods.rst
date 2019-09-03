@@ -3,7 +3,7 @@
 =====================
 
 15.1 isCollection
--------------
+-----------------
 
 Verifica se dado objeto é uma instância da classe Collection ou que extenda dela
 
