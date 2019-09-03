@@ -15,6 +15,15 @@ Seja bem vindo à nossa documentação
 
 .. toctree::
    :hidden:
+   :caption: Regex:
+   :glob:
+   :titlesonly:
+
+   Boas Vindas <regex/index>
+   Guia do Usuário <regex/guide>
+
+.. toctree::
+   :hidden:
    :caption: Arrays:
    :glob:
    :titlesonly:
