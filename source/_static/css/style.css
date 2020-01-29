@@ -1,5 +1,9 @@
+body {
+  text-align: center;
+}
+
 .highlight > pre {
-  line-height: 20px!important;
+  line-height: 20px !important;
 }
 
 .title-container {
@@ -105,4 +109,26 @@
   padding: 5px;
   border-radius: 5px;
   overflow: auto;
+}
+
+ul.simple > li {
+  list-style: none !important;
+  padding: 10px 0;
+  margin: 10px 0;
+  transition: background 0.5s;
+}
+
+ul.simple > li:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #ff471a;
+  transition: background 0.5s;
+}
+
+ul.simple > li > p {
+  font-size: 30px;
+}
+
+ul.simple > li > p > a {
+  color: inherit !important;
 }

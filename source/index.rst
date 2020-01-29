@@ -4,60 +4,19 @@
 Seja bem vindo à nossa documentação
 ===================================
 
-.. toctree::
-   :hidden:
-   :caption: EasyForm:
-   :glob:
-   :titlesonly:
+- Collection_
+- EasyForm_
+- Regex_
+- CsvParser_
+- Validator_
+- `Getters & Setters`_
 
-   Boas Vindas <easyform/index>
-   Guia do Usuário <easyform/guide>
-
-.. toctree::
-   :hidden:
-   :caption: Regex:
-   :glob:
-   :titlesonly:
-
-   Boas Vindas <regex/index>
-   Guia do Usuário <regex/guide>
-
-.. toctree::
-   :hidden:
-   :caption: Getter & Setter:
-   :glob:
-   :titlesonly:
-
-   Boas Vindas <getter-setter/index>
-   Guia do Usuário <getter-setter/guide>
-
-.. toctree::
-   :hidden:
-   :caption: Arrays:
-   :glob:
-   :titlesonly:
-
-   Boas Vindas <arrays/index>
-
-.. toctree::
-   :hidden:
-   :caption: Validator:
-   :glob:
-   :titlesonly:
-
-   Boas Vindas <validator/index>
-   Classes <validator/classes>
-
-.. toctree::
-   :hidden:
-   :caption: CsvParser:
-   :glob:
-   :titlesonly:
-
-   Boas Vindas <csvparser/index>
-   Guia do Usuário <csvparser/guide>
-
-No menu ao lado você encontrará todas as informações referentes às nossas bibliotecas.
+.. _Collection: https://cajudev.readthedocs.io/projects/collection/pt/v4/
+.. _EasyForm: https://cajudev.readthedocs.io/projects/easyform/pt/v0/
+.. _Regex: https://cajudev.readthedocs.io/projects/regex/pt/v0/
+.. _CsvParser: https://cajudev.readthedocs.io/projects/csvparser/pt/v0/
+.. _Validator: https://cajudev.readthedocs.io/projects/validator/pt/v0/
+.. _`Getters & Setters`: https://cajudev.readthedocs.io/projects/getter-setter/pt/v0/
 
 
 .. |github| image:: image/github.png

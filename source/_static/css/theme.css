@@ -31,11 +31,11 @@ pre {
 }
 
 .code-description {
-    height: 40px;
-    background: #FFF;
-    font-size: 14px;
-    margin: 15px 0;
-    border: 1px solid #DADADA;
+  height: 40px;
+  background: #fff;
+  font-size: 14px;
+  margin: 15px 0;
+  border: 1px solid #dadada;
 }
 
 .ethical-rtd {
@@ -6013,6 +6013,7 @@ html {
   color: white;
   background: #ff471a;
   z-index: 200;
+  display: none;
 }
 
 .wy-side-scroll {
@@ -6062,7 +6063,6 @@ html {
 }
 
 .wy-nav-content-wrap {
-  margin-left: 300px;
   background: #fcfcfc;
 }
 
@@ -6148,9 +6148,6 @@ span.commit {
   }
   .wy-nav-top {
     display: block;
-  }
-  .wy-nav-side {
-    left: -300px;
   }
   .wy-nav-side.shift {
     width: 85%;
