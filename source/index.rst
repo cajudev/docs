@@ -1,8 +1,8 @@
-|github| |github-logo| |packagist| |packagist-logo|
+=====================
+Documentações Cajudev
+=====================
 
-===================================
-Seja bem vindo à nossa documentação
-===================================
+-----------------------------------------------------------------------------------
 
 - Collection_
 - EasyForm_
@@ -17,20 +17,3 @@ Seja bem vindo à nossa documentação
 .. _CsvParser: https://cajudev.readthedocs.io/projects/csvparser/pt/v0/
 .. _Validator: https://cajudev.readthedocs.io/projects/validator/pt/v0/
 .. _`Getters & Setters`: https://cajudev.readthedocs.io/projects/getter-setter/pt/v0/
-
-
-.. |github| image:: image/github.png
-   :scale: 100 %
-   :target: https://github.com/cajudev
-
-.. |github-logo| image:: image/github-logo.png
-   :scale: 10 %
-   :target: https://github.com/cajudev
-
-.. |packagist| image:: image/packagist.png
-   :scale: 4 %
-   :target: https://packagist.org/packages/cajudev
-
-.. |packagist-logo| image:: image/packagist-logo.png
-   :scale: 27 %
-   :target: https://packagist.org/packages/cajudev

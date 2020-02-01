@@ -118,7 +118,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 nav,
@@ -6013,6 +6012,7 @@ html {
   color: white;
   background: #ff471a;
   z-index: 200;
+  z-index: 200;
   display: none;
 }
 
@@ -6033,12 +6033,6 @@ html {
   line-height: 50px;
   text-align: center;
   font-size: 100%;
-}
-
-.wy-nav-top:after,
-.wy-nav-top:before {
-  display: table;
-  content: '';
 }
 
 .wy-nav-top a {
@@ -6064,12 +6058,16 @@ html {
 
 .wy-nav-content-wrap {
   background: #fcfcfc;
+  height: 100%;
 }
 
 .wy-nav-content {
   padding: 1.618em 3.236em;
   height: 100%;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wy-body-mask {
@@ -6145,9 +6143,6 @@ span.commit {
 @media screen and (max-width: 768px) {
   .wy-body-for-nav {
     background: #fcfcfc;
-  }
-  .wy-nav-top {
-    display: block;
   }
   .wy-nav-side.shift {
     width: 85%;
@@ -6895,4 +6890,12 @@ span[id*='MathJax-Span'] {
 
 .math {
   text-align: center;
+}
+
+div[role='navigation'] {
+  display: none;
+}
+
+footer {
+  display: none !important;
 }
