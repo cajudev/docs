@@ -137,8 +137,10 @@ ul.simple {
 }
 
 ul.simple > li {
-  display: inline-block;
-  vertical-align: middle;
+  list-style: none !important;
+}
+
+ul.simple > li > a {
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -147,8 +149,30 @@ ul.simple > li {
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 20px;
+  background: linear-gradient(236deg, rgba(255, 71, 26, 1) 0%, rgba(205, 40, 0, 1) 100%);
+  height: 150px;
+  width: 370px;
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+  line-height: 40px;
 }
-ul.simple > li:before {
+
+@media screen and (max-width: 480px) {
+  ul.simple > li > a {
+    width: 280px;
+    font-size: 30px;
+  }
+}
+
+ul.simple > li > a:before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -168,40 +192,18 @@ ul.simple > li:before {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-ul.simple > li:hover,
-ul.simple > li:focus,
-ul.simple > li:active {
+ul.simple > li > a:hover,
+ul.simple > li > a:focus,
+ul.simple > li > a:active {
   color: white;
 }
-ul.simple > li:hover:before,
-ul.simple > li:focus:before,
-ul.simple > li:active:before {
+ul.simple > li > a:hover:before,
+ul.simple > li > a:focus:before,
+ul.simple > li > a:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
-ul.simple > li {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  list-style: none !important;
-  margin: 20px;
-  padding: 0 100px;
-  background: linear-gradient(236deg, rgba(255, 71, 26, 1) 0%, rgba(205, 40, 0, 1) 100%);
-  height: 150px;
-  width: 370px;
-  color: white;
-  cursor: pointer;
-}
-
-ul.simple > li > p {
-  font-size: 40px;
-  line-height: 40px;
-}
-
-ul.simple > li > p > a {
-  color: inherit !important;
+h1 {
+  text-align: center;
 }

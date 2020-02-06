@@ -5536,14 +5536,6 @@ article ul {
   margin-bottom: 24px;
 }
 
-.rst-content .section ul li,
-.rst-content .toctree-wrapper ul li,
-.wy-plain-list-disc li,
-article ul li {
-  list-style: disc;
-  margin-left: 24px;
-}
-
 .rst-content .section ul li p:last-child,
 .rst-content .section ul li ul,
 .rst-content .toctree-wrapper ul li p:last-child,
@@ -5991,12 +5983,6 @@ html {
 
 .wy-body-for-nav {
   background: #fcfcfc;
-}
-
-.wy-grid-for-nav {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 .wy-nav-side {
