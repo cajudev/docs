@@ -140,7 +140,7 @@ ul.simple > li {
   list-style: none !important;
 }
 
-ul.simple > li > a {
+ul.simple > li a {
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -166,13 +166,13 @@ ul.simple > li > a {
 }
 
 @media screen and (max-width: 480px) {
-  ul.simple > li > a {
+  ul.simple > li a {
     width: 280px;
     font-size: 30px;
   }
 }
 
-ul.simple > li > a:before {
+ul.simple > li a:before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -192,14 +192,14 @@ ul.simple > li > a:before {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-ul.simple > li > a:hover,
-ul.simple > li > a:focus,
-ul.simple > li > a:active {
+ul.simple > li a:hover,
+ul.simple > li a:focus,
+ul.simple > li a:active {
   color: white;
 }
-ul.simple > li > a:hover:before,
-ul.simple > li > a:focus:before,
-ul.simple > li > a:active:before {
+ul.simple > li a:hover:before,
+ul.simple > li a:focus:before,
+ul.simple > li a:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
