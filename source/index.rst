@@ -11,7 +11,7 @@ Documentações Cajudev
 - Validator_
 - `Getters & Setters`_
 
-.. _Collection: https://cajudev.readthedocs.io/projects/collection/pt/v4/
+.. _Collection: https://cajudev.readthedocs.io/projects/collection/en/v2/
 .. _EasyForm: https://cajudev.readthedocs.io/projects/easyform/pt/v0/
 .. _Regex: https://cajudev.readthedocs.io/projects/regex/pt/v0/
 .. _CsvParser: https://cajudev.readthedocs.io/projects/csvparser/pt/v0/
